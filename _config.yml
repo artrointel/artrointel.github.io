@@ -8,7 +8,7 @@ baseurl: "/artrointel" # the subpath of your site, e.g. /blog
 url: "https://artrointel.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
 
-list-item1: 'Profile'
+list-item: 'Profile'
 
 # Author Settings
 author: Woohyun Kim # add your name
