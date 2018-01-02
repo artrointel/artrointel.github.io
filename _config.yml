@@ -8,12 +8,13 @@ baseurl: "/artrointel" # the subpath of your site, e.g. /blog
 url: "https://artrointel.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
 
+# Side list menu Settings
 list-item: 'Profile'
 
 # Author Settings
 author: Woohyun Kim # add your name
 author-img: main_picture.jpg # add your photo
-about-author: I am a software developer focusing on both AI and graphics. I cannot just leave without programming.
+about-author: I am a software developer focusing on both AI and Graphics. I cannot just leave without programming.
 twitter: # add your Twitter handle
 facebook: # add your Facebook handle
 github: artrointel # add your Github handle
