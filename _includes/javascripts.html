@@ -1,2 +1,17 @@
 <!-- Main Js -->
 <script src="{{site.baseurl}}/assets/js/main.js"></script>
+<!-- Customized JS -->
+<script type="text/javascript">
+function removeDivByClass(className)
+{
+	var nodes = document.getElementsByClassName(className);
+	for(i = nodes.length-1; i >= 0; ;i--)
+	{
+		if (nodes[i].parent)
+		{
+			nodes[i].parent.removeChild(nodes[i]);
+		}
+	}
+}
+
+</script>
