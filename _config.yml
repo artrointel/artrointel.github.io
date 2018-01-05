@@ -10,7 +10,7 @@ site-twitter: #if your site has a twitter account, enter it here
 
 # Side list menu Settings
 list-item: 'Profile'
-list-item-link: profiles.html
+list-item-link: profiles
 
 # Author Settings
 author: Woohyun Kim # add your name
