@@ -4,7 +4,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Neural Network, Graphics and everything to change the world.
   This codename is Artrointel.
 permalink: ':title/'
-baseurl: "/artrointel" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://artrointel.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
 
