@@ -9,8 +9,10 @@ url: "https://artrointel.github.io" # the base hostname & protocol for your site
 site-twitter: #if your site has a twitter account, enter it here
 
 # Side list menu Settings
-list-item: 'Profile'
-list-item-link: profiles
+list-item-profile: 'Profile'
+list-item-profile-page: profiles
+
+list-item-projects: 'Projects'
 
 # Author Settings
 author: Woohyun Kim # add your name
