@@ -4,7 +4,7 @@ title: Profile
 date: 1989-01-10 01:31:00 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: software.jpg # Add image post (optional)
-tags: [Software] # add tag
+tags: [artrointel, we.kim, Woohyun.Kim] # add tag
 profiles: profile
 ---
 
@@ -12,29 +12,26 @@ profiles: profile
 * Software Engineering and Applied Mathematics from ([KIT](http://kumoh.ac.kr))  
 * Graphic RnD Group, Samsung Electronics (2016.02 ~ )  
 
-## Interests
+# * Interests
 * Deep Learning, Game Engine
-  
-## History
-// pdf table
 
----------------------------
+--------------------------------------------------------------------------------
   
-## Journals
+# * Journals
 [1] Seongsoo Choi, **Woohyun Kim**, and Jongho Kim, *Compression of Hamiltonian matrix: Application to spin-1/2 Heisenberg square
 lattice* in American Institute of Physics (AIP Advances), Sep. 2016. ([PDF](http://aip.scitation.org/doi/pdf/10.1063/1.4963834))  
   
-## Awards 
+# * Awards 
   
 | Date     |    Awards     | Description | Host |
-|:--------:| -------------:| :---------- | ---: |
+|:--------:| :-----------: | :---------- | ---: |
 | '15.09.09 | *K-Hackathon 3*, **Grand (Minister)** | "Globell" team, Web-based global free internet phone service (front-end development) | [App center](http://appcenter.kr/), [MSIP](http://www.msip.go.kr) |
 | '14.11.14 | *KIT Engineering Fair 2014*, **Silver** | "Friendly Farm" team, Farming Simulation Game (Leader) | [KIT](http://kumoh.ac.kr), [LINC Corp](http://linc.kumoh.ac.kr) |
 | '14.07.11 | *HPCSS@UNIST 2014*, **Contribution** | 'Uiri' team, Wave simulation via OpenMP and MPI Supercomputing | [KISTI](http://www.nisn.re.kr/) |  
   
----------------------------
+--------------------------------------------------------------------------------
   
-## Personal Projects
+# * Personal Projects
 ### 2017
 neural nets for mnist, opengl learning 
 // + github pages, + neural nets based on math
@@ -47,23 +44,26 @@ sword art online mobile app
 friendly farm, cross the bridge (pl, physics engine), smart voice
 // + youtube & github pages
 
-## Presentations
+# * Presentations
 
 * Vector, Matrix and Quaternion for 3D Game Programming
 * OpenMP and MPI for Beginners
 
 // + naver/linkedIn ppt upload is to be required
 
----------------------------
+--------------------------------------------------------------------------------
   
-## Work Experience
+# * History
+// pdf table
+
+# * Work Experience
 * Samsung Electronics (2016.02 ~ Current)  
 Mobile GPU Driver (ARM Mali GPU) management for Samsung mobile products (Exynos)
 
 * Samsung Software Membership (2014.01 ~ 2015.07)  
 Regular Member(24-1), Education Team Leader(2014.09 ~ 2015.03)
   
-## Basic Skills  
+# * Basic Skills  
 ### Languages
 C++, C, C#, Java, Shell, Python
 
