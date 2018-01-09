@@ -28,9 +28,9 @@ lattice* in American Institute of Physics (AIP Advances), Sep. 2016. ([PDF](http
   
 | Date     |    Awards     | Description | Host |
 |:--------:| -------------:| :---------- | ---: |
-| '15.09.09 | *K-Hackathon 3*, **Grand (Minister)** | "Globell" team, Web-based global free internet phone service (front-end development) | [App center](http://appcenter.kr/), [MSIP(Ministry of Science, ICT and Future Planning)](http://www.msip.go.kr) |
+| '15.09.09 | *K-Hackathon 3*, **Grand (Minister)** | "Globell" team, Web-based global free internet phone service (front-end development) | [App center](http://appcenter.kr/), [MSIP](http://www.msip.go.kr) |
 | '14.11.14 | *KIT Engineering Fair 2014*, **Silver** | "Friendly Farm" team, Farming Simulation Game (Leader) | [KIT](http://kumoh.ac.kr), [LINC Corp](http://linc.kumoh.ac.kr) |
-| '14.07.11 | *High Performance Computing Summer School @ UNIST 2014(HPCSS@UNIST 2014)*, **Contribution** | 'Uiri' team, Wave simulation via OpenMP and MPI Supercomputing | [KISTI](http://www.nisn.re.kr/) |  
+| '14.07.11 | *HPCSS@UNIST 2014*, **Contribution** | 'Uiri' team, Wave simulation via OpenMP and MPI Supercomputing | [KISTI](http://www.nisn.re.kr/) |  
   
 ---------------------------
   
