@@ -15,6 +15,9 @@ profiles: profile
 ## Interests
 * Deep Learning, Game Engine
   
+## History
+// pdf table
+
 ---------------------------
   
 ## Journals
@@ -24,7 +27,7 @@ lattice* in American Institute of Physics (AIP Advances), Sep. 2016. ([PDF](http
 ## Awards 
   
 | Date     |    Awards     | Description | Host |
-|----------|:-------------:|      ------:| ----:|
+|:--------:| -------------:| :---------- | ---: |
 | '15.09.09 | *K-Hackathon 3*, **Grand (Minister)** | "Globell" team, Web-based global free internet phone service (front-end development) | [App center](http://appcenter.kr/), [MSIP(Ministry of Science, ICT and Future Planning)](http://www.msip.go.kr) |
 | '14.11.14 | *KIT Engineering Fair 2014*, **Silver** | "Friendly Farm" team, Farming Simulation Game (Leader) | [KIT](http://kumoh.ac.kr), [LINC Corp](http://linc.kumoh.ac.kr) |
 | '14.07.11 | *High Performance Computing Summer School @ UNIST 2014(HPCSS@UNIST 2014)*, **Contribution** | 'Uiri' team, Wave simulation via OpenMP and MPI Supercomputing | [KISTI](http://www.nisn.re.kr/) |  
@@ -34,22 +37,22 @@ lattice* in American Institute of Physics (AIP Advances), Sep. 2016. ([PDF](http
 ## Personal Projects
 ### 2017
 neural nets for mnist, opengl learning 
-(-> + github pages, + neural nets based on math)
+// + github pages, + neural nets based on math
 
 ### 2016
 sword art online mobile app
-(.apk + some code snippet + youtube)
+//.apk + some code snippet + youtube
 
 ### 2015
 friendly farm, cross the bridge (pl, physics engine), smart voice
-
+// + youtube & github pages
 
 ## Presentations
 
 * Vector, Matrix and Quaternion for 3D Game Programming
 * OpenMP and MPI for Beginners
 
-//(linked in ppt upload is required)
+// + naver/linkedIn ppt upload is to be required
 
 ---------------------------
   
@@ -57,8 +60,8 @@ friendly farm, cross the bridge (pl, physics engine), smart voice
 * Samsung Electronics (2016.02 ~ Current)  
 Mobile GPU Driver (ARM Mali GPU) management for Samsung mobile products (Exynos)
 
-* Samsung Software Membership (2014.01 ~ 2015.07)  
-Smart Voice system service on Android Framework (Jellybeans), and Cross the bridge game
+* Samsung Software Membership (2014.01 ~ 2015.07)  
+Regular Member(24-1), Education Team Leader(2014.09 ~ 2015.03)
   
 ## Basic Skills  
 ### Languages
