@@ -9,7 +9,7 @@ profiles: profile
 ---
 
 # Woohyun Kim
-* Software Engineering and Applied Mathematics from [KIT](http://kumoh.ac.kr)  
+* Software Engineering and Applied Mathematics from ([KIT](http://kumoh.ac.kr))  
 * Graphic RnD Group, Samsung Electronics (2016.02 ~ )  
 
 ## Interests
@@ -17,25 +17,40 @@ profiles: profile
   
 ---------------------------
   
-## Awards 
-포폴 참고
-K-Hackathon, supercomputing, kit,
-
 ## Journals
-[1] Seongsoo Choi, Woohyun Kim, and Jongho Kim, Compression of Hamiltonian matrix: Application to spin-1/2 Heisenberg square
-lattice in American Institute of Physics (AIP Advances), Sep. 2016. [PDF](http://aip.scitation.org/doi/pdf/10.1063/1.4963834)
+[1] Seongsoo Choi, **Woohyun Kim**, and Jongho Kim, *Compression of Hamiltonian matrix: Application to spin-1/2 Heisenberg square
+lattice* in American Institute of Physics (AIP Advances), Sep. 2016. ([PDF](http://aip.scitation.org/doi/pdf/10.1063/1.4963834))  
+  
+## Awards 
+  
+| Date     |    Awards     | Description | Host |
+|----------|:-------------:|      ------:| ----:|
+| '15.09.09 | *K-Hackathon 3*, **Grand (Minister)** | "Globell" team, Web-based global free internet phone service (front-end development) | [App center](http://appcenter.kr/), [MSIP(Ministry of Science, ICT and Future Planning)](http://www.msip.go.kr) |
+| '14.11.14 | *KIT Engineering Fair 2014*, **Silver** | "Friendly Farm" team, Farming Simulation Game (Leader) | [KIT](http://kumoh.ac.kr), [LINC Corp](http://linc.kumoh.ac.kr) |
+| '14.07.11 | *High Performance Computing Summer School @ UNIST 2014(HPCSS@UNIST 2014)*, **Contribution** | 'Uiri' team, Wave simulation via OpenMP and MPI Supercomputing | [KISTI](http://www.nisn.re.kr/) |  
   
 ---------------------------
   
-## Projects
-포폴 참고 및 기본 템플릿 생성 필요  
-neural nets for mnist, opengl learning,
-sword art, friendly farm, cross the bridge, smart voice
+## Personal Projects
+### 2017
+neural nets for mnist, opengl learning 
+(-> + github pages, + neural nets based on math)
+
+### 2016
+sword art online mobile app
+(.apk + some code snippet + youtube)
+
+### 2015
+friendly farm, cross the bridge (pl, physics engine), smart voice
 
 
 ## Presentations
-멤 quaternion, openmp ppt 업로드
-  
+
+* Vector, Matrix and Quaternion for 3D Game Programming
+* OpenMP and MPI for Beginners
+
+//(linked in ppt upload is required)
+
 ---------------------------
   
 ## Work Experience
@@ -50,5 +65,4 @@ Smart Voice system service on Android Framework (Jellybeans), and Cross the brid
 C++, C, C#, Java, Shell, Python
 
 ### Tools
-Android Studio, Visual Studio, VIM, 
-Unity3D, Mali Graphic Debugger
+Android Studio, Visual Studio, VIM, Unity3D
