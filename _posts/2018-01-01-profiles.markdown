@@ -1,51 +1,51 @@
 ---
 layout: post
-title: The Best Organizer Software
+title: Profile
 date: 1989-01-10 01:31:00 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: software.jpg # Add image post (optional)
-tags: [Productivity, Software] # add tag
+tags: [Software] # add tag
 profiles: profile
 ---
 
-# Profile
-* Software Engineering and Applied Mathematics from [KIT](http://kumoh.ac.kr)
-* Graphic RnD Group, Samsung Electronics (2016.02 ~ )
+# Woohyun Kim
+* Software Engineering and Applied Mathematics from [KIT](http://kumoh.ac.kr)  
+* Graphic RnD Group, Samsung Electronics (2016.02 ~ )  
 
 ## Interests
 * Deep Learning, Game Engine
-
+  
 ---------------------------
-
-## Awards
+  
+## Awards 
 포폴 참고
 K-Hackathon, supercomputing, kit,
 
 ## Journals
 [1] Seongsoo Choi, Woohyun Kim, and Jongho Kim, Compression of Hamiltonian matrix: Application to spin-1/2 Heisenberg square
 lattice in American Institute of Physics (AIP Advances), Sep. 2016. [PDF](http://aip.scitation.org/doi/pdf/10.1063/1.4963834)
-
+  
 ---------------------------
-
+  
 ## Projects
-포폴 참고 및 기본 템플릿 생성 필요
+포폴 참고 및 기본 템플릿 생성 필요  
 neural nets for mnist, opengl learning,
 sword art, friendly farm, cross the bridge, smart voice
 
 
 ## Presentations
 멤 quaternion, openmp ppt 업로드
-
+  
 ---------------------------
-
+  
 ## Work Experience
-* Samsung Electronics (2016.02 ~ Current)
-Mobile GPU Driver (ARM Mali GPU) management for Samsung mobile devices (Exynos)
+* Samsung Electronics (2016.02 ~ Current)  
+Mobile GPU Driver (ARM Mali GPU) management for Samsung mobile products (Exynos)
 
-* Samsung Software Membership (2014.01 ~ 2015.07)
+* Samsung Software Membership (2014.01 ~ 2015.07)  
 Smart Voice system service on Android Framework (Jellybeans), and Cross the bridge game
-
-## Basic Skills
+  
+## Basic Skills  
 ### Languages
 C++, C, C#, Java, Shell, Python
 
