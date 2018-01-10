@@ -32,8 +32,6 @@ analytics: # Google Analytics
 
 # Build Settings
 markdown: kramdown
-kramdown:
-  input: GFM
 plugins:
   - jekyll-sitemap
   - jekyll-paginate
