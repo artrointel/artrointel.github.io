@@ -79,7 +79,7 @@ Regular Member(24-1), Education Team Leader(2014.09 ~ 2015.03)
 |:--------:| :---------- |
 | '16.09 | * 'CRM', Participate in the project as a developer. (AIP Advance) ('14.11 ~ ) |
 | '16.02 | * Joined Samsung Electronics, Mobile Communications Division |
-| '16.01 | * Sword Art Online~Babel of dungeon~ (Indie Local Game), developed with an artist just a hobby. ('15.11 ~ ) |
+| '16.01 | * Sword Art Online ~ Babel of dungeon ~ (Indie Local Game), Developed with an artist just a hobby. ('15.11 ~ ) |
 | '15.09 | * Graduated from Kumoh National Institute of Technology (KIT) <br> * K-Hackathon 3, _Globell_ team as a front-end developer |
 | '15.07 | * Manpower training course(140h) from [TVBA](https://ko-kr.facebook.com/tvba.or.kr/) <br> * Completed Samsung Software Membership ('14.01 ~ ) |
 | '15.03 | * 'SmartVoice', Voice-based Android Framework (Jellybeans) system service as an architect |
