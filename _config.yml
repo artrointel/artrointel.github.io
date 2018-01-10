@@ -31,7 +31,9 @@ discus-identifier: # add your discus identifier
 analytics: # Google Analytics
 
 # Build Settings
-markdown: redcarpet
+markdown: kramdown
+kramdown:
+  input: GFM
 plugins:
   - jekyll-sitemap
   - jekyll-paginate
