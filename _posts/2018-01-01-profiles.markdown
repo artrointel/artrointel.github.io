@@ -39,14 +39,14 @@ lattice* in American Institute of Physics (AIP Advances), Sep. 2016. ([PDF](http
 * study; opengl learning project  
 
 ### 2016
-sword art online mobile app  
+sword art online mobile game app 
 
 ### 2015
 * cross the bridge - rpengine  
 https://www.youtube.com/watch?v=j9WeBjJaUlE&list=PLFvdltGhnoAOEi8856S_SpO5De_5REK_o  
 
-* smartvoice  
-https://www.youtube.com/playlist?list=PLFvdltGhnoANUmPkSl9IVSECUSKcswDoK  
+* smartvoice - API Design
+https://www.youtube.com/playlist?list=PLFvdltGhnoANUmPkSl9IVSECUSKcswDoK 
 
 ### 2014
 * super app korea family story  
@@ -79,6 +79,7 @@ Regular Member(24-1), Education Team Leader(2014.09 ~ 2015.03)
 |:--------:| :---------- |
 | '16.09 | * 'CRM', Participate in the project as a developer. (AIP Advance) ('14.11 ~ ) |
 | '16.02 | * Joined Samsung Electronics, Mobile Communications Division |
+| '16.01 | * Sword Art Online~Babel of dungeon~ (Indie Local Game), developed with an artist just a hobby. ('15.11 ~ ) |
 | '15.09 | * Graduated from Kumoh National Institute of Technology (KIT) <br> * K-Hackathon 3, _Globell_ team as a front-end developer |
 | '15.07 | * Manpower training course(140h) from [TVBA](https://ko-kr.facebook.com/tvba.or.kr/) <br> * Completed Samsung Software Membership ('14.01 ~ ) |
 | '15.03 | * 'SmartVoice', Voice-based Android Framework (Jellybeans) system service as an architect |
