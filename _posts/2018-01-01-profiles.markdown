@@ -46,26 +46,25 @@ friendly farm, cross the bridge (pl, physics engine), smart voice
 
 # * Presentations
 
-* Vector, Matrix and Quaternion for 3D Game Programming
+* Vector, Matrix and Quaternion for 3D Programming
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/j8r1JUnNZet8E0" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/WoohyunKim16/3d-85975448" title="3D프로그래밍을 위한 벡터,행렬과 사원수" target="_blank">3D프로그래밍을 위한 벡터,행렬과 사원수</a> </strong> from <strong><a href="https://www.slideshare.net/WoohyunKim16" target="_blank">WoohyunKim16</a></strong> </div>
+
 * OpenMP and MPI for Beginners
-
-test iframe on markdown file
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dHHmUF9gs70" frameborder="0" allowfullscreen></iframe>
-
-// + naver/linkedIn ppt upload is to be required
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/j8r1JUnNZet8E0" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/WoohyunKim16/3d-85975448" title="3D프로그래밍을 위한 벡터,행렬과 사원수" target="_blank">3D프로그래밍을 위한 벡터,행렬과 사원수</a> </strong> from <strong><a href="https://www.slideshare.net/WoohyunKim16" target="_blank">WoohyunKim16</a></strong> </div>
+[Download Tutorial codes]()
 
 --------------------------------------------------------------------------------
   
 # * Work Experience
 * Samsung Electronics (2016.02 ~ Current)  
-Mobile GPU Driver (ARM Mali GPU) management for Samsung mobile products (Exynos)
+Mobile GPU Driver (ARM Mali GPU) management for Samsung mobile products (Exynos)  
 
-* Samsung Software Membership (2014.01 ~ 2015.07)
+* Samsung Software Membership (2014.01 ~ 2015.07)  
 Regular Member(24-1), Education Team Leader(2014.09 ~ 2015.03)
 
 
 # * History
-// pdf table
+// pdf table update & upload
   
 --------------------------------------------------------------------------------
   
