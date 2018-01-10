@@ -60,7 +60,7 @@ test iframe on markdown file
 * Samsung Electronics (2016.02 ~ Current)  
 Mobile GPU Driver (ARM Mali GPU) management for Samsung mobile products (Exynos)
 
-* Samsung Software Membership (2014.01 ~ 2015.07)  
+* Samsung Software Membership (2014.01 ~ 2015.07)
 Regular Member(24-1), Education Team Leader(2014.09 ~ 2015.03)
 
 
