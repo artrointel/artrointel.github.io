@@ -10,12 +10,12 @@ Thesedays I'm studying neural network and I wanted to develop it myself for a de
 
 ## Development for a deeper understanding
 
-I developed a simple neural network platform for mnist and you can download it from here;
-test
 $$a^2 + b^2 = c^2$$
+I developed a simple neural network platform for mnist and you can download it from here;
+
 ```
  https://github.com/Team-AI-Learning/mnist_nn/tree/kim_dev
- $$a^2 + b^2 = c^2$$
+ 
 ```
 
 ## Neural Network Theories focused on Mathematics
