@@ -3,7 +3,7 @@ layout: post
 title: Neural Network for mnist
 date: 2017-09-12 13:32:20 +0300
 description: Experimental c++ with openMP for mnist example
-img: 
+img: mnist-result.jpg
 tags: [mnist, neural network, nn, cnn]
 language: kr
 ---
