@@ -28,16 +28,13 @@ lattice* in American Institute of Physics (AIP Advances), Sep. 2016. ([PDF](http
 | '15.09.09 | *K-Hackathon 3*, **Grand (Minister)** | "Globell" team, Web-based global free internet phone service (front-end development) | [App center](http://appcenter.kr/), [MSIP](http://www.msip.go.kr) |
 | '14.11.14 | *KIT Engineering Fair 2014*, **Silver** | "Friendly Farm" team, Farming Simulation Game (PL) | [KIT](http://kumoh.ac.kr), [LINC](http://linc.kumoh.ac.kr) |
 | '14.07.11 | *HPCSS@UNIST 2014*, **Contribution** | "Uiri" team, Wave simulation via OpenMP and MPI Supercomputing | [KISTI](http://www.nisn.re.kr/) |  
-  
---------------------------------------------------------------------------------
-  
+
 # * Work Experience
 * Samsung Electronics (2016.02 ~ Current)  
 Mobile GPU Driver (ARM Mali GPU) management for Samsung mobile products (Exynos)  
 
 * Samsung Software Membership (2014.01 ~ 2015.07)  
 Regular Member(24-1), Education Team Leader(2014.09 ~ 2015.03)  
-
 
 # * History
   
@@ -105,6 +102,7 @@ Social Network game(SNG) with Farming simulation & Defense game, PL - Farming Si
 family-specific SNS application  
 // 가족을 위한 SNS플랫폼 애플리케이션  
 
+--------------------------------------------------------------------------------
 
 # * Seminars
 
