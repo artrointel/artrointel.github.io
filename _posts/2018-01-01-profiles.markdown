@@ -68,7 +68,7 @@ Regular Member(24-1), Education Team Leader(2014.09 ~ 2015.03)
 ### 2017
 * [In progress] convolutional neural nets and neural nets for mnist [[NN](), [CNN]()]
 c++ project for mnist without any using NN-related external libraries  
-// C++에서 NN 관련 외부 라이브러리를 사용하지 않고 cnn 및 nn 직접 구현하여 mnist 글자 인식하기
+// C++에서 NN 관련 외부 라이브러리를 사용하지 않고 cnn 및 nn 직접 구현하여 mnist 글자 인식하기  
 
 * [In progress] opengl es study - in progress
 GLES 3.0 study based on android native C++  
@@ -77,31 +77,31 @@ GLES 3.0 study based on android native C++
 
 ### 2016
 * Sword Art Online (mobile indie game) [[YouTube]()] [[APK]()]
-<UI한장>  
+(UI한장)  
 [SAO](https://en.wikipedia.org/wiki/Sword_Art_Online) Animation Indie RPG game with Unity3D  
 // Unity3D를 활용한 애니메이션 롤플레잉 인디 게임 개발(PL) - 개발
 
 
 ### 2015
 * Cross the bridge - RPEngine  [[YouTube](https://www.youtube.com/watch?v=j9WeBjJaUlE&list=PLFvdltGhnoAOEi8856S_SpO5De_5REK_o) [PDF]()]
-<UI한장>  
+(UI한장)  
 3D Game Engine Development and Build-up a bridge simulation game, PL - Physics Engine Part  
 // 게임 엔진 개발과 다리 건설 시뮬레이션 게임(PL) - 물리엔진 Part
   
 * SmartVoice - API Design  [[YouTube](https://www.youtube.com/playlist?list=PLFvdltGhnoANUmPkSl9IVSECUSKcswDoK), [PDF()]
-<UI한장>  
+(UI한장)  
 Voice-based Android Framework(Jellybeans) utilizing 3rd party collective intelligence - Voice API Design & Implementation  
 // 3rd party 집단지성 활용을 위한 음성 기반 안드로이드 프레임워크 - 음성 API 설계 및 구현 Part
 
 
 ### 2014
 * Friendly Farm  [[YouTube](https://www.youtube.com/watch?v=8CI9qfpottU&list=PLFvdltGhnoAPDOS2YjjSNd1FlrL-JpJZt&index=1), [PDF]()]  
-<UI한장>  
+(UI한장)  
 Social Network game(SNG) with Farming simulation & Defense game, PL - Farming Simulation Part  
 // 농사 시뮬레이션과 디펜스 게임이 포함된 소셜 네트워크 게임(PL) - 농업 시뮬레이션 Part
 
 * Family Story
-<UI한장>
+(UI한장)  
 family-specific SNS application
 // 가족을 위한 SNS플랫폼 애플리케이션  
 
