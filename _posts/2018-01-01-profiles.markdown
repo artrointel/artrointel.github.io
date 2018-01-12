@@ -66,7 +66,7 @@ Regular Member(24-1), Education Team Leader(2014.09 ~ 2015.03)
 // TODO: + attach snapshots, brief descriptions, github pages, youtube links, .apk files
 
 ### 2017
-* [In progress] convolutional neural nets and neural nets for mnist [[NN](), [CNN]()]  
+* [In progress] convolutional neural nets and neural nets for mnist [[NN]()] [[CNN]()]  
 c++ project for mnist without any using NN-related external libraries  
 // C++에서 NN 관련 외부 라이브러리를 사용하지 않고 cnn 및 nn 직접 구현하여 mnist 글자 인식하기  
 
@@ -83,19 +83,19 @@ GLES 3.0 study based on android native C++
 
 
 ### 2015
-* Cross the bridge - RPEngine  [[YouTube](https://www.youtube.com/watch?v=j9WeBjJaUlE&list=PLFvdltGhnoAOEi8856S_SpO5De_5REK_o) [PDF]()]  
+* Cross the bridge - RPEngine  [[YouTube](https://www.youtube.com/watch?v=j9WeBjJaUlE&list=PLFvdltGhnoAOEi8856S_SpO5De_5REK_o)] [[PDF]()]  
 (UI한장)  
 3D Game Engine Development and Build-up a bridge simulation game, PL - Physics Engine Part  
 // 게임 엔진 개발과 다리 건설 시뮬레이션 게임(PL) - 물리엔진 Part
   
-* SmartVoice - API Design  [[YouTube](https://www.youtube.com/playlist?list=PLFvdltGhnoANUmPkSl9IVSECUSKcswDoK), [PDF()]  
+* SmartVoice - API Design  [[YouTube](https://www.youtube.com/playlist?list=PLFvdltGhnoANUmPkSl9IVSECUSKcswDoK)] [[PDF]()]  
 (UI한장)  
 Voice-based Android Framework(Jellybeans) utilizing 3rd party collective intelligence - Voice API Design & Implementation  
 // 3rd party 집단지성 활용을 위한 음성 기반 안드로이드 프레임워크 - 음성 API 설계 및 구현 Part  
 
 
 ### 2014
-* Friendly Farm  [[YouTube](https://www.youtube.com/watch?v=8CI9qfpottU&list=PLFvdltGhnoAPDOS2YjjSNd1FlrL-JpJZt&index=1), [PDF]()]  
+* Friendly Farm  [[YouTube](https://www.youtube.com/watch?v=8CI9qfpottU&list=PLFvdltGhnoAPDOS2YjjSNd1FlrL-JpJZt&index=1)] [[PDF]()]  
 (UI한장)  
 Social Network game(SNG) with Farming simulation & Defense game, PL - Farming Simulation Part  
 // 농사 시뮬레이션과 디펜스 게임이 포함된 소셜 네트워크 게임(PL) - 농업 시뮬레이션 Part
@@ -108,10 +108,12 @@ family-specific SNS application
 
 # * Seminars
 
-* Vector, Matrix and Quaternion for 3D Programming  
+## * Vector, Matrix and Quaternion for 3D Programming  
+for DGSSM (2014)  
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/j8r1JUnNZet8E0" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/WoohyunKim16/3d-85975448" title="3D프로그래밍을 위한 벡터,행렬과 사원수" target="_blank">3D프로그래밍을 위한 벡터,행렬과 사원수</a> </strong> from <strong><a href="https://www.slideshare.net/WoohyunKim16" target="_blank">WoohyunKim16</a></strong> </div>
 
-* OpenMP and MPI for Beginners  
+## * OpenMP and MPI for Beginners  
+for DGSSM (2014)  
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/b8E8s3PsQjwKqr" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/WoohyunKim16/openmp-for-beginners" title="OpenMP for beginners" target="_blank">OpenMP for beginners</a> </strong> from <strong><a href="https://www.slideshare.net/WoohyunKim16" target="_blank">WoohyunKim16</a></strong> </div>
 [Download Tutorial codes]()
 
@@ -119,7 +121,7 @@ family-specific SNS application
   
 # * Basic Skills  
 ### Languages
-C++, C, C#, Java, Shell, Python
+C, C++, C#, Java, HTML, Shell, Python
 
 ### Tools
 Android Studio, Visual Studio, VIM, Unity3D
