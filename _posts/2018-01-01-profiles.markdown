@@ -26,7 +26,7 @@ lattice* in American Institute of Physics (AIP Advances), Sep. 2016. ([PDF](http
 | Date     |    Awards     | Description | Host |
 |:--------:| :-----------: | :---------- | ---: |
 | '15.09.09 | *K-Hackathon 3*, **Grand (Minister)** | "Globell" team, Web-based global free internet phone service (front-end development) | [App center](http://appcenter.kr/), [MSIP](http://www.msip.go.kr) |
-| '14.11.14 | *KIT Engineering Fair 2014*, **Silver** | "Friendly Farm" team, Farming Simulation Game (PL) | [KIT](http://kumoh.ac.kr), [LINC Corp](http://linc.kumoh.ac.kr) |
+| '14.11.14 | *KIT Engineering Fair 2014*, **Silver** | "Friendly Farm" team, Farming Simulation Game (PL) | [KIT](http://kumoh.ac.kr), [LINC](http://linc.kumoh.ac.kr) |
 | '14.07.11 | *HPCSS@UNIST 2014*, **Contribution** | "Uiri" team, Wave simulation via OpenMP and MPI Supercomputing | [KISTI](http://www.nisn.re.kr/) |  
   
 --------------------------------------------------------------------------------
@@ -96,7 +96,7 @@ Voice-based Android Framework(Jellybeans) utilizing 3rd party collective intelli
 
 ### 2014
 * Friendly Farm  [[YouTube](https://www.youtube.com/watch?v=8CI9qfpottU&list=PLFvdltGhnoAPDOS2YjjSNd1FlrL-JpJZt&index=1)] [[PDF]()]  
-(UI한장)  
+(UI두장)  
 Social Network game(SNG) with Farming simulation & Defense game, PL - Farming Simulation Part  
 // 농사 시뮬레이션과 디펜스 게임이 포함된 소셜 네트워크 게임(PL) - 농업 시뮬레이션 Part
 
@@ -108,11 +108,11 @@ family-specific SNS application
 
 # * Seminars
 
-## * Vector, Matrix and Quaternion for 3D Programming  
+### Vector, Matrix and Quaternion for 3D Programming  
 for DGSSM (2014)  
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/j8r1JUnNZet8E0" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/WoohyunKim16/3d-85975448" title="3D프로그래밍을 위한 벡터,행렬과 사원수" target="_blank">3D프로그래밍을 위한 벡터,행렬과 사원수</a> </strong> from <strong><a href="https://www.slideshare.net/WoohyunKim16" target="_blank">WoohyunKim16</a></strong> </div>
 
-## * OpenMP and MPI for Beginners  
+### OpenMP and MPI for Beginners  
 for DGSSM (2014)  
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/b8E8s3PsQjwKqr" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/WoohyunKim16/openmp-for-beginners" title="OpenMP for beginners" target="_blank">OpenMP for beginners</a> </strong> from <strong><a href="https://www.slideshare.net/WoohyunKim16" target="_blank">WoohyunKim16</a></strong> </div>
 [Download Tutorial codes]()
@@ -125,3 +125,6 @@ C, C++, C#, Java, HTML, Shell, Python
 
 ### Tools
 Android Studio, Visual Studio, VIM, Unity3D
+
+--------------------------------------------------------------------------------
+#### Profile.old - [[Download PDF]()] - last update: '2015.10
