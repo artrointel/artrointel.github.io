@@ -36,7 +36,7 @@ $$ F(x) ~= \sum_{i=1}^N v_i \Phi(w_i^Tx + b_i) = f(x) ~~~ where ~~~ i \in 1, ...
 아래와 같이 d번째 Layer에 존재하는 임의의 index를 가지는 $ x $를 다음과 같이 표기한다.  
 $$ x_indice^(layer d) $$
 이 때의 Single Perceptron은 다음과 같다.  
-<img src="http://artrointel.github.io/assets/img/neural-network/perceptron.JPG" />  
+<img src="http://artrointel.github.io/assets/projects/neural-network/perceptron.JPG" />  
 
 위의 그림에서 다음 Layer의 $x_{i}^{(1)}$를 일반화하면 다음과 같다.  
 $$ f(\sum_{j=0}^N w_{i,j}^{(1)} x_{j}^{(0)} + b_{i}^{(1)}) = x_{i}^{(1)}, ~~~ f() is an activation function.$$
