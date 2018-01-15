@@ -83,7 +83,7 @@ GLES 3.0 based on android native C++
 <br><br>
   
 * SmartVoice [[YouTube](https://www.youtube.com/playlist?list=PLFvdltGhnoANUmPkSl9IVSECUSKcswDoK)]  
-  * Voice-based android system service based on the third-party collective intelligence, Voice API developer  
+  * Voice-based android system service based on the third-party collective intelligence, API developer  
 <br>
 <img src="http://artrointel.github.io/assets/projects/smart-voice/settings.jpg" style="max-width: 600px; max-height: 400px;" />  
 <br><br>
@@ -125,4 +125,4 @@ C, C++, C#, Java, HTML, Shell, Python
 Android Studio, Visual Studio, VIM, Unity3D
 
 --------------------------------------------------------------------------------
-#### Profile.old - [[Download PDF]()] - last update: '2015.10
+#### Old profile - [[PDF](http://artrointel.github.io/assets/data/woohyun_kim_portfolio.pdf)] - last update: '2015.10
