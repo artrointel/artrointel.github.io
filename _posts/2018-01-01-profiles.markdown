@@ -31,10 +31,10 @@ lattice*, AIP Advances (2016). ([PDF](http://aip.scitation.org/doi/pdf/10.1063/1
 
 # * Working Experiences
 * Samsung Electronics (Feb. 2016 ~ current)  
-- Managing Mobile GPU Driver (ARM Mali GPU) for Samsung mobile products (Exynos)  
+> Managing Mobile GPU Driver (ARM Mali GPU) for Samsung mobile products (Exynos)  
 
 * Samsung Software Membership (Jan. 2014 ~ Jul. 2015)  
-- Regular member (24-1), Education Team Leader (Sep. 2014 ~ Mar. 2015)  
+> Regular member (24-1), Education Team Leader (Sep. 2014 ~ Mar. 2015)  
 
 # * History
   
@@ -70,7 +70,7 @@ C++ project (w/o external libraries)
 GLES 3.0 based on android native C++  
 
 ### 2016  
-* Sword Art Online (mobile indie game) [[YouTube]()] [[APK]()]  
+* Sword Art Online (mobile indie game) ([[YouTube]()] [[APK]()]  )
 (UI한장)  
 [SAO](https://en.wikipedia.org/wiki/Sword_Art_Online) Animation Indie RPG game using Unity3D  
 
