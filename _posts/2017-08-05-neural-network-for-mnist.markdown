@@ -17,44 +17,27 @@ language: kr
 
 ## Neural Network Theories focused on Mathematics
 
-가장 먼저, Universal Approximation Theorem을 이해할 필요가 있다.
+먼저 Universal Approximation Theorem을 이해할 필요가 있다.
 
 ### * Universal Approximation Theorem [[WIKI](https://en.wikipedia.org/wiki/Universal_approximation_theorem), [Reference](http://mcneela.github.io/machine_learning/2017/03/21/Universal-Approximation-Theorem.html)]
 
-임의의 함수 $F(x)$가 연속한 실수공간에 존재하는 함수라 할 때, 이에 아래와 같이 근사하는 연속함수 $f(x)$가 반드시 존재한다.
+임의의 함수 $ F(x) $가 연속한 실수공간에 존재하는 함수라 할 때, 이에 아래와 같이 근사하는 연속함수 $ f(x) $가 반드시 존재한다.
 
-$$ F(x) ~= \sum_{i=1}^N v_i \Phi(w_i^Tx + b_i) = f(x) ~~~where~~~ i \in 1, ..., N $$
+$$ F(x) ~= \sum_{i=1}^N v_i \Phi(w_i^Tx + b_i) = f(x) ~~~ where ~~~ i \in 1, ..., N $$
 
-이 때 $\Phi()$는 비상수인 단조증가연속함수이며, 충분히 작은 $\epsilon > 0$에 대하여 $ |F(x) -  f(x)| > \epsilon $을 만족시키는  
+이 때 $ \Phi() $는 비상수인 단조증가연속함수이며, 충분히 작은 $ \epsilon > 0 $에 대하여 $ |F(x) -  f(x)| > \epsilon $을 만족시키는  
 자연수 $ N $ 과 실수 $ v_i, b_i $ 및 벡터 $ w_i $가 존재한다.  
 
 
-(특히, $\Phi()$가 sigmoid 함수인 경우 [시벤코 정리](https://ko.wikipedia.org/wiki/%EC%8B%9C%EB%B2%A4%EC%BD%94_%EC%A0%95%EB%A6%AC)라 한다.)
+(특히, $ \Phi() $가 sigmoid 함수인 경우 [시벤코 정리](https://ko.wikipedia.org/wiki/%EC%8B%9C%EB%B2%A4%EC%BD%94_%EC%A0%95%EB%A6%AC)라 한다.)
 
-결국 이 정리에 의해, 임의의 함수 $ F(x) $는 아래의 단층 퍼셉트론만으로 $ F(x) $에 근사하는 임의의 함수 $ f(x) $를 만들어낼 수 있다는 것을 의미한다.  
+이 정리에 의해 임의의 함수 $ F(x) $는 아래의 단층 퍼셉트론만으로 $ F(x) $에 근사하는 임의의 함수 $ f(x) $를 만들어낼 수 있다는 것을 의미한다.  
 
 ### * Perceptron
 
+
 <이미지 ppt 첨부 + 퍼셉트론 설명>
 
-위의 정리는 가령 아래와 같은 Formula로 재구성할 수 있다.  
-
-Notation을 $ x_{i,j}$로 표기할 때,  
-
-$$ F(x) = f(\sum_{j=1}^N w_{i,j} x_{j} +  b_{j} ) $$
-
-Perceptron의 구조에 짜맞춘 것인데, 이 때의 f는 역시 단조증가연속함수인 Activation function이다.
-
-
-
-
-
-
-
-// 뒤에
-이를 아인슈타인 표기법을 활용하여 아래와 같이 단순하게 표기할 수 있다.
-
-$$ z_{i,j} = \sum -> \vec{z} = W \vec{x} + \vec{b} $$
 
 ------------------------------------------------------------
 
