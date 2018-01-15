@@ -31,10 +31,10 @@ lattice*, AIP Advances (2016). ([PDF](http://aip.scitation.org/doi/pdf/10.1063/1
 
 # * Working Experiences
 * Samsung Electronics (Feb. 2016 ~ current)  
- Managing Mobile GPU Driver (ARM Mali GPU) for Samsung mobile products (Exynos)  
+  * Managing Mobile GPU Driver (ARM Mali GPU) for Samsung mobile products (Exynos)  
 
 * Samsung Software Membership (Jan. 2014 ~ Jul. 2015)  
- Regular member (24-1), Education Team Leader (Sep. 2014 ~ Mar. 2015)  
+  * Regular member (24-1), Education Team Leader (Sep. 2014 ~ Mar. 2015)  
 
 # * History
   
@@ -72,29 +72,35 @@ GLES 3.0 based on android native C++
 ### 2016  
 * Sword Art Online (mobile indie game) ([[YouTube]()] )  
   * [SAO](https://en.wikipedia.org/wiki/Sword_Art_Online) Animation Indie RPG game using Unity3D  
+<br>
+<br><br>
 
 ### 2015  
 * Cross the bridge [[YouTube](https://www.youtube.com/watch?v=j9WeBjJaUlE&list=PLFvdltGhnoAOEi8856S_SpO5De_5REK_o)]  
   * 3D game engine development and bridge simulation, project leader & physics engine developer  
+<br>
 <img src="http://artrointel.github.io/assets/projects/cross-the-bridge/bridge.jpg" style="max-width: 600px; max-height: 400px;" />  
-
+<br><br>
   
 * SmartVoice [[YouTube](https://www.youtube.com/playlist?list=PLFvdltGhnoANUmPkSl9IVSECUSKcswDoK)]  
   * Voice-based android system service based on the third-party collective intelligence, Voice API developer  
+<br>
 <img src="http://artrointel.github.io/assets/projects/smart-voice/settings.jpg" style="max-width: 600px; max-height: 400px;" />  
+<br><br>
 
 ### 2014  
 * Friendly Farm  [[YouTube](https://www.youtube.com/watch?v=8CI9qfpottU&list=PLFvdltGhnoAPDOS2YjjSNd1FlrL-JpJZt&index=1)]  
   * Social network game(SNG) with farming simulation & defense game, project leader  
-```
+<br>
 <img src="http://artrointel.github.io/assets/projects/friendly-farm/farming.jpg" style="max-width: 600px; max-height: 400px;" />
 <img src="http://artrointel.github.io/assets/projects/friendly-farm/defense.jpg" style="max-width: 600px; max-height: 400px;" />  
-```
+<br><br>
 
 * Family Story  
   * Family-specific SNS application  
+<br>
 <img src="http://artrointel.github.io/assets/projects/family-story/family-story.jpg" style="max-width: 600px; max-height: 400px;" />  
-
+<br><br>
 
 --------------------------------------------------------------------------------
 
