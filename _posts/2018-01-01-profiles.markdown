@@ -71,26 +71,30 @@ GLES 3.0 based on android native C++
 
 ### 2016  
 * Sword Art Online (mobile indie game) ([[YouTube]()] )  
-
-[SAO](https://en.wikipedia.org/wiki/Sword_Art_Online) Animation Indie RPG game using Unity3D  
+  * [SAO](https://en.wikipedia.org/wiki/Sword_Art_Online) Animation Indie RPG game using Unity3D  
 
 ### 2015  
 * Cross the bridge [[YouTube](https://www.youtube.com/watch?v=j9WeBjJaUlE&list=PLFvdltGhnoAOEi8856S_SpO5De_5REK_o)]  
-<img src="http://artrointel.github.io/assets/projects/cross-the-bridge/cross-the-bridge.jpg" />  
-3D game engine development and bridge simulation, project leader & physics engine developer  
+  * 3D game engine development and bridge simulation, project leader & physics engine developer  
+<img src="http://artrointel.github.io/assets/projects/cross-the-bridge/bridge.jpg" style="max-width: 600px; max-height: 400px;" />  
+
   
 * SmartVoice [[YouTube](https://www.youtube.com/playlist?list=PLFvdltGhnoANUmPkSl9IVSECUSKcswDoK)]  
-<img src="http://artrointel.github.io/assets/projects/smart-voice/smart-voice.jpg" />  
-Voice-based android system service based on the third-party collective intelligence, Voice API developer  
+  * Voice-based android system service based on the third-party collective intelligence, Voice API developer  
+<img src="http://artrointel.github.io/assets/projects/smart-voice/settings.jpg" style="max-width: 600px; max-height: 400px;" />  
 
 ### 2014  
 * Friendly Farm  [[YouTube](https://www.youtube.com/watch?v=8CI9qfpottU&list=PLFvdltGhnoAPDOS2YjjSNd1FlrL-JpJZt&index=1)]  
-<img src="http://artrointel.github.io/assets/projects/friendly-farm/farming.jpg" /><img src="http://artrointel.github.io/assets/projects/friendly-farm/defense.jpg" />  
-Social network game(SNG) with farming simulation & defense game, project leader  
+  * Social network game(SNG) with farming simulation & defense game, project leader  
+```
+<img src="http://artrointel.github.io/assets/projects/friendly-farm/farming.jpg" style="max-width: 600px; max-height: 400px;" />
+<img src="http://artrointel.github.io/assets/projects/friendly-farm/defense.jpg" style="max-width: 600px; max-height: 400px;" />  
+```
 
 * Family Story  
-<img src="http://artrointel.github.io/assets/projects/family-story/family-story.jpg" />  
-Family-specific SNS application  
+  * Family-specific SNS application  
+<img src="http://artrointel.github.io/assets/projects/family-story/family-story.jpg" style="max-width: 600px; max-height: 400px;" />  
+
 
 --------------------------------------------------------------------------------
 
