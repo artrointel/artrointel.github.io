@@ -60,7 +60,8 @@ $$ F(x) \simeq \sum_{i=1}^N v_i \Phi(w_i^Tx + b_i) = f(x) \text{ where } i \in 1
   따라서 정답 값 $ t_{i} $와 예측 값$ x_{i}^{(1)} $의 오차(이하 손실률 J)를 계산하고, 정답으로 근사시킬 $w(weight) $ 및 $ b(bias)$의 값을 찾아가야 한다.  
   이를 위해서는 $ x_{i}^{(1)} $의 계산에 참여한 $w_{i}^{(1)}$ 및 $b_{i}^{(1)}$ 값이 손실률에 얼마나 기여했는지에 대해 찾아서 적절히 update해야 할 것이다.  
 <br>
-$$ w \leftarrow w - \mu \frac{\delta J}{\delta w} , \mu \text{ is learning rate} $$  
+$$ w \leftarrow w - \mu \frac{\partial J}{\partial w} , \mu \text{ is learning rate} $$  
+$$ b \leftarrow b - \mu \frac{\partial J}{\partial b} , \mu \text{ is learning rate} $$  
 <br>
   예를 들어 손실함수 J를 아래의 mean-square인 경우를 생각해보자.  
 <br>
@@ -71,21 +72,55 @@ $$ J = \frac{1}{2} \sum_{i=1}^N (t_{i} - x_{i})^2 $$
   (ppt작업 첨부)  
   
   위의 mean-square function에서 역시 $ t_{i}=x_{i} $로 수렴하는 순간 손실률 $J = 0$이 된다.  
-  매 계산마다 $J$ 값의 변화율에 기여한 $\frac{\delta J}{\delta w}$ 및 $\frac{\delta J}{\delta b}$를 계산하여 각 $w$와 $b$값들을 update할 것이다.  
+  정답 값으로 근사할 수록 J의 변화율이 줄어드므로, 과정이 반복될 수록 수렴하게 될 것임을 유추할 수 있다.
 
 ----------------------------------------------------------------------------------------------------------------------------------
   
 ### 4. Activation functions  
   앞서 Universal Approximation Theorem에서 $\Phi$가 연속한 단조증가함수로 정의하였으니,  
   activation function으로 아래와 같은 적절한 함수를 지정할 수 있다.  
+  //(그래프 첨부)  
   
+  <br>
   * sigmoid  
-  $ f(x) = \frac{1}{1+e^{-x}} $
-  (그래프)  
-  
+  $ f(x) = \frac{1}{1+e^{-x}}$ , $ \frac {d f}{d x} = f(x) (1-f(x)) $  
+  <br>
+  $ pf) $  
+  $ \frac {d f}{d x} = -(1+e^{-x})^{-2} (-e^{-x}) $  
+  $ = \frac {1}{1+e^{-x}} \frac {e^{-x}}{1+e^{-x}} $   
+  $ hence, \frac {d f}{d x} = f(x) (1-f(x)) $  
+     
+  <br>
   * ReLU  
-  $ f(x) = $
-  (그래프 첨부)
+  $ f(x) = \begin{cases}
+   0 \text{, if } x \le 0 \\ 
+   x \text{, if } x \gt 1 \\ 
+   \end{cases}
+  $ , definitely 
+
+  $ \frac {d f}{d x} = \begin{cases}
+   0 \text{, if } x \le 0 \\ 
+   1 \text{, if } x \gt 1 \\ 
+   \end{cases}
+  $
+  
+  <br>
+  * softmax  
+  
+  $ f(x_{i}) = \frac {e^{x_{i}}}{\sum^N e^{x_{j}}} $  
+  
+### 5. Back propagation  
+  실제로는 Single Perceptron가 아닌 다수의 Neurons와 Layers가 존재할 것이므로, 최종 결과 값 x_{j}^{(d)}에 대한 손실률은  
+  다변수 함수에 대한 미분을 통해 $w$, $b$ 값을 업데이트할 수 있다. 가령,  
+  $ w_{1,1}^{(0)} $ 값에 의한 손실률 J의 미분 즉, $\nabla_{w_{1,1}^{(0)}} J$ 는, 그 다음 레이어 (1), (2), ... 의 모든 $ w_{i,j}^{(1)}, w_{i,j}^{(2)}, ...$의 영향을 받는다.  
+  따라서 하나의 $w$를 update 하기 위해서는 매우 복잡한 계산비용이 필요하다.  
+  또한 모든 Neuron들의 $w$, $b$를 계산해야 하므로 비용은 매우 커진다.  
+  <br>
+  이를 해결하기 위해 Chain rule을 사용하면 계산 비용을 줄일 수 있다.  
+  <br>
+  (그림)  
+  <br>
+  손실률 $J$ 를 cross entrophy라 가정하면, 
   
 ----------------------------------------------------------------------------------------------------------------------------------
 
