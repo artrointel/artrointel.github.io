@@ -60,17 +60,18 @@ lattice*, AIP Advances (2016). ([PDF](http://aip.scitation.org/doi/pdf/10.1063/1
   
   
 # * Personal Projects
-// TODO: + attach snapshots, brief descriptions, github pages, youtube links, .apk files
 
 ### 2017
-* [In progress] convolutional neural networks [[NN]()] [[CNN]()]  
+* [In progress] convolutional neural networks 
 C++ project (w/o external libraries)
 
 * [In progress] opengl es study  
 GLES 3.0 based on android native C++  
+<br>
+<br><br>
 
 ### 2016  
-* Sword Art Online (mobile indie game) ([[YouTube]()] )  
+* Sword Art Online (mobile indie game)  
   * [SAO](https://en.wikipedia.org/wiki/Sword_Art_Online) Animation Indie RPG game using Unity3D  
 <br>
 <br><br>
