@@ -108,7 +108,8 @@ $$ J = \frac{1}{2} \sum_{i=1}^N (t_{i} - x_{i})^2 $$
   <br>
   * softmax  
   
-  $ f(x_{i}) = \frac {e^{x_{i}}}{\sum^N e^{x_{j}}} $  
+  $ f(x_{i}) = \frac {e^{x_{i}}}{\sum_{j=1}^N e^{x_{j}}} $  
+  
   
 ### 5. Back propagation  
   실제로는 Single Perceptron가 아닌 다수의 Neurons와 Layers가 존재할 것이므로, 최종 결과 값 x_{j}^{(d)}에 대한 손실률은  
@@ -117,11 +118,33 @@ $$ J = \frac{1}{2} \sum_{i=1}^N (t_{i} - x_{i})^2 $$
   따라서 하나의 $w$를 update 하기 위해서는 매우 복잡한 계산비용이 필요하다.  
   또한 모든 Neuron들의 $w$, $b$를 계산해야 하므로 비용은 매우 커진다.  
   <br>
-  이를 해결하기 위해 Chain rule을 사용하면 계산 비용을 줄일 수 있다.  
+  이를 해결하기 위해 아래의 그림처럼 Chain rule을 통해 계산하여 비용을 대폭 줄일 수 있다.  
+  <br>
+  (그림)  
+  
+  <br>
+  그림에서의 손실률 $J$ 를 아래의 cross entropy라 가정하면, 
+  
+  <br>
+  * cross-entropy  
+  <br>
+  $$ J(x_{k}^{d}) = -\sum_{i=1}t_{i} \log x_{i}^{d} \text{, where t is an answer vector, d is outputlayer, k is one of index i} $$
+  
+  ⓐ $ definitely \frac {\partial J }{\partial x_{k}} = - \frac {t}{x_{k}} \\
+  \therefore \frac {\partial J }{\partial x} = - \frac {t}{x} $  
   <br>
   (그림)  
   <br>
-  손실률 $J$ 를 cross entrophy라 가정하면, 
+  ⓑ $z^{(2)} \rightarrow x^{(2)} \rightarrow \nabla_{z^{(2)}} J$ 의 손실률 $\nabla_{z^{(2)}} J $을 구해보자.  
+  위 그림에서 보듯이, 특정 $z_{k}^{(2)} \text{, } (k = i) \text{ or } (k \ne i) $에 의한 cross entropy 계산은 다른 모든 $x_{i}^{(2)}$에 모두 영향을 미치므로,  
+  모든 $x_{i}^{(2)}$에 대한 변화율을 합해주어야 한다. 즉,  
+  <br>
+  ⓒ $ \begin{align} \nabla_{z_{k}} J &= \sum_{i} \frac{\partial J}{\partial x_{i}} \frac{\partial x_{i}}{\partial z_{k}} \text{, } (k = i) \text{ or } (k \ne i) \\
+   &= \sum_{i \ne k} \frac{\partial J}{\partial x_{i}} \frac{\partial x_{i}}{\partial z_{k}} + \frac{\partial J}{\partial x_{k}} \frac{\partial x_{k}}{\partial z_{k}} \end{align} $
+  <br>
+  이미 ⓐ에서 $ \frac {\partial J }{\partial x} = - \frac {t}{x} $는 알고 있으니, $ \frac{\partial x}{\partial z} $에 대해 생각해보자.
+  
+  
   
 ----------------------------------------------------------------------------------------------------------------------------------
 
