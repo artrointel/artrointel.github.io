@@ -89,7 +89,7 @@ $$ J = \frac{1}{2} \sum_{i=1}^N (t_{i} - x_{i})^2 $$
   $ pf) $ <br>
   $ \begin{align} \\ 
   \frac {d f}{d x} &= -(1+e^{-x})^{-2} (-e^{-x})  \\\\ 
-  &= \frac {1}{1+e^{-x}} \frac {e^{-x}}{1+e^{-x}} \\\\ 
+  &= \frac {1}{1+e^{-x}} \frac {e^{-x}}{1+e^{-x}} \\ 
   \therefore \frac {d f}{d x} &= f(x) (1-f(x))  \end{align} $
      
   <br>
