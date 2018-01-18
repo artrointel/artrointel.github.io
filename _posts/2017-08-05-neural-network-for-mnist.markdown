@@ -61,7 +61,7 @@ $$ F(x) \simeq \sum_{i=1}^N v_i \Phi(w_i^Tx + b_i) = f(x) \text{ where } i \in 1
   이를 위해서는 $ x_{i}^{(1)} $의 계산에 참여한 $w_{i}^{(1)}$ 및 $b_{i}^{(1)}$ 값이 손실률에 얼마나 기여했는지에 대해 찾아서 적절히 update해야 할 것이다.  
 <br>
 $$ \begin{align}
-w &\leftarrow w - \mu \frac{\partial J}{\partial w} , \mu \text{ is learning rate} \\
+w &\leftarrow w - \mu \frac{\partial J}{\partial w} , \mu \text{ is learning rate}  \\\\ 
 b &\leftarrow b - \mu \frac{\partial J}{\partial b} , \mu \text{ is learning rate} \end{align} $$  
 <br>
   예를 들어 손실함수 J를 아래의 mean-square인 경우를 생각해보자.  
@@ -89,19 +89,19 @@ $$ J = \frac{1}{2} \sum_{i=1}^N (t_{i} - x_{i})^2 $$
   $ pf) $ <br>
   $ \begin{align} \\ 
   \frac {d f}{d x} &= -(1+e^{-x})^{-2} (-e^{-x})  \\\\ 
-  &= \frac {1}{1+e^{-x}} \frac {e^{-x}}{1+e^{-x}} \\ 
+  &= \frac {1}{1+e^{-x}} \frac {e^{-x}}{1+e^{-x}}  \\\\ 
   \therefore \frac {d f}{d x} &= f(x) (1-f(x))  \end{align} $
      
   <br>
   * ReLU  
   $ f(x) = \begin{cases} \\
-   0 \text{, if } x \le 0 \\ 
-   x \text{, if } x \gt 1 \\ 
+   0 \text{, if } x \le 0  \\\\ 
+   x \text{, if } x \gt 1  \\\\ 
    \end{cases}
    \text{, definitely }
    \frac {d f}{d x} = \begin{cases} \\
-   0 \text{, if } x \le 0 \\ 
-   1 \text{, if } x \gt 1 \\ 
+   0 \text{, if } x \le 0  \\\\ 
+   1 \text{, if } x \gt 1  \\\\ 
    \end{cases}
   $
   
@@ -131,7 +131,7 @@ $$ J = \frac{1}{2} \sum_{i=1}^N (t_{i} - x_{i})^2 $$
   <br>
   $$ J(x_{k}^{d}) = -\sum_{i=1}t_{i} \log x_{i}^{d} \text{ , where t is an answer vector, d is an output layer, k is one of index i} $$
   
-  ⓐ $ \begin{align} \text{definitely, } \frac {\partial J }{\partial x_{k}} &= - \frac {t}{x_{k}} \\
+  ⓐ $ \begin{align} \text{definitely, } \frac {\partial J }{\partial x_{k}} &= - \frac {t}{x_{k}}  \\\\ 
   \therefore \frac {\partial J }{\partial x} &= - \frac {t}{x} \end{align} $  
   <br>
   (그림)  
@@ -140,7 +140,7 @@ $$ J = \frac{1}{2} \sum_{i=1}^N (t_{i} - x_{i})^2 $$
   위 그림에서 보듯이, 특정 $z_{k}^{(2)} \text{, } (k = i) \text{ or } (k \ne i) $에 의한 cross entropy 계산은 다른 모든 $x_{i}^{(2)}$에 모두 영향을 미치므로,  
   모든 $x_{i}^{(2)}$에 대한 변화율을 합해주어야 한다. 즉,  
   <br>
-  ⓒ $ \begin{align} \nabla_{z_{k}} J &= \sum_{i} \frac{\partial J}{\partial x_{i}} \frac{\partial x_{i}}{\partial z_{k}} \text{, } (k = i) \text{ or } (k \ne i) \\
+  ⓒ $ \begin{align} \nabla_{z_{k}} J &= \sum_{i} \frac{\partial J}{\partial x_{i}} \frac{\partial x_{i}}{\partial z_{k}} \text{, } (k = i) \text{ or } (k \ne i)  \\\\ 
    &= \sum_{i \ne k} \frac{\partial J}{\partial x_{i}} \frac{\partial x_{i}}{\partial z_{k}} + \frac{\partial J}{\partial x_{k}} \frac{\partial x_{k}}{\partial z_{k}} \end{align} $
   <br>
   이미 ⓐ에서 $ \frac {\partial J }{\partial x} = - \frac {t}{x} $는 알고 있으니, $ \frac{\partial x}{\partial z} $에 대해 생각해보자.
