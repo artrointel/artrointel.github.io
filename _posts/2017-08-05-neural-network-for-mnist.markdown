@@ -42,8 +42,9 @@ $$ F(x) \simeq \sum_{i=1}^N v_i \Phi(w_i^Tx + b_i) = f(x) \text{ where } i \in 1
   
   위의 그림에서 다음 Layer의 $ x_{i}^{(1)} $를 일반화하면 다음과 같다.  
 <br>
-  $$ f(\sum_{j=1}^N w_{i,j}^{(1)} x_{j}^{(0)} + b_{i}^{(1)}) = x_{i}^{(1)} \text{, f() is an activation function. } $$
+  $$ f(\sum_{j=1}^N w_{i,j}^{(1)} x_{j}^{(0)} + b_{i}^{(1)}) = x_{i}^{(1)} \text{, f() is an activation function. } $$  
 <br>
+
   이 때, 편의 상 $ z_{i}^{(1)} = \sum_{j=1}^N w_{i,j}^{(1)} x_{j}^{(0)} + b_{i}^{(1)} $ 라 정의하자.  
   
   그러면 $ f(z_{i}^{(1)}) = x_{i}^{(1)} $. 이며, 간단히 $ f(\vec z) = \vec x$ 로 표기할 수 있다.  
@@ -95,19 +96,17 @@ $$ J = \frac{1}{2} \sum_{i=1}^N (t_{i} - x_{i})^2 $$
   <br>
   * ReLU  
   $ f(x) = \begin{cases} \\
-   0 \text{, if } x \le 0  \\\\ 
-   x \text{, if } x \gt 1  \\\\ 
-   \end{cases}
-   \text{, definitely }
-   \frac {d f}{d x} = \begin{cases} \\
-   0 \text{, if } x \le 0  \\\\ 
-   1 \text{, if } x \gt 1  \\\\ 
-   \end{cases}
-  $
+  0 \text{, if } x \le 0  \\\\ 
+  x \text{, if } x \gt 1  \\\\ 
+  \end{cases}
+  \text{, definitely }
+  \frac {d f}{d x} = \begin{cases} \\
+  0 \text{, if } x \le 0  \\\\ 
+  1 \text{, if } x \gt 1  \\\\ 
+  \end{cases} $
   
   <br>
   * softmax  
-  
   $ f(x_{i}) = \frac {e^{x_{i}}}{\sum_{j=1}^N e^{x_{j}}} $  
   
   
@@ -140,10 +139,10 @@ $$ J = \frac{1}{2} \sum_{i=1}^N (t_{i} - x_{i})^2 $$
   위 그림에서 보듯이, 특정 $z_{k}^{(2)} \text{, } (k = i) \text{ or } (k \ne i) $에 의한 cross entropy 계산은 다른 모든 $x_{i}^{(2)}$에 모두 영향을 미치므로,  
   모든 $x_{i}^{(2)}$에 대한 변화율을 합해주어야 한다. 즉,  
   <br>
-  ⓒ $ \begin{align} \nabla_{z_{k}} J &= \sum_{i} \frac{\partial J}{\partial x_{i}} \frac{\partial x_{i}}{\partial z_{k}} \text{, } (k = i) \text{ or } (k \ne i)  \\\\ 
+  ⓒ $ \begin{align} \nabla_{z_{k}} J &= \sum_{i} \color{red}{\frac{\partial J}{\partial x_{i}}} \color{blue}{\frac{\partial x_{i}}{\partial z_{k}}} \text{, } (k = i) \text{ or } (k \ne i)  \\\\ 
    &= \sum_{i \ne k} \frac{\partial J}{\partial x_{i}} \frac{\partial x_{i}}{\partial z_{k}} + \frac{\partial J}{\partial x_{k}} \frac{\partial x_{k}}{\partial z_{k}} \end{align} $
   <br>
-  이미 ⓐ에서 $ \frac {\partial J }{\partial x} = - \frac {t}{x} $는 알고 있으니, $ \frac{\partial x}{\partial z} $에 대해 생각해보자.
+  그런데 이미 ⓐ에서 $ \color{red}{\frac {\partial J }{\partial x}} = - \frac {t}{x} $는 알고 있으니, $ \color{blue} {\frac{\partial x}{\partial z}} $에 대해 생각해보자.
   
   
   
