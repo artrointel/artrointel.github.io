@@ -88,8 +88,8 @@ $$ J = \frac{1}{2} \sum_{i=1}^N (t_{i} - x_{i})^2 $$
   <br>
   $ pf) $ <br>
   $ \begin{align} \\ 
-  \frac {d f}{d x} &= -(1+e^{-x})^{-2} (-e^{-x})  \\ 
-  &= \frac {1}{1+e^{-x}} \frac {e^{-x}}{1+e^{-x}} \\
+  \frac {d f}{d x} &= -(1+e^{-x})^{-2} (-e^{-x})  \\\\ 
+  &= \frac {1}{1+e^{-x}} \frac {e^{-x}}{1+e^{-x}} \\\\
   \therefore \frac {d f}{d x} &= f(x) (1-f(x))  \end{align} $
      
   <br>
@@ -112,26 +112,27 @@ $$ J = \frac{1}{2} \sum_{i=1}^N (t_{i} - x_{i})^2 $$
   
   
 ### 5. Back propagation  
-  실제로는 Single Perceptron가 아닌 다수의 Neurons와 Layers가 존재할 것이므로, 최종 결과 값 x_{j}^{(d)}에 대한 손실률은  
-  다변수 함수에 대한 미분을 통해 $w$, $b$ 값을 업데이트할 수 있다. 가령,  
-  $ w_{1,1}^{(0)} $ 값에 의한 손실률 J의 미분 즉, $\nabla_{w_{1,1}^{(0)}} J$ 는, 그 다음 레이어 (1), (2), ... 의 모든 $ w_{i,j}^{(1)}, w_{i,j}^{(2)}, ...$의 영향을 받는다.  
-  따라서 하나의 $w$를 update 하기 위해서는 매우 복잡한 계산비용이 필요하다.  
-  또한 모든 Neuron들의 $w$, $b$를 계산해야 하므로 비용은 매우 커진다.  
+  실제 Neural network 구성에서는 Single perceptron이 아닌 다수의 Neurons와 Layers가 존재할 것이므로,  
+  최종 결과 값 $ x_{j}^{(d)} $에 대한 손실률은 다변수 함수에 대한 편미분을 통해 $w$, $b$ 값을 업데이트할 수 있다. 가령,  
+  어떤 $ w_{1,1}^{(0)} $ 값에 의한 손실률 J의 미분 즉 $\nabla_{w_{1,1}^{(0)}} J$ 는, 전파하였던 레이어들의 모든 $ w_{i,j}^{(1)}, w_{i,j}^{(2)}, ...$의 영향을 받는다.  
+  따라서 하나의 $w_{i,j}^{(d)} $를 update 하기 위해서는 매우 큰 계산비용이 필요하다.  
+  또한 각각의 모든 Neurons의 $\vec w$, $\vec b$를 update해야 하므로 비용은 더욱 커진다.  
   <br>
   이를 해결하기 위해 아래의 그림처럼 Chain rule을 통해 계산하여 비용을 대폭 줄일 수 있다.  
   <br>
+  
   (그림)  
   
   <br>
-  그림에서의 손실률 $J$ 를 아래의 cross entropy라 가정하면, 
+  그림에서의 손실률 $J$ 를 아래의 cross entropy라 가정하면,
   
   <br>
   * cross-entropy  
   <br>
-  $$ J(x_{k}^{d}) = -\sum_{i=1}t_{i} \log x_{i}^{d} \text{, where t is an answer vector, d is outputlayer, k is one of index i} $$
+  $$ J(x_{k}^{d}) = -\sum_{i=1}t_{i} \log x_{i}^{d} \text{ , where t is an answer vector, d is an output layer, k is one of index i} $$
   
-  ⓐ $ definitely \frac {\partial J }{\partial x_{k}} = - \frac {t}{x_{k}} \\
-  \therefore \frac {\partial J }{\partial x} = - \frac {t}{x} $  
+  ⓐ $ \begin{align} \text{definitely, } \frac {\partial J }{\partial x_{k}} &= - \frac {t}{x_{k}} \\
+  \therefore \frac {\partial J }{\partial x} &= - \frac {t}{x} \end{align} $  
   <br>
   (그림)  
   <br>
