@@ -42,7 +42,7 @@ $$ F(x) \simeq \sum_{i=1}^N v_i \Phi(w_i^Tx + b_i) = f(x) \text{ where } i \in 1
   
   위의 그림에서 다음 Layer의 $ x_{i}^{(1)} $를 일반화하면 다음과 같다.  
 <br>
-  ### $$ f(\sum_{j=1}^N w_{i,j}^{(1)} x_{j}^{(0)} + b_{i}^{(1)}) = x_{i}^{(1)} \text{, f() is an activation function. } $$
+  $$ f(\sum_{j=1}^N w_{i,j}^{(1)} x_{j}^{(0)} + b_{i}^{(1)}) = x_{i}^{(1)} \text{, f() is an activation function. } $$
 <br>
   이 때, 편의 상 $ z_{i}^{(1)} = \sum_{j=1}^N w_{i,j}^{(1)} x_{j}^{(0)} + b_{i}^{(1)} $ 라 정의하자.  
   
@@ -60,8 +60,9 @@ $$ F(x) \simeq \sum_{i=1}^N v_i \Phi(w_i^Tx + b_i) = f(x) \text{ where } i \in 1
   따라서 정답 값 $ t_{i} $ 와 예측 값 $ x_{i}^{(1)} $ 의 오차(이하 손실률 J)를 계산하고, 정답으로 근사시킬 $w(weight) $ 및 $ b(bias)$의 값을 찾아가야 한다.  
   이를 위해서는 $ x_{i}^{(1)} $의 계산에 참여한 $w_{i}^{(1)}$ 및 $b_{i}^{(1)}$ 값이 손실률에 얼마나 기여했는지에 대해 찾아서 적절히 update해야 할 것이다.  
 <br>
-$$ w \leftarrow w - \mu \frac{\partial J}{\partial w} , \mu \text{ is learning rate} $$  
-$$ b \leftarrow b - \mu \frac{\partial J}{\partial b} , \mu \text{ is learning rate} $$  
+$$ \begin{align}
+w &\leftarrow w - \mu \frac{\partial J}{\partial w} , \mu \text{ is learning rate} \\
+b &\leftarrow b - \mu \frac{\partial J}{\partial b} , \mu \text{ is learning rate} \end{align} $$  
 <br>
   예를 들어 손실함수 J를 아래의 mean-square인 경우를 생각해보자.  
 <br>
@@ -85,8 +86,8 @@ $$ J = \frac{1}{2} \sum_{i=1}^N (t_{i} - x_{i})^2 $$
   * sigmoid  
   $ f(x) = \frac{1}{1+e^{-x}}$ , $ \frac {d f}{d x} = f(x) (1-f(x)) $  
   <br>
-  $ pf) \\ 
-  \begin{align} \\ 
+  $ pf) $ <br>
+  $ \begin{align} \\ 
   \frac {d f}{d x} &= -(1+e^{-x})^{-2} (-e^{-x})  \\ 
   &= \frac {1}{1+e^{-x}} \frac {e^{-x}}{1+e^{-x}} \\
   \therefore \frac {d f}{d x} &= f(x) (1-f(x))  \end{align} $
@@ -97,9 +98,8 @@ $$ J = \frac{1}{2} \sum_{i=1}^N (t_{i} - x_{i})^2 $$
    0 \text{, if } x \le 0 \\ 
    x \text{, if } x \gt 1 \\ 
    \end{cases}
-  $ , definitely 
-
-  $ \frac {d f}{d x} = \begin{cases} \\
+   \text{, definitely }
+   \frac {d f}{d x} = \begin{cases} \\
    0 \text{, if } x \le 0 \\ 
    1 \text{, if } x \gt 1 \\ 
    \end{cases}
