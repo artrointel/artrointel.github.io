@@ -1374,6 +1374,7 @@ a.newer-posts:hover {
     margin-bottom: 10px;
   }
   .content-box {
+	line-height: 2;
     padding: 20px 10px;
     display: -webkit-box;
     display: -webkit-flex;
