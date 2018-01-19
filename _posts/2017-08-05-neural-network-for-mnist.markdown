@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Neural Network for mnist
+title: Neural Network
 date: 2017-09-12 13:32:20 +0300
 description: Experimental c++ with openMP for mnist example
 img: mnist-result.jpg
@@ -154,10 +154,45 @@ $$ J = \frac{1}{2} \sum_{i=1}^N (t_{i} - x_{i})^2 $$
   <br><br>
   
   *ii)* $ i \neq k $ <br>
-  $ \frac{\partial x_{i}}{\partial z_{k}} = \frac{0 S - e^{z_{i} e^{z_{k}}}} {S^2} = -x_{i} x_{k} $
+  $ \frac{\partial x_{i}}{\partial z_{k}} = \frac{0 \cdot S - e^{z_{i}} e^{z_{k}}} {S^2} = \frac{- e^{z_{i}} e^{z_{k}}} {S \cdot S} = -x_{i} x_{k} $
+  
   <br><br>
   
   이제 ⓒ의 식으로 돌아와서 다시 정리하면,  
+  ⓒ $ \begin{align} \nabla_{z_{k}} J &= \sum_{i} \color{red}{\frac{\partial J}{\partial x_{i}}} \color{blue}{\frac{\partial x_{i}}{\partial z_{k}}} \text{, } (k = i) \text{ or } (k \ne i)  \\\\ 
+   &= \sum_{i \ne k} \frac{\partial J}{\partial x_{i}} \frac{\partial x_{i}}{\partial z_{k}} + \frac{\partial J}{\partial x_{k}} \frac{\partial x_{k}}{\partial z_{k}}   \\\\ 
+   &= \sum_{i \ne k} (- \frac{t_{i}}{x_{i}}) \cdot (-x_{i} x_{k}) + (- \frac{t_{k}}{x_{k}}) \cdot ( x_{k} (1-x_{k}))   \\\\ 
+   &= x_{k} \sum_{i \ne k} t_{i} + t_{k} (x_{k}-1) = x_{k} \sum_{i} t_{i} - t_{k}   \\\\ 
+   &= x_{k} - t_{k} \text{ ,  } \because \sum t_{i} = 1   \\\\ 
+   \therefore \frac{\partial J}{\partial z} &= x-t \end{align}$  
+  
+  
+  ⓓ $w$, $b$의 변화율을 구하기에 앞서 $ z_{k}^{(d)} $의 정의를 Layer $d$에 대하여 정리하면 다음과 같다.
+  <br>
+  $$ z_{i}^{(d)} = \sum_{j=1}^N w_{i,j}^{(d)} x_{j}^{(d-1)} + b_{i}^{(d)} $$
+  <br>
+  
+  아래 ⓔ, ⓕ를 통해 각 $w$, $b$의 변화율을 차례로 계산해보자.
+  
+  ⓔ $w$의 변화율  
+  $ \frac{\partial J}{\partial w_{i,j}^{(d)}} = \color{red}{\frac{\partial J}{\partial z_{i}^{(d)}}} \cdot \color{blue}{\frac{\partial z_{i}^{(d)}} {\partial w_{i,j}^{(d)}}} $ 이고,  
+  $ \color{red}{\frac{\partial J}{\partial z_{i}^{(d)}}} $ 는 ⓒ에서 이미 구한 값이다.  
+  또한 $ \color{blue}{\frac{\partial z_{i}^{(d)}} {\partial w_{i,j}^{(d)}}} $는 명백히 $ x_{i}^{(d-1)} $ 이므로, 따라서  
+  <br>
+  $$ \therefore \frac{\partial J}{\partial w_{i,j}^{(d)}} = \frac{\partial J}{\partial z_{i}^{(d)}} \cdot x_{i}^{(d-1)} $$
+  <br><br>
+  
+  ⓕ $b$의 변화율  
+  $ \begin{align} \frac{\partial J}{\partial b_{i}^{(d)}} &= \frac{\partial J}{\partial z_{i}^{(d)}} \cdot \frac{\partial z_{i}^{(d)}}{\partial b_{i}^{(d)}}   \\\\ 
+  &= \frac{\partial J}{\partial z_{i}^{(d)}} \text{  } (\because definitely \frac{\partial z_{i}^{(d)}}{\partial b_{i}^{(d)}} = 1) \end{align} $ 
+  <br><br>
+  
+  ⓖ 마지막으로 $ \frac{\partial J} {\partial x_{j}^{(d-1)}} $를 구하면, 재귀적으로 ⓑ~ⓖ의 과정을 수행할 수 있다.  
+  $ \begin{align} \frac{\partial J} {\partial x_{j}^{(d-1)}} &= \frac{\partial J}{\partial z_{i}^{(d)}} \cdot \frac{\partial z_{i}^{(d)}} {\partial x_{j}^{(d-1)}}   \\\\ 
+  &= \frac{\partial J}{\partial z_{i}^{(d)}} \cdot w_{i,j}^{(d)} \end{align} $
+  <br>
+  여기에서 $ \frac{\partial J}{\partial z_{i}^{(d)}} $는 ⓒ에서 이미 구한 값이므로 $ \frac{\partial J} {\partial x_{j}^{(d-1)}} $의 계산이 가능하다.  
+  한편 이 예제에서는 softmax-cross entropy로 계산하였으므로, ⓒ에서의  $ \frac{\partial J}{\partial z_{i}^{(d)}} $는 activation function 종류에 따라 다르므로, 별도로 확인해 볼 필요는 있다.  
   
   
 ----------------------------------------------------------------------------------------------------------------------------------
