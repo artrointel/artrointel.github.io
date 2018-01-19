@@ -7,9 +7,9 @@ img: mnist-result.jpg
 tags: [mnist, neural network, nn, cnn]
 language: kr
 ---
-# (공책 내용 옮기는중..)
+# (수정 중)
 
-## Neural Network Theories focused on Mathematics
+## Neural Network based on Mathematics
 
 먼저 Universal Approximation Theorem을 알아볼 필요가 있다.
 
@@ -35,14 +35,14 @@ $$ F(x) \simeq \sum_{i=1}^N v_i \Phi(w_i^Tx + b_i) = f(x) \text{ where } i \in 1
   * Notation  
   아래와 같이 d번째 Layer에 존재하는 임의의 index i를 가지는 $ x $를 다음과 같이 표기하자.  
 <br>
-  $$ x_{i}^{(d)} $$  
+  $$ \Huge {x_{i}^{(d)} }$$  
 <br>
   
   <img src="http://artrointel.github.io/assets/projects/neural-network/perceptron.JPG" />  
   
   위의 그림에서 다음 Layer의 $ x_{i}^{(1)} $를 일반화하면 다음과 같다.  
 <br>
-  $$ f(\sum_{j=1}^N w_{i,j}^{(1)} x_{j}^{(0)} + b_{i}^{(1)}) = x_{i}^{(1)} \text{, f() is an activation function. } $$  
+  $$ \Large f(\sum_{j=1}^N w_{i,j}^{(1)} x_{j}^{(0)} + b_{i}^{(1)}) = x_{i}^{(1)} \text{, f() is an activation function. } $$  
 <br>
 
   이 때, 편의 상 $ z_{i}^{(1)} = \sum_{j=1}^N w_{i,j}^{(1)} x_{j}^{(0)} + b_{i}^{(1)} $ 라 정의하자.  
@@ -59,21 +59,21 @@ $$ F(x) \simeq \sum_{i=1}^N v_i \Phi(w_i^Tx + b_i) = f(x) \text{ where } i \in 1
   
   위 그림의 $ d = 1 $이 output layer일 때 $ x_{i}^{(1)} $ 은 예측 값이라 할 수 있다.  
   따라서 정답 값 $ t_{i} $ 와 예측 값 $ x_{i}^{(1)} $ 의 오차(이하 손실률 J)를 계산하고, 정답으로 근사시킬 $w(weight) $ 및 $ b(bias)$의 값을 찾아가야 한다.  
-  이를 위해서는 $ x_{i}^{(1)} $의 계산에 참여한 $w_{i}^{(1)}$ 및 $b_{i}^{(1)}$ 값이 손실률에 얼마나 기여했는지에 대해 찾아서 적절히 update해야 할 것이다.  
+  이를 위해서는 $ x_{i}^{(1)} $의 계산에 참여한 $w_{i}^{(1)}$ 및 $b_{i}^{(1)}$ 값이 손실률에 얼마나 기여했는지에 대해 찾아서 아래처럼 적절히 update해야 할 것이다.  
 <br>
 $$ \begin{align}
 w &\leftarrow w - \mu \frac{\partial J}{\partial w} , \mu \text{ is learning rate}  \\\\ 
 b &\leftarrow b - \mu \frac{\partial J}{\partial b} , \mu \text{ is learning rate} \end{align} $$  
 <br>
-  예를 들어 손실함수 J를 아래의 mean-square인 경우를 생각해보자.  
+  예를 들어 손실함수 J를 아래의 *mean-square*인 경우를 생각해보자.  
 <br>
-$$ J = \frac{1}{2} \sum_{i=1}^N (t_{i} - x_{i})^2 $$  
+$$ \Large J = \frac{1}{2} \sum_{i=1}^N (t_{i} - x_{i})^2 $$  
 <br>
   이 경우 그래프는 대략 아래와 같다.  
   
   (ppt작업 첨부)  
   
-  위의 mean-square function에서 역시 $ t_{i}=x_{i} $로 수렴하는 순간 손실률 $J = 0$이 된다.  
+  위의 mean-square 역시 $ t_{i}=x_{i} $로 수렴하는 순간 손실률 $J = 0$이 된다.  
   정답 값으로 근사할 수록 J의 변화율이 줄어드므로, 과정이 반복될 수록 수렴할 것을 유추할 수 있다.
 
 ----------------------------------------------------------------------------------------------------------------------------------
@@ -85,7 +85,7 @@ $$ J = \frac{1}{2} \sum_{i=1}^N (t_{i} - x_{i})^2 $$
   
   <br>
   * sigmoid  
-  $ f(x) = \frac{1}{1+e^{-x}}$ , $ \frac {d f}{d x} = f(x) (1-f(x)) $  
+  $ \Large f(x) = \frac{1}{1+e^{-x}}$ , $ \frac {d f}{d x} = f(x) (1-f(x)) $  
   <br>
   $ pf) $ <br>
   $ \begin{align} \\ 
@@ -95,7 +95,7 @@ $$ J = \frac{1}{2} \sum_{i=1}^N (t_{i} - x_{i})^2 $$
      
   <br>
   * ReLU  
-  $ f(x) = \begin{cases} \\
+  $ \Large f(x) = \begin{cases} \\
   0 \text{, if } x \le 0  \\\\ 
   x \text{, if } x \gt 1  \\\\ 
   \end{cases}
@@ -123,14 +123,15 @@ $$ J = \frac{1}{2} \sum_{i=1}^N (t_{i} - x_{i})^2 $$
   (그림)  
   
   <br>
-  그림에서의 손실률 $J$ 를 아래의 cross entropy라 가정하면,
+  그림처럼 손실률 $J$ 를 아래의 cross entropy라 가정하면,
   
   <br>
   * cross-entropy  
   <br>
-  $$ J(x_{k}^{d}) = -\sum_{i=1}t_{i} \log x_{i}^{d} \text{ , where t is an answer vector, d is an output layer, k is one of index i} $$
+  $$ \Large J(x_{k}^{d}) = -\sum_{i=1}t_{i} \log x_{i}^{d} \small \text{ , where t is an answer vector, d is an output layer, k is one of index i} $$
   
-  ⓐ $ \begin{align} \text{definitely, } \frac {\partial J }{\partial x_{k}} &= - \frac {t}{x_{k}}  \\\\ 
+  ⓐ$ \frac {\partial J }{\partial x_{k}} $  
+  $ \begin{align} \text{definitely, } \frac {\partial J }{\partial x_{k}} &= - \frac {t}{x_{k}}  \\\\ 
   \therefore \frac {\partial J }{\partial x} &= - \frac {t}{x} \end{align} $  
   <br>
   (그림)  
@@ -144,35 +145,35 @@ $$ J = \frac{1}{2} \sum_{i=1}^N (t_{i} - x_{i})^2 $$
   <br>
   그런데 이미 ⓐ에서 $ \color{red}{\frac {\partial J }{\partial x}} = - \frac {t}{x} $는 알고 있으니, $ \color{blue} {\frac{\partial x}{\partial z}} $에 대해 생각해보자.  
   <br>
-  위 그림처럼 cross entropy를 통해 손실률 J을 계산하기 전에 사용한 activation function은 softmax이다. 즉,
-  $ x_{k}^{(2)}  = f(z_{k}^{(2)}) = \frac{e^{z_{k}^{(2)}}} { \sum e^{z_{i}^{(2)}}} \text{ , Let } S =\sum e^{z_{i}^{(2)}} $
-  $z_{k}$에 대한 편미분은 $ i = k $ 인 경우와 $ i \neq k $ 인 경우로 나누어 계산할 수 있다.  
+  위 그림처럼 cross entropy를 통해 손실률 J을 계산하기 전에 사용한 activation function은 softmax이다. 즉,  
+  $ x_{k}^{(2)}  = f(z_{k}^{(2)}) = \frac{e^{z_{k}^{(2)}}} { \sum e^{z_{i}^{(2)}}} \text{ , Let } S =\sum e^{z_{i}^{(2)}} $  
+  여기에서 $x_{k}$의 $z_{k}$에 대한 편미분은 $ i = k $ 인 경우와 $ i \neq k $ 인 경우로 나누어 계산할 수 있다.  
   <br>
-  *i)* $ i = k $ <br>
+  *i)* $ i = k $ 인 경우 <br>
   $ \begin{align} \frac{\partial x_{i}}{\partial z_{k}} &= \frac{e^{z_{i}} S - e^{z_{k}} e^{z_{i}}}{S^2} = \frac{e^{z_{i}} (S - e^{z_{k}})} { S^2}   \\\\ 
-  &= \frac{e^z_{i}}{S} \frac{S-e^{z_{k}}}{S} = x_{i} (1-x_{i}) \text{, } \because e^{z_{i}} = e^{z_{k}} \end{align} $  
+  &= \frac{e^z_{i}}{S} \frac{S-e^{z_{k}}}{S} = x_{i} (1-x_{i}) \text{    } \because e^{z_{i}} = e^{z_{k}} \end{align} $  
   <br><br>
   
-  *ii)* $ i \neq k $ <br>
+  *ii)* $ i \neq k $ 인 경우 <br>
   $ \frac{\partial x_{i}}{\partial z_{k}} = \frac{0 \cdot S - e^{z_{i}} e^{z_{k}}} {S^2} = \frac{- e^{z_{i}} e^{z_{k}}} {S \cdot S} = -x_{i} x_{k} $
   
   <br><br>
   
   이제 ⓒ의 식으로 돌아와서 다시 정리하면,  
-  ⓒ $ \begin{align} \nabla_{z_{k}} J &= \sum_{i} \color{red}{\frac{\partial J}{\partial x_{i}}} \color{blue}{\frac{\partial x_{i}}{\partial z_{k}}} \text{, } (k = i) \text{ or } (k \ne i)  \\\\ 
+  $ \begin{align} \nabla_{z_{k}} J &= \sum_{i} \color{red}{\frac{\partial J}{\partial x_{i}}} \color{blue}{\frac{\partial x_{i}}{\partial z_{k}}} \text{, } (k = i) \text{ or } (k \ne i)  \\\\ 
    &= \sum_{i \ne k} \frac{\partial J}{\partial x_{i}} \frac{\partial x_{i}}{\partial z_{k}} + \frac{\partial J}{\partial x_{k}} \frac{\partial x_{k}}{\partial z_{k}}   \\\\ 
    &= \sum_{i \ne k} (- \frac{t_{i}}{x_{i}}) \cdot (-x_{i} x_{k}) + (- \frac{t_{k}}{x_{k}}) \cdot ( x_{k} (1-x_{k}))   \\\\ 
    &= x_{k} \sum_{i \ne k} t_{i} + t_{k} (x_{k}-1) = x_{k} \sum_{i} t_{i} - t_{k}   \\\\ 
-   &= x_{k} - t_{k} \text{ ,  } \because \sum t_{i} = 1   \\\\ 
-   \therefore \frac{\partial J}{\partial z} &= x-t \end{align}$  
+   &= x_{k} - t_{k} \text{ ,  } \because \sum t_{i} = 1  \end{align} $ <br><br>
+  $ \Large \therefore \frac{\partial J}{\partial z} = x-t $  
   
-  
-  ⓓ $w$, $b$의 변화율을 구하기에 앞서 $ z_{k}^{(d)} $의 정의를 Layer $d$에 대하여 정리하면 다음과 같다.
   <br>
-  $$ z_{i}^{(d)} = \sum_{j=1}^N w_{i,j}^{(d)} x_{j}^{(d-1)} + b_{i}^{(d)} $$
+  ⓓ 이제 $w$, $b$에 의한 J의 변화율을 구하기에 앞서 $ z_{k}^{(d)} $의 정의를 Layer $d$에 대하여 일반화하면 다음과 같다.  
+  <br>
+  $$ \Large z_{i}^{(d)} = \sum_{j=1}^N w_{i,j}^{(d)} x_{j}^{(d-1)} + b_{i}^{(d)} $$
   <br>
   
-  아래 ⓔ, ⓕ를 통해 각 $w$, $b$의 변화율을 차례로 계산해보자.
+  아래 ⓔ, ⓕ를 통해 각각의 변화율을 차례로 계산해보자.
   
   ⓔ $w$의 변화율  
   $ \frac{\partial J}{\partial w_{i,j}^{(d)}} = \color{red}{\frac{\partial J}{\partial z_{i}^{(d)}}} \cdot \color{blue}{\frac{\partial z_{i}^{(d)}} {\partial w_{i,j}^{(d)}}} $ 이고,  
@@ -192,7 +193,8 @@ $$ J = \frac{1}{2} \sum_{i=1}^N (t_{i} - x_{i})^2 $$
   &= \frac{\partial J}{\partial z_{i}^{(d)}} \cdot w_{i,j}^{(d)} \end{align} $
   <br>
   여기에서 $ \frac{\partial J}{\partial z_{i}^{(d)}} $는 ⓒ에서 이미 구한 값이므로 $ \frac{\partial J} {\partial x_{j}^{(d-1)}} $의 계산이 가능하다.  
-  한편 이 예제에서는 softmax-cross entropy로 계산하였으므로, ⓒ에서의  $ \frac{\partial J}{\partial z_{i}^{(d)}} $는 activation function 종류에 따라 다르므로, 별도로 확인해 볼 필요는 있다.  
+  <br>
+  이 예제에서는 softmax-cross entropy로 계산하였으므로, ⓒ에서의  $ \frac{\partial J}{\partial z_{i}^{(d)}} $는 activation function 종류에 따라 별도로 확인해 볼 필요는 있다.  
   
   
 ----------------------------------------------------------------------------------------------------------------------------------
