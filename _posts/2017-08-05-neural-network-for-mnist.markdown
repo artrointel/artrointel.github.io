@@ -110,6 +110,8 @@ $$ \Large J = \frac{1}{2} \sum_{i=1}^N (t_{i} - x_{i})^2 $$
   $ f(x_{i}) = \frac {e^{x_{i}}}{\sum_{j=1}^N e^{x_{j}}} $  
   
   
+----------------------------------------------------------------------------------------------------------------------------------
+  
 ### 5. Back propagation  
   실제 Neural network 구성에서는 Single perceptron이 아닌 다수의 Neurons와 Layers가 존재할 것이므로,  
   최종 결과 값 $ x_{j}^{(d)} $에 대한 손실률은 다변수 함수에 대한 편미분을 통해 $w$, $b$ 값을 업데이트할 수 있다. 가령,  
@@ -173,8 +175,8 @@ $$ \Large J = \frac{1}{2} \sum_{i=1}^N (t_{i} - x_{i})^2 $$
   $$ \Large z_{i}^{(d)} = \sum_{j=1}^N w_{i,j}^{(d)} x_{j}^{(d-1)} + b_{i}^{(d)} $$
   <br>
   
-  아래 ⓔ, ⓕ를 통해 각각의 변화율을 차례로 계산해보자.
-  
+  아래 ⓔ, ⓕ를 통해 각각의 변화율을 차례로 계산해보자.  
+  <br>
   ⓔ $w$의 변화율  
   $ \frac{\partial J}{\partial w_{i,j}^{(d)}} = \color{red}{\frac{\partial J}{\partial z_{i}^{(d)}}} \cdot \color{blue}{\frac{\partial z_{i}^{(d)}} {\partial w_{i,j}^{(d)}}} $ 이고,  
   $ \color{red}{\frac{\partial J}{\partial z_{i}^{(d)}}} $ 는 ⓒ에서 이미 구한 값이다.  
@@ -199,5 +201,4 @@ $$ \Large J = \frac{1}{2} \sum_{i=1}^N (t_{i} - x_{i})^2 $$
   
 ----------------------------------------------------------------------------------------------------------------------------------
 
-## Source code Implementation for the theories
 
