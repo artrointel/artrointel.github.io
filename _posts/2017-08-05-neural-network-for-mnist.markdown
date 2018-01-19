@@ -142,8 +142,22 @@ $$ J = \frac{1}{2} \sum_{i=1}^N (t_{i} - x_{i})^2 $$
   ⓒ $ \begin{align} \nabla_{z_{k}} J &= \sum_{i} \color{red}{\frac{\partial J}{\partial x_{i}}} \color{blue}{\frac{\partial x_{i}}{\partial z_{k}}} \text{, } (k = i) \text{ or } (k \ne i)  \\\\ 
    &= \sum_{i \ne k} \frac{\partial J}{\partial x_{i}} \frac{\partial x_{i}}{\partial z_{k}} + \frac{\partial J}{\partial x_{k}} \frac{\partial x_{k}}{\partial z_{k}} \end{align} $
   <br>
-  그런데 이미 ⓐ에서 $ \color{red}{\frac {\partial J }{\partial x}} = - \frac {t}{x} $는 알고 있으니, $ \color{blue} {\frac{\partial x}{\partial z}} $에 대해 생각해보자.
+  그런데 이미 ⓐ에서 $ \color{red}{\frac {\partial J }{\partial x}} = - \frac {t}{x} $는 알고 있으니, $ \color{blue} {\frac{\partial x}{\partial z}} $에 대해 생각해보자.  
+  <br>
+  위 그림처럼 cross entropy를 통해 손실률 J을 계산하기 전에 사용한 activation function은 softmax이다. 즉,
+  $ x_{k}^{(2)}  = f(z_{k}^{(2)}) = \frac{e^{z_{k}^{(2)}}} { \sum e^{z_{i}^{(2)}}} \text{ , Let } S =\sum e^{z_{i}^{(2)}} $
+  $z_{k}$에 대한 편미분은 $ i = k $ 인 경우와 $ i \neq k $ 인 경우로 나누어 계산할 수 있다.  
+  <br>
+  *i)* $ i = k $ <br>
+  $ \begin{align} \frac{\partial x_{i}}{\partial z_{k}} &= \frac{e^{z_{i}} S - e^{z_{k}} e^{z_{i}}}{S^2} = \frac{e^{z_{i}} (S - e^{z_{k}})} { S^2}   \\\\ 
+  &= \frac{e^z_{i}}{S} \frac{S-e^{z_{k}}}{S} = x_{i} (1-x_{i}) \text{, } \because e^{z_{i}} = e^{z_{k}} \end{align} $  
+  <br><br>
   
+  *ii)* $ i \neq k $ <br>
+  $ \frac{\partial x_{i}}{\partial z_{k}} = \frac{0 S - e^{z_{i} e^{z_{k}}}} {S^2} = -x_{i} x_{k} $
+  <br><br>
+  
+  이제 ⓒ의 식으로 돌아와서 다시 정리하면,  
   
   
 ----------------------------------------------------------------------------------------------------------------------------------
