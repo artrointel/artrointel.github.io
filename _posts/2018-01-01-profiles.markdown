@@ -63,8 +63,8 @@ lattice*, AIP Advances (2016). ([PDF](http://aip.scitation.org/doi/pdf/10.1063/1
 ### 2017 ~ Current
 * `In progress` convolutional neural networks  
 C++ project (w/o external libraries)  
-  * Neural Network based on Mathematics at [POST](https://artrointel.github.io/neural-network/)  
-  * Neural Network version has been successfully finished [github [NN](https://github.com/Team-AI-Learning/mnist_nn/tree/kim) 92% with mnist example]  
+  * Neural Network based on Mathematics [[POST](https://artrointel.github.io/neural-network/)]  
+  * Neural Network version has been successfully finished [github [NN](https://github.com/Team-AI-Learning/mnist_nn/tree/kim) over 92% with mnist example]  
   * CNN version is now in progress [github [CNN](https://github.com/Team-AI-Learning/mnist_nn/tree/kim_dev)]  
 <br>
 <br><br>
@@ -83,7 +83,7 @@ GLES 3.0 based on android native C++
 
 ### 2015  
 * Cross the bridge [[YouTube](https://www.youtube.com/watch?v=j9WeBjJaUlE&list=PLFvdltGhnoAOEi8856S_SpO5De_5REK_o)]  
-  * 3D game engine development and bridge simulation, project leader & physics engine developer  
+  * 3D game engine development and bridge simulation, project leader & physics engine([RPEngine](https://github.com/artrointel/RPEngine)) developer  
 <br>
 <img src="http://artrointel.github.io/assets/projects/cross-the-bridge/bridge.jpg" style="max-width: 600px; max-height: 400px;" />  
 <br><br>
@@ -103,7 +103,7 @@ GLES 3.0 based on android native C++
 <br><br>
 
 * Family Story  
-  * Family-specific SNS application  
+  * Family-specific SNS application based on android hybrid web app, project leader  
 <br>
 <img src="http://artrointel.github.io/assets/projects/family-story/family-story.jpg" style="max-width: 600px; max-height: 400px;" />  
 <br><br>
@@ -124,11 +124,11 @@ for DGSSM (2014)
 --------------------------------------------------------------------------------
   
 # * Basic Skills  
-### Languages
-C, C++, C#, Java, HTML, Shell, Python
+### Languages  
+C, C++, C#, Java, HTML, Shell, Python et al.  
 
-### Tools
-Android Studio, Visual Studio, VIM, Unity3D
+### Tools  
+Android Studio, Visual Studio, VIM, Unity3D et al.  
 
 --------------------------------------------------------------------------------
-#### Old profile - [[PDF](http://artrointel.github.io/assets/data/woohyun_kim_portfolio.pdf)] - last update: '2015.10
+#### Old profile - [[PDF](http://artrointel.github.io/assets/data/woohyun_kim_portfolio.pdf)] - last update: '2015.10  
