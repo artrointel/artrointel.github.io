@@ -3,7 +3,6 @@ layout: post
 title: Neural Network based on Mathematics
 date: 2017-09-12 13:32:20 +0300
 description: Experimental c++ with openMP for mnist example
-img: mnist-result.jpg
 tags: [mnist, neural network, nn, cnn]
 language: kr
 ---
