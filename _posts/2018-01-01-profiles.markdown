@@ -61,13 +61,13 @@ lattice*, AIP Advances (2016). ([PDF](http://aip.scitation.org/doi/pdf/10.1063/1
 # * Personal Projects
 
 ### 2017 ~ Current
-* `[In progress]` convolutional neural networks  
+* `In progress` convolutional neural networks  
 C++ project (w/o external libraries)  
-  * Neural Network based on Mathematics at [Post](https://artrointel.github.io/neural-network/)  
+  * Neural Network based on Mathematics at [POST](https://artrointel.github.io/neural-network/)  
   * Neural Network version has been successfully finished [github [NN](https://github.com/Team-AI-Learning/mnist_nn/tree/kim)]  
   * CNN version is now in progress [github [CNN](https://github.com/Team-AI-Learning/mnist_nn/tree/kim_dev)]  
 
-* `[In progress]` opengl es study  
+* `In progress` opengl es study  
 GLES 3.0 based on android native C++  
   * OpenGLES for learning _[OpenGL ES 3.0 Programming Guide SE](http://opengles-book.com/)_ is in progress [[ESRenderEngine](https://github.com/artrointel/ESRenderEngine)]
 <br>
