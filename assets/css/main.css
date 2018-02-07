@@ -1310,7 +1310,7 @@ a.newer-posts:hover {
 
 /* - - - - - - - - - - Media Styles - - - - - - - - - - */
 /* Medium Devices, Desktops */
-@media only screen and (min-width: 992px) {
+@media only screen and (max-width: 992px) {
   .post {
     width: 48%;
     max-width: 100%;
