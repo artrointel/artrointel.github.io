@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-
+<!-- removing Sidebar
 <aside class="sidebar">
   <header>
     <div class="about">
@@ -11,11 +11,11 @@ layout: default
       <div class="author-name">{{site.author}}</div>
       <p>{{site.about-author}}</p>
 	  <div class="side-list-item"><a href="{{site.baseurl}}/{{site.list-item-profile-page}}">{{site.list-item-profile}}</a>
-	  <!-- remove projects
-	   <div class="side-list-item"><a href="https://artrointel.github.io/">{{site.list-item-projects}}</a> --> 
+	  
+	   <div class="side-list-item"><a href="https://artrointel.github.io/">{{site.list-item-projects}}</a> 
 	  </div>
     </div>
-  </header> <!-- End Header -->
+  </header> 
   <footer>
     <section class="contact">
       <h3 class="contact-title">Contact me</h3>
@@ -46,11 +46,11 @@ layout: default
           <li class="email"><a href="mailto:artrointel@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
         {% endif %}
       </ul>
-    </section> <!-- End Section Contact -->
+    </section>
     <div class="copyright">
       <p>{{site.time | date: '%Y'}} &copy; {{site.author}}</p>
     </div>
-  </footer> <!-- End Footer -->
+  </footer>
 </aside> <!-- End Sidebar -->
 <div class="content-box clearfix">
   {{ content }}
