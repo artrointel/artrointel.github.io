@@ -77,25 +77,37 @@ GLES 3.0 based on android native C++
 
 ### 2016  
 * Sword Art Online (mobile indie game)  
-
+  * [SAO](https://en.wikipedia.org/wiki/Sword_Art_Online) Animation Indie RPG game using Unity3D  
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/FFwTGsyIyss?start=680" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<br>
+<br><br>
 
 ### 2015  
 * Cross the bridge [[YouTube](https://www.youtube.com/watch?v=j9WeBjJaUlE&list=PLFvdltGhnoAOEi8856S_SpO5De_5REK_o)]  
   * 3D game engine development and bridge simulation, project leader & physics engine([RPEngine](https://github.com/artrointel/RPEngine)) developer  
-
+<br>
+<img src="http://artrointel.github.io/assets/projects/cross-the-bridge/bridge.jpg" style="max-width: 600px; max-height: 400px;" />  
+<br><br>
   
 * SmartVoice [[YouTube](https://www.youtube.com/playlist?list=PLFvdltGhnoANUmPkSl9IVSECUSKcswDoK)]  
   * Voice-based android system service based on the third-party collective intelligence, API developer  
-
+<br>
+<img src="http://artrointel.github.io/assets/projects/smart-voice/settings.jpg" style="max-width: 600px; max-height: 400px;" />  
+<br><br>
 
 ### 2014  
 * Friendly Farm  [[YouTube](https://www.youtube.com/watch?v=8CI9qfpottU&list=PLFvdltGhnoAPDOS2YjjSNd1FlrL-JpJZt&index=1)]  
   * Social network game(SNG) with farming simulation & defense game, project leader  
-
+<br>
+<img src="http://artrointel.github.io/assets/projects/friendly-farm/farming.jpg" style="max-width: 600px; max-height: 400px;" />
+<img src="http://artrointel.github.io/assets/projects/friendly-farm/defense.jpg" style="max-width: 600px; max-height: 400px;" />  
+<br><br>
 
 * Family Story  
   * Family-specific SNS application based on android hybrid web app, project leader  
-
+<br>
+<img src="http://artrointel.github.io/assets/projects/family-story/family-story.jpg" style="max-width: 600px; max-height: 400px;" />  
+<br><br>
 
 --------------------------------------------------------------------------------
 
@@ -103,10 +115,12 @@ GLES 3.0 based on android native C++
 
 ### Vector, Matrix and Quaternion for 3D Programming  
 for DGSSM (2014)  
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/j8r1JUnNZet8E0" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/WoohyunKim16/3d-85975448" title="3D프로그래밍을 위한 벡터,행렬과 사원수" target="_blank">3D프로그래밍을 위한 벡터,행렬과 사원수</a> </strong> from <strong><a href="https://www.slideshare.net/WoohyunKim16" target="_blank">WoohyunKim16</a></strong> </div>
 
 ### OpenMP and MPI for Beginners  
 for DGSSM (2014)  
-
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/b8E8s3PsQjwKqr" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/WoohyunKim16/openmp-for-beginners" title="OpenMP for beginners" target="_blank">OpenMP for beginners</a> </strong> from <strong><a href="https://www.slideshare.net/WoohyunKim16" target="_blank">WoohyunKim16</a></strong> </div>
+[Download Tutorial codes]()
 
 --------------------------------------------------------------------------------
   
