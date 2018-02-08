@@ -1342,7 +1342,7 @@ a.newer-posts:hover {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flow-root;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
