@@ -78,7 +78,9 @@ GLES 3.0 based on android native C++
 ### 2016  
 * Sword Art Online (mobile indie game)  
   * [SAO](https://en.wikipedia.org/wiki/Sword_Art_Online) Animation Indie RPG game using Unity3D  
+<div class="video-responsive">
 <iframe src="https://www.youtube.com/embed/FFwTGsyIyss?start=680" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 <br>
 <br><br>
 
