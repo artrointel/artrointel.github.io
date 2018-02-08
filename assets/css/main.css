@@ -9,9 +9,9 @@
 html {
   line-height: 1.15;
   /* 1 */
-  -ms-text-size-adjust: 50%;
+  -ms-text-size-adjust: 30%;
   /* 2 */
-  -webkit-text-size-adjust: 50%;
+  -webkit-text-size-adjust: 30%;
   /* 2 */
 }
 
