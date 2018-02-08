@@ -78,7 +78,7 @@ GLES 3.0 based on android native C++
 ### 2016  
 * Sword Art Online (mobile indie game)  
   * [SAO](https://en.wikipedia.org/wiki/Sword_Art_Online) Animation Indie RPG game using Unity3D  
-  [[embed url=https://www.youtube.com/embed/FFwTGsyIyss?start=685]]  
+  [![Sword Art Online](https://www.youtube.com/embed/FFwTGsyIyss?start=685)](https://www.youtube.com/embed/FFwTGsyIyss?start=685 "Sword Art Online")
 <br>
 <br><br>
 
@@ -115,11 +115,11 @@ GLES 3.0 based on android native C++
 
 ### Vector, Matrix and Quaternion for 3D Programming  
 for DGSSM (2014)  
-[[embed url=www.slideshare.net/slideshow/embed_code/key/j8r1JUnNZet8E0]]
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/j8r1JUnNZet8E0" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/WoohyunKim16/3d-85975448" title="3D프로그래밍을 위한 벡터,행렬과 사원수" target="_blank">3D프로그래밍을 위한 벡터,행렬과 사원수</a> </strong> from <strong><a href="https://www.slideshare.net/WoohyunKim16" target="_blank">WoohyunKim16</a></strong> </div>
 <br>
 ### OpenMP and MPI for Beginners  
 for DGSSM (2014)  
-[[embed url=www.slideshare.net/slideshow/embed_code/key/b8E8s3PsQjwKqr]]
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/b8E8s3PsQjwKqr" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/WoohyunKim16/openmp-for-beginners" title="OpenMP for beginners" target="_blank">OpenMP for beginners</a> </strong> from <strong><a href="https://www.slideshare.net/WoohyunKim16" target="_blank">WoohyunKim16</a></strong> </div>
 
 --------------------------------------------------------------------------------
   
