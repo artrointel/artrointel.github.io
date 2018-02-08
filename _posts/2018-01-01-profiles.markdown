@@ -69,6 +69,7 @@ GLES 3.0 based on android native C++
 * Friendly Farm  [[YouTube](https://www.youtube.com/watch?v=8CI9qfpottU&list=PLFvdltGhnoAPDOS2YjjSNd1FlrL-JpJZt&index=1)]  
   * Social network game(SNG) with farming simulation & defense game, project leader  
 ![](http://artrointel.github.io/assets/projects/friendly-farm/defense.jpg)
+[[embed url=http://www.youtube.com/watch?v=6YbBmqUnoQM]]
 
 * Family Story  
   * Family-specific SNS application based on android hybrid web app, project leader  
