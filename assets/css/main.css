@@ -1314,6 +1314,7 @@ a.newer-posts:hover {
   .post {
     width: 48%;
     max-width: 100%;
+    font-size: 10px;
     margin: 0 0.9% 1.5%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1331,7 +1332,7 @@ a.newer-posts:hover {
     margin: 0 0 5px;
   }
   .post .post-content .post-title a {
-    font-size: 21px;
+    font-size: 10px;
   }
 }
 
@@ -1374,6 +1375,7 @@ a.newer-posts:hover {
     margin-bottom: 10px;
   }
   .content-box {
+	  font-size: 8px;
 	line-height: 2;
     padding: 20px 10px;
     display: -webkit-box;
@@ -1423,6 +1425,6 @@ a.newer-posts:hover {
     margin: 0 0 5px;
   }
   .post .post-content .post-title a {
-    font-size: 21px;
+    font-size: 5px;
   }
 }
