@@ -22,6 +22,12 @@ lattice*, AIP Advances (2016). ([PDF](http://aip.scitation.org/doi/pdf/10.1063/1
   
 # * Awards 
   
+| Date     |    Awards     | Description | Host |
+|:--------:| :-----------: | :---------- | ---: |
+| '15.09.09. | *K-Hackathon 3*, **Grand Award (Minister)** | Team _Globell_, Web-based global free internet phone service (front-end developer) | [App center](http://appcenter.kr/), [MSIP](http://www.msip.go.kr) |
+| '14.11.14. | *KIT Engineering Fair 2014*, **Silver Award** | Team _Friendly Farm_, Farming simulation game (project leader) | [KIT](http://kumoh.ac.kr), [LINC](http://linc.kumoh.ac.kr) |
+| '14.07.11. | *HPCSS@UNIST 2014*, **Outstanding Contribution Award** | Team _UIRI_, Simulation of double-slit experiment based on supercomputing (OpenMP, MPI) | [KISTI](http://www.kisti.re.kr) |  
+
 # * Working Experiences
 * Samsung Electronics (Feb. 2016 ~ current)  
   * Managing Mobile GPU Driver (ARM Mali GPU) for Samsung mobile products (Exynos)  
@@ -30,6 +36,23 @@ lattice*, AIP Advances (2016). ([PDF](http://aip.scitation.org/doi/pdf/10.1063/1
   * Regular member (24-1), Education Team Leader (Sep. 2014 ~ Mar. 2015)  
 
 # * History
+  
+| Date     | Description |
+|:--------:| :---------- |
+| '16.09. | * Participated in the project 'CRM' as a developer (Ref.: Choi *et al.*, AIP Advance (2016)) ('14.11. ~ ) |
+| '16.02. | * Joined in Samsung Electronics, Mobile Communications Division |
+| '16.01. | * Sword Art Online ~ Babel of dungeon ~ (Indie Local Game), developed with an artist ('15.11. ~ ) |
+| '15.09. | * Graduated from Kumoh National Institute of Technology (KIT) <br> * Team _Globell_ (front-end developer), K-Hackathon 3 |
+| '15.07. | * Completed Samsung Software Membership ('14.01. ~ ) |
+| '15.03. | * 'SmartVoice,' Voice-based android system service (developer) |
+| '14.11. | * KIT Engineering Fair 2014, 'Friendly Farm' (project leader) (14.05. ~ ) |
+| '14.09. | * 'Cross the bridge !,' Team _AKAPERA_ (project leader) & physics engine developer (RPEngine) ('14.05. ~ ) |
+| '14.07. | * Team _UIRI_, Simulation of double-slit experiment based on supercomputing (OpenMP, MPI), [HPCSS@UNIST 2014](http://usc.unist.ac.kr/hpcssunist-2014/) |
+| '14.05. | * Training course for Samsung Tizen web applications |
+| '14.01. | * Joined in [Samsung Software Membership](http://secmem.org/) (regular member, 24-1) |
+| '13.12. | * 'Family Story,' SNS for family (project leader). [Super App Korea 2013]() |
+| '12.07. | * Completed beginner course of supercomputing, [HPCSS@UNIST 2013](http://hpcschool.kr/hpcss2013/) |
+| '12.05. | * Finished military service ('10.04. ~ ) |
   
   
 --------------------------------------------------------------------------------
@@ -54,26 +77,37 @@ GLES 3.0 based on android native C++
 
 ### 2016  
 * Sword Art Online (mobile indie game)  
-
+  * [SAO](https://en.wikipedia.org/wiki/Sword_Art_Online) Animation Indie RPG game using Unity3D  
+  [[embed url=https://www.youtube.com/embed/FFwTGsyIyss?start=685]]  
+<br>
+<br><br>
 
 ### 2015  
 * Cross the bridge [[YouTube](https://www.youtube.com/watch?v=j9WeBjJaUlE&list=PLFvdltGhnoAOEi8856S_SpO5De_5REK_o)]  
   * 3D game engine development and bridge simulation, project leader & physics engine([RPEngine](https://github.com/artrointel/RPEngine)) developer  
-
+<br>
+![](http://artrointel.github.io/assets/projects/cross-the-bridge/bridge.jpg)  
+<br><br>
   
 * SmartVoice [[YouTube](https://www.youtube.com/playlist?list=PLFvdltGhnoANUmPkSl9IVSECUSKcswDoK)]  
   * Voice-based android system service based on the third-party collective intelligence, API developer  
-
+<br>
+![](http://artrointel.github.io/assets/projects/smart-voice/settings.jpg)  
+<br><br>
 
 ### 2014  
 * Friendly Farm  [[YouTube](https://www.youtube.com/watch?v=8CI9qfpottU&list=PLFvdltGhnoAPDOS2YjjSNd1FlrL-JpJZt&index=1)]  
   * Social network game(SNG) with farming simulation & defense game, project leader  
-![](http://artrointel.github.io/assets/projects/friendly-farm/defense.jpg)
-[[embed url=http://www.youtube.com/watch?v=6YbBmqUnoQM]]
+<br>
+![](http://artrointel.github.io/assets/projects/friendly-farm/farming.jpg)  
+![](http://artrointel.github.io/assets/projects/friendly-farm/defense.jpg)  
+<br><br>
 
 * Family Story  
   * Family-specific SNS application based on android hybrid web app, project leader  
-
+<br>
+![](http://artrointel.github.io/assets/projects/family-story/family-story.jpg)  
+<br><br>
 
 --------------------------------------------------------------------------------
 
@@ -81,10 +115,11 @@ GLES 3.0 based on android native C++
 
 ### Vector, Matrix and Quaternion for 3D Programming  
 for DGSSM (2014)  
-
+[[embed url=www.slideshare.net/slideshow/embed_code/key/j8r1JUnNZet8E0]]
+<br>
 ### OpenMP and MPI for Beginners  
 for DGSSM (2014)  
-
+[[embed url=www.slideshare.net/slideshow/embed_code/key/b8E8s3PsQjwKqr]]
 
 --------------------------------------------------------------------------------
   
