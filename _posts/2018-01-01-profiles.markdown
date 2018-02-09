@@ -81,8 +81,6 @@ GLES 3.0 based on android native C++
 <div class="video-responsive">
 <iframe src="https://www.youtube.com/embed/FFwTGsyIyss?start=690" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
-<br>
-<br><br>
 
 ### 2015  
 * Cross the bridge [[YouTube](https://www.youtube.com/watch?v=j9WeBjJaUlE&list=PLFvdltGhnoAOEi8856S_SpO5De_5REK_o)]  

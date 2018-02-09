@@ -1432,14 +1432,14 @@ a.newer-posts:hover {
 /* For youtube div */
 .video-responsive{
     overflow:hidden;
-    padding-bottom:56.25%;
+    padding-bottom:36.5%;
     position:relative;
     height:0;
 }
 .video-responsive iframe{
     left:0;
     top:0;
-    height:65%;
+    height:100%;
     width:65%;
     position:absolute;
 }
