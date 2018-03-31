@@ -108,7 +108,7 @@ GLES 3.0 based on android native C++
 ![](http://artrointel.github.io/assets/projects/friendly-farm/defense.jpg)  
 <br><br>
 
-* Family Story  [[Doc](http://artrointel.github.io/assets/projects/docs/docs.zip)]  
+* Family Story  [[Doc](http://artrointel.github.io/assets/projects/family-story/docs.zip)]  
   * Family-specific SNS application based on android hybrid web app, project leader  
 <br>
 ![](http://artrointel.github.io/assets/projects/family-story/family-story.jpg)  
