@@ -37,8 +37,8 @@ lattice*, AIP Advances (2016). ([PDF](http://aip.scitation.org/doi/pdf/10.1063/1
 
 # * History
   
-| Date     | Description |
-|:--------:| :---------- |
+| Date    | Description |
+|:-------:| :---------- |
 | '16.09. | * Participated in the project 'CRM' as a developer (Ref.: Choi *et al.*, AIP Advance (2016)) ('14.11. ~ ) |
 | '16.02. | * Joined in Samsung Electronics, Mobile Communications Division |
 | '16.01. | * Sword Art Online ~ Babel of dungeon ~ (Indie Local Game), developed with an artist ('15.11. ~ ) |
@@ -60,12 +60,17 @@ lattice*, AIP Advances (2016). ([PDF](http://aip.scitation.org/doi/pdf/10.1063/1
   
 # * Personal Projects
 
-### 2017 ~ Current
+### 2018
 * `In progress` convolutional neural networks  
 C++ project (w/o external libraries)  
-  * Neural Network based on Mathematics [[POST](https://artrointel.github.io/neural-network/)]  
-  * Neural Network version has been successfully finished [github [NN](https://github.com/Team-AI-Learning/mnist_nn/tree/kim) over 92% with mnist example]  
   * CNN version is now in progress [github [CNN](https://github.com/Team-AI-Learning/mnist_nn/tree/kim_dev)]  
+
+### 2017
+* `In progress` neural networks  
+C++ project (w/o external libraries)  
+  * Neural Network based on Mathematics [[POST](https://artrointel.github.io/neural-network/)]  
+  * Neural Network [github [NN](https://github.com/Team-AI-Learning/mnist_nn/tree/kim) over 92% with mnist example]  
+  
 <br>
 <br><br>
 
@@ -83,27 +88,27 @@ GLES 3.0 based on android native C++
 </div>
 
 ### 2015  
-* Cross the bridge [[YouTube](https://www.youtube.com/watch?v=j9WeBjJaUlE&list=PLFvdltGhnoAOEi8856S_SpO5De_5REK_o)]  
+* Cross the bridge [[YouTube](https://www.youtube.com/watch?v=j9WeBjJaUlE&list=PLFvdltGhnoAOEi8856S_SpO5De_5REK_o)] [[Doc](http://artrointel.github.io/assets/projects/cross-the-bridge/docs.zip)]  
   * 3D game engine development and bridge simulation, project leader & physics engine([RPEngine](https://github.com/artrointel/RPEngine)) developer  
 <br>
 ![](http://artrointel.github.io/assets/projects/cross-the-bridge/bridge.jpg)  
 <br><br>
   
-* SmartVoice [[YouTube](https://www.youtube.com/playlist?list=PLFvdltGhnoANUmPkSl9IVSECUSKcswDoK)]  
+* SmartVoice [[YouTube](https://www.youtube.com/playlist?list=PLFvdltGhnoANUmPkSl9IVSECUSKcswDoK)]  [[Doc](http://artrointel.github.io/assets/projects/smart-voice/docs.zip)]  
   * Voice-based android system service based on the third-party collective intelligence, API developer  
 <br>
 ![](http://artrointel.github.io/assets/projects/smart-voice/settings.jpg)  
 <br><br>
 
 ### 2014  
-* Friendly Farm  [[YouTube](https://www.youtube.com/watch?v=8CI9qfpottU&list=PLFvdltGhnoAPDOS2YjjSNd1FlrL-JpJZt&index=1)]  
+* Friendly Farm  [[YouTube](https://www.youtube.com/watch?v=8CI9qfpottU&list=PLFvdltGhnoAPDOS2YjjSNd1FlrL-JpJZt&index=1)]  [[Doc](http://artrointel.github.io/assets/projects/friendly-farm/docs.zip)]  
   * Social network game(SNG) with farming simulation & defense game, project leader  
 <br>
 ![](http://artrointel.github.io/assets/projects/friendly-farm/farming.jpg)  
 ![](http://artrointel.github.io/assets/projects/friendly-farm/defense.jpg)  
 <br><br>
 
-* Family Story  
+* Family Story  [[Doc](http://artrointel.github.io/assets/projects/docs/docs.zip)]  
   * Family-specific SNS application based on android hybrid web app, project leader  
 <br>
 ![](http://artrointel.github.io/assets/projects/family-story/family-story.jpg)  
