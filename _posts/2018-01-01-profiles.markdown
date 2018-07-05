@@ -30,7 +30,7 @@ lattice*, AIP Advances (2016). ([PDF](http://aip.scitation.org/doi/pdf/10.1063/1
 
 # * Working Experiences
 * Samsung Electronics (Feb. 2016 ~ current)  
-  * Managing Mobile GPU Driver (ARM Mali GPU) for Samsung mobile products (Exynos)  
+  * Managing Mobile GPU Driver (ARM Mali GPU) for Samsung mobile products (Exynos) (Feb. 2016 ~ Jul. 2018)  
 
 * Samsung Software Membership (Jan. 2014 ~ Jul. 2015)  
   * Regular member (24-1), Education Team Leader (Sep. 2014 ~ Mar. 2015)  
@@ -40,7 +40,7 @@ lattice*, AIP Advances (2016). ([PDF](http://aip.scitation.org/doi/pdf/10.1063/1
 | Date    | Description |
 |:-------:| :---------- |
 | '16.09. | * Participated in the project 'CRM' as a developer (Ref.: Choi *et al.*, AIP Advance (2016)) ('14.11. ~ ) |
-| '16.02. | * Joined in Samsung Electronics, Mobile Communications Division |
+| '16.02. | * Joined in Samsung Electronics, Mobile Communications Division, Graphics R&D Group |
 | '16.01. | * Sword Art Online ~ Babel of dungeon ~ (Indie Local Game), developed with an artist ('15.11. ~ ) |
 | '15.09. | * Graduated from Kumoh National Institute of Technology (KIT) <br> * Team _Globell_ (front-end developer), K-Hackathon 3 |
 | '15.07. | * Completed Samsung Software Membership ('14.01. ~ ) |
@@ -61,24 +61,26 @@ lattice*, AIP Advances (2016). ([PDF](http://aip.scitation.org/doi/pdf/10.1063/1
 # * Personal Projects
 
 ### 2018
-* `In progress` convolutional neural networks  
+* Mali GPU Blog for Korean  
+Architecture and Performance of Mali GPU [[POST](https://artrointel.github.io/mali-gpu-1/)]  
+<br>
+
+* `In progress` Convolutional Neural Network  
 C++ project (w/o external libraries)  
-  * CNN version is now in progress [github [CNN](https://github.com/Team-AI-Learning/mnist_nn/tree/kim_dev)]  
+  * Parallelized CNN  is now in progress [github [CNN](https://github.com/Team-AI-Learning/mnist_nn/tree/kim_dev)]  
+<br>
 
 ### 2017
-* `In progress` neural networks  
+* Neural Network  
 C++ project (w/o external libraries)  
   * Neural Network based on Mathematics [[POST](https://artrointel.github.io/neural-network/)]  
   * Neural Network [github [NN](https://github.com/Team-AI-Learning/mnist_nn/tree/kim) over 92% with mnist example]  
-  
 <br>
-<br><br>
 
 * `In progress` opengl es study  
 GLES 3.0 based on android native C++  
   * OpenGLES for learning _[OpenGL ES 3.0 Programming Guide SE](http://opengles-book.com/)_ is in progress [[ESRenderEngine](https://github.com/artrointel/ESRenderEngine)]  
 <br>
-<br><br>
 
 ### 2016  
 * Sword Art Online (mobile indie game)  
@@ -133,7 +135,7 @@ for DGSSM (2014)
 C, C++, C#, Java, HTML, Shell, Python et al.  
 
 ### Tools  
-Android Studio, Visual Studio, VIM, Unity3D et al.  
+Android Studio, Unity3D, DS-5, Renderdoc et al.  
 
 --------------------------------------------------------------------------------
 #### Old profile - [[PDF](http://artrointel.github.io/assets/data/woohyun_kim_portfolio.pdf)] - last update: '2015.10  
