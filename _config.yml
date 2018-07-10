@@ -37,6 +37,7 @@ plugins:
   - jekyll-paginate
   - jemoji
 
+future: true
 paginate: 8
 paginate_path: "/page/:num"
 
