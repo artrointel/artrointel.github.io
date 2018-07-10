@@ -6,9 +6,10 @@ description: Translation of The Mali GPU Blog
 tags: [mali, gpu, rendering, engine]
 language: kr
 ---
-**Mali GPU: An Abstract Machine, Part 1 - Frame Pipelining**  
+### Contents
+**[Mali GPU: An Abstract Machine, Part 1 - Frame Pipelining](http://artrointel.github.io/mali-gpu-1)**  
 [Mali GPU: An Abstract Machine, Part 2 - Tile based rendering](http://artrointel.github.io/mali-gpu-2)  
-----------------------------------------------------------------------------------------------------------------------------------
+<br>
 _본 자료는 ARM Community의 Blog를 통해 공개된 내용을 한국어로 번역한 것입니다._  
 _문의 : artrointel@gmail.com_  
 _출처 : https://community.arm.com/graphics/b/blog/posts/the-mali-gpu-an-abstract-machine-part-1---frame-pipelining_  
@@ -69,18 +70,18 @@ _출처 : https://community.arm.com/graphics/b/blog/posts/the-mali-gpu-an-abstra
   GPU가 연산 중일 때에는 CPU가 idle 상태가 되고, 반대로 CPU가 처리하는 동안에는 GPU가 idle인 과정이 번갈하가며 발생해야 한다.
   그렇지만, 이런 방식은 성능 최적화 면에서 매우 비효율적이고 납득할 수 없는 방식임은 분명하다.
   
-<br><center>
-![](https://community.arm.com/cfs-file/__key/communityserver-blogs-components-weblogfiles/00-00-00-20-66/4555.gles_2D00_sync.png)
-</center><br>
+<br>
+![](https://community.arm.com/cfs-file/__key/communityserver-blogs-components-weblogfiles/00-00-00-20-66/4555.gles_2D00_sync.png){: .center-image }
+<br>
   
   다행히도, 실제로는 CPU-GPU간의 이러한 idle time이 발생하지 않으며 실제 frame swap은 내부에서 비동기로 처리된다. 그렇지만, GLES API의
   사용 상에 있어서는 마치 동기화된 draw call인 것처럼 보일 수 있도록 설계되었다. 또한 이러한 설계 덕분에, 
   어떤 한 workload (역자 - 프레임 하나를 그리기 위한 일련의 작업)가 실제 GPU 파이프라인 내에서 처리되고 있는 동안에도, CPU는 GPU에게 새로운 작업을 
   전달할 수 있는 것이다. 이를 통해, 파이프라인 내부를 아래와 같이 꽉 찬 상태로 유지할 수 있으며 최적의 GPU 성능을 발휘하는 것을 가능케 하고 있다.
   
-<br><center>
-![](https://community.arm.com/cfs-file/__key/communityserver-blogs-components-weblogfiles/00-00-00-20-66/6622.gles_2D00_async.png)
-</center><br>
+<br>
+![](https://community.arm.com/cfs-file/__key/communityserver-blogs-components-weblogfiles/00-00-00-20-66/6622.gles_2D00_async.png){: .center-image }
+<br>
   
   매 작업 단위(unit)들은 Mali GPU 파이프라인 내에서 각각 render target을 기준으로 스케줄링 된다. (역자-렌더 타겟은 보통 window surface나 offscreen-
   render buffer 등이 될 것이다.) 여기서 하나의 렌더 타겟은 두 단계로 처리된다.
@@ -97,9 +98,9 @@ _출처 : https://community.arm.com/graphics/b/blog/posts/the-mali-gpu-an-abstra
 * fragment 처리
 ```
 
-<br><center>
-![](https://community.arm.com/cfs-file/__key/communityserver-blogs-components-weblogfiles/00-00-00-20-66/1016.gles_2D00_mali.png)
-</center><br>
+<br>
+![](https://community.arm.com/cfs-file/__key/communityserver-blogs-components-weblogfiles/00-00-00-20-66/1016.gles_2D00_mali.png){: .center-image }
+<br>
 
 #### 파이프라인 쓰로틀링(Pipeline Throttling) (역자 - GPU job 처리 지연을 위한 CPU 블로킹 기법)
   위 그림에서처럼 fragment 처리 단계에서 로드가 높은 경우가 대부분이며, CPU와 Geometry stage의 연산량을 훨씬 뛰어넘기 때문에 Lagging(버벅임)의
@@ -118,18 +119,18 @@ _출처 : https://community.arm.com/graphics/b/blog/posts/the-mali-gpu-an-abstra
   따라서 이러한 상황이 실제로 발생하게 되면, N에 도달하여 CPU가 idle 상태가 되어있으리라 예상할 수 있는데, 이 과정은 곧 디스플레이 화면이
   실제 버퍼를 소비(화면에 출력)하는 동안 CPU의 egl/gles 함수의 호출이 일시적으로 blocking될 것이다.
   
-<br><center>
-![](https://community.arm.com/cfs-file/__key/communityserver-blogs-components-weblogfiles/00-00-00-20-66/3173.gles_2D00_mali_2D00_throttle.png)
-</center><br>
+<br>
+![](https://community.arm.com/cfs-file/__key/communityserver-blogs-components-weblogfiles/00-00-00-20-66/3173.gles_2D00_mali_2D00_throttle.png){: .center-image }
+<br>
   
   화면 주사율에 따른 디스플레이 화면의 업데이트 속도보다 GPU 버퍼가 더 자주 업데이트되는 경우에도, 이러한 blocking 동작을 통해 파이프라인 버퍼링을 
   제한시킨다. 바로 수직동기화(vsync)가 이 역할을 수행한다. vsync는 디스플레이 컨트롤러에게 완전히 그려진 next frame buffer를 내보내도 된다는 시그널을
   일으키는 것이다. 만약, 화면 업데이트 속도보다 빠른 GPU 처리능력으로 인해, GPU가 이미 작업을 마친 버퍼들을 SurfaceFlinger가 실제 디스플레이 화면에
   뿌리지 못하면, 마찬가지로 버퍼가 최대 N개만큼 될 때까지 쌓이게 될 것이다.
   
-<br><center>
-![](https://community.arm.com/cfs-file/__key/communityserver-blogs-components-weblogfiles/00-00-00-20-66/8863.gles_2D00_mali_2D00_vsync.png)
-</center><br>
+<br>
+![](https://community.arm.com/cfs-file/__key/communityserver-blogs-components-weblogfiles/00-00-00-20-66/8863.gles_2D00_mali_2D00_vsync.png){: .center-image }
+<br>
   
   위 그림처럼, vsync가 발생하는 경우 CPU, GPU가 모두 해당 시간동안 idle 상태가 된다. 플랫폼에서의 DVFS(Dynamic Voltage Frequency Scaling)는 이러한
   시나리오에서 동작 주파수를 낮추어 전압과 에너지 소모를 줄일 수 있도록 동작할 것이다. 그러나 DVFS의 주파수 제어 동작이 다소 이산적이기에,
