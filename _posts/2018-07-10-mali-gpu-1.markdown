@@ -7,13 +7,8 @@ tags: [mali, gpu, rendering, engine]
 language: kr
 ---
 ### Contents
-**[Mali GPU: An Abstract Machine, Part 1 - Frame Pipelining](http://artrointel.github.io/mali-gpu-1)**  
-[Mali GPU: An Abstract Machine, Part 2 - Tile based rendering](http://artrointel.github.io/mali-gpu-2)  
-<br>
-_출처 : [https://community.arm.com/graphics/b/blog/posts/the-mali-gpu-an-abstract-machine-part-1---frame-pipelining](https://community.arm.com/graphics/b/blog/posts/the-mali-gpu-an-abstract-machine-part-1---frame-pipelining)_  
-_본 자료는 ARM Community의 Blog를 통해 공개된 내용을 한국어로 번역한 것입니다._  
-_문의 : artrointel@gmail.com_  
-<br>
+**[Mali GPU - An Abstract Machine, Part 1 - Frame Pipelining](http://artrointel.github.io/mali-gpu-1)**  
+[Mali GPU - An Abstract Machine, Part 2 - Tile based rendering](http://artrointel.github.io/mali-gpu-2)  
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
@@ -50,12 +45,13 @@ _문의 : artrointel@gmail.com_
 ```
 
   이번 첫 장에서는 첫 번째 내용인 "CPU-GPU 렌더링 파이프라인"을 다루어보도록 한다.
-
+<br>
 ----------------------------------------------------------------------------------------------------------------------------------
 
 ### CPU-GPU 렌더링 파이프라인(CPU-GPU Rendering Pipeline)
 
 #### 동기화 API의 비동기화 처리 방식 (역자 - GLES API의 Draw Call Seq.는 환상이다.)
+<br>
   첫 번째로 알아야 하는 것은 앱의 'OpenGL ES API 호출들'과, '실제 렌더링 연산 실행에 필요한 것들'의 관계를 이해하는 것이다.
   애플리케이션 관점에서는 OpenGL ES가 마치 동기화된 API인 것 처럼 보인다. 예를 들어, 애플리케이션에서는 상태를 설정하는 일련의 GL API 호출을 
   수행한 후, 마지막으로 glDraw*()을 통해 그리는 연산을 호출하게 된다. 
@@ -142,5 +138,9 @@ _문의 : artrointel@gmail.com_
 
   
 ----------------------------------------------------------------------------------------------------------------------------------
-
-[Mali GPU: An Abstract Machine, Part 2 - Tile based rendering](http://artrointel.github.io/mali-gpu-2)  
+[[NEXT] Mali GPU - An Abstract Machine, Part 2 - Tile based rendering](http://artrointel.github.io/mali-gpu-2)  
+<br>
+_출처 : [https://community.arm.com/graphics/b/blog/posts/the-mali-gpu-an-abstract-machine-part-1---frame-pipelining](https://community.arm.com/graphics/b/blog/posts/the-mali-gpu-an-abstract-machine-part-1---frame-pipelining)_  
+_본 자료는 ARM Community의 Blog를 통해 공개된 내용을 한국어로 번역한 것입니다._  
+_문의 : artrointel@gmail.com_  
+<br>
