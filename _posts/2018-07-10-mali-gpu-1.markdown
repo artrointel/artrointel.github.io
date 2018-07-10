@@ -44,8 +44,9 @@ language: kr
 * 쉐이더 코어 설계
 ```
 
-  이번 첫 장에서는 첫 번째 내용인 "CPU-GPU 렌더링 파이프라인"을 다루어보도록 한다.
+  이번 첫 장에서는 첫 번째 내용인 "CPU-GPU 렌더링 파이프라인"을 다루어보도록 한다.  
 <br>
+
 ----------------------------------------------------------------------------------------------------------------------------------
 
 ### CPU-GPU 렌더링 파이프라인(CPU-GPU Rendering Pipeline)
@@ -138,6 +139,7 @@ language: kr
 
   
 ----------------------------------------------------------------------------------------------------------------------------------
+
 [[NEXT] Mali GPU - An Abstract Machine, Part 2 - Tile based rendering](http://artrointel.github.io/mali-gpu-2)  
 <br>
 _출처 : [https://community.arm.com/graphics/b/blog/posts/the-mali-gpu-an-abstract-machine-part-1---frame-pipelining](https://community.arm.com/graphics/b/blog/posts/the-mali-gpu-an-abstract-machine-part-1---frame-pipelining)_  
