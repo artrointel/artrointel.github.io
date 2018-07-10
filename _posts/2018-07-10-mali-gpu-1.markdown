@@ -10,9 +10,9 @@ language: kr
 **[Mali GPU: An Abstract Machine, Part 1 - Frame Pipelining](http://artrointel.github.io/mali-gpu-1)**  
 [Mali GPU: An Abstract Machine, Part 2 - Tile based rendering](http://artrointel.github.io/mali-gpu-2)  
 <br>
+_출처 : [https://community.arm.com/graphics/b/blog/posts/the-mali-gpu-an-abstract-machine-part-1---frame-pipelining](https://community.arm.com/graphics/b/blog/posts/the-mali-gpu-an-abstract-machine-part-1---frame-pipelining)_  
 _본 자료는 ARM Community의 Blog를 통해 공개된 내용을 한국어로 번역한 것입니다._  
 _문의 : artrointel@gmail.com_  
-_출처 : https://community.arm.com/graphics/b/blog/posts/the-mali-gpu-an-abstract-machine-part-1---frame-pipelining_  
 <br>
 
 ----------------------------------------------------------------------------------------------------------------------------------
@@ -23,13 +23,13 @@ _출처 : https://community.arm.com/graphics/b/blog/posts/the-mali-gpu-an-abstra
   동료인 Michael McGeaghsms는 구글 넥서스10(Mali-T604)에서 GPU 프로파일링과 그래픽 애플리케이션의 최적화를 위해 DS-5 Streamline의 활용 가이드
   [http://community.arm.com/docs/DOC-8055] 를 포스팅 하였다. Streamline은 높은 해상도를 가진 전체 시스템 동작의 데이터들을 쉽게 볼 수 있도록
   제공하고 있으며, 따라서 이러한 데이터들을 분석하여 문제점을 찾아내고 수정할 수 있는 능력이 엔지니어에게 필요하다.  
-<br><br>
+<br>
 
   그래픽 최적화에 관해 처음으로 접하는 개발자에게는 초기 학습에 대한 진입 장벽이 다소 있을거라 생각하지만, 이 블로그에서 Mali GPU를 통해
   최적화하기에 필요한 모든 필수적인 지식들을 제공할 것이다. 또한, 이 코스를 통해 GPU에 대한 Macro 수준의 세밀한 설계 구조와
   동작을 이해하는 것을 토대로, 개발들이 자주 고민하는 것들에 대해 살펴볼 것이다. 즉, 어떻게 앱의 컨텐츠들이 내부 작업들로 전환되어 문제가 
   발생하는 지, 그리고 최종적으로 이런 문제를 Streamline에서 어떻게 발견해낼 것인지를 살펴볼 것이다.  
-<br><br>
+<br>
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
@@ -49,12 +49,12 @@ _출처 : https://community.arm.com/graphics/b/blog/posts/the-mali-gpu-an-abstra
 * 쉐이더 코어 설계
 ```
 
-  이번 첫 장에서는, 이 중 가장 첫 번째 내용인 "CPU-GPU 렌더링 파이프라인"을 다루어보도록 한다.
+  이번 첫 장에서는 첫 번째 내용인 "CPU-GPU 렌더링 파이프라인"을 다루어보도록 한다.
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
 ### CPU-GPU 렌더링 파이프라인(CPU-GPU Rendering Pipeline)
-<br>
+
 #### 동기화 API의 비동기화 처리 방식 (역자 - GLES API의 Draw Call Seq.는 환상이다.)
   첫 번째로 알아야 하는 것은 앱의 'OpenGL ES API 호출들'과, '실제 렌더링 연산 실행에 필요한 것들'의 관계를 이해하는 것이다.
   애플리케이션 관점에서는 OpenGL ES가 마치 동기화된 API인 것 처럼 보인다. 예를 들어, 애플리케이션에서는 상태를 설정하는 일련의 GL API 호출을 
@@ -63,7 +63,7 @@ _출처 : https://community.arm.com/graphics/b/blog/posts/the-mali-gpu-an-abstra
   관점에서는 이상적이고 마치 꿈만 같은 이야기이다. (역자 - 즉, 매 프레임마다 일련의 GL 호출들이 실제 gpu 내부에서는 순서대로 처리되지는 않는다는 것이다.)
   
   이러한 관점에서, eglSwapBuffers()의 호출이 front-back 버퍼간 교체가 실제로 일어난다는 것은 논리적으로 사실이지만, 드라이버의 관점에서는 환상일 뿐이다.
-  그러나 대부분의 플랫폼에서는 실제 물리 메모리에 대한 swap은 더 나중에 일어나게 된다.
+  그러나 대부분의 플랫폼에서는 실제 물리 메모리에 대한 swap은 더 나중에 일어나게 된다.  
 <br>
 #### 파이프라이닝(Pipelining) - CPU-GPU idle 최소화를 통한 성능 극대화
   이러한 동기화에 대한 환상이 만들어지게 된 배경은 사실 성능때문이다. 만약 정말 동기화된 API였다면, 아래 그림처럼 매 순간의 렌더링 호출마다
@@ -134,7 +134,7 @@ _출처 : https://community.arm.com/graphics/b/blog/posts/the-mali-gpu-an-abstra
   
   위 그림처럼, vsync가 발생하는 경우 CPU, GPU가 모두 해당 시간동안 idle 상태가 된다. 플랫폼에서의 DVFS(Dynamic Voltage Frequency Scaling)는 이러한
   시나리오에서 동작 주파수를 낮추어 전압과 에너지 소모를 줄일 수 있도록 동작할 것이다. 그러나 DVFS의 주파수 제어 동작이 다소 이산적이기에,
-  어느 정도의 유휴 시간이 발생할 것이다.
+  어느 정도의 유휴 시간이 발생할 것이다.  
 
 ### Summery
   이번 장에서 외부적 관점에서는 동기화 GLES API이지만, 비동기화된 내부 처리 방식이라는 사실을 렌더링 파이프라인을 통해 알아보았다.
@@ -143,4 +143,4 @@ _출처 : https://community.arm.com/graphics/b/blog/posts/the-mali-gpu-an-abstra
   
 ----------------------------------------------------------------------------------------------------------------------------------
 
-https://community.arm.com/graphics/b/blog/posts/the-mali-gpu-an-abstract-machine-part-1---frame-pipelining
+[Mali GPU: An Abstract Machine, Part 2 - Tile based rendering](http://artrointel.github.io/mali-gpu-2)  
