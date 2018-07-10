@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Mali GPU: An Abstract Machine, Part 1 - Frame Pipelining
+title: The Mali GPU - An Abstract Machine, Part 1 - Frame Pipelining
 date: 2018-01-01 13:32:20 +0300
 description: Translation of The Mali GPU Blog
 tags: [mali, gpu, rendering, engine]
