@@ -30,15 +30,18 @@ lattice*, AIP Advances (2016). ([PDF](http://aip.scitation.org/doi/pdf/10.1063/1
 
 # * Working Experiences
 * Samsung Electronics (Feb. 2016 ~ current)  
+  * Tizen Graphics (DALi Engine) Development for Samsung watch products (SamsungGear)(Jul. 2018 ~ current)  
   * Managing Mobile GPU Driver (ARM Mali GPU) for Samsung mobile products (Exynos) (Feb. 2016 ~ Jul. 2018)  
 
 * Samsung Software Membership (Jan. 2014 ~ Jul. 2015)  
-  * Regular member (24-1), Education Team Leader (Sep. 2014 ~ Mar. 2015)  
+  * Regular member (24-1)  
+  * Education Team Leader (Sep. 2014 ~ Mar. 2015)  
 
 # * History
   
 | Date    | Description |
 |:-------:| :---------- |
+| '18.07. | * Moved Dept. of PL Group, Interaction Device Part for Tizen Graphics Engineering |
 | '16.09. | * Participated in the project 'CRM' as a developer (Ref.: Choi *et al.*, AIP Advance (2016)) ('14.11. ~ ) |
 | '16.02. | * Joined in Samsung Electronics, Mobile Communications Division, Graphics R&D Group |
 | '16.01. | * Sword Art Online ~ Babel of dungeon ~ (Indie Local Game), developed with an artist ('15.11. ~ ) |
