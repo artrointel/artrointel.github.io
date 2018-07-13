@@ -23,6 +23,9 @@ $$ F(x) \simeq \sum_{i=1}^N v_i \Phi(w_i^Tx + b_i) = f(x) \text{ where } i \in 1
 (특히, $ \Phi() $가 sigmoid 함수인 경우 [시벤코 정리](https://ko.wikipedia.org/wiki/%EC%8B%9C%EB%B2%A4%EC%BD%94_%EC%A0%95%EB%A6%AC)라 한다.)
 
 정리에 의해 임의의 함수 $ F(x) $는 single perceptron만으로 $ F(x) $에 근사하는 임의의 함수 $ f(x) $를 만들어낼 수 있다는 것을 의미한다.  
+  
+아래에서 소개할 과정은 Neural Network에서 $ w_i $와 $ b_i $를 찾아가는 과정을 알아볼 것이다.  
+<br>
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
@@ -60,26 +63,27 @@ $$ \begin{align}
 w &\leftarrow w - \mu \frac{\partial J}{\partial w} , \mu \text{ is learning rate}  \\\\ 
 b &\leftarrow b - \mu \frac{\partial J}{\partial b} , \mu \text{ is learning rate} \end{align} $$  
 <br>
-  예를 들어 손실함수 J를 아래의 *mean-square*인 경우를 생각해보자.  
+  예를 들어, 손실함수 J를 아래의 *mean-squared-error*를 사용하는 경우를 생각해보자.  
 <br>
 $$ \Large J = \frac{1}{2} \sum_{i=1}^N (t_{i} - x_{i})^2 $$  
 <br>
-  이 경우 그래프는 대략 아래와 같다.  
+  이 경우 그래프는 아래와 같다.  
   
-  (ppt작업 첨부)  
+![MSE](http://artrointel.github.io/assets/projects/neural-network/mse.JPG)
   
   위의 mean-square 역시 $ t_{i}=x_{i} $로 수렴하는 순간 손실률 $J = 0$이 된다.  
-  정답 값으로 근사할 수록 J의 변화율이 줄어드므로, 과정이 반복될 수록 수렴할 것을 유추할 수 있다.
+  정답 값으로 근사할 수록 J의 변화율이 줄어드므로, 과정을 반복할 수록 정답에 근사하는 $w $ 및 $ b $의 값을 찾아낼 수 있을 것임을 유추할 수 있다.
+<br>
 
 ----------------------------------------------------------------------------------------------------------------------------------
   
 ### 4. Activation functions  
   앞서 Universal Approximation Theorem에서 $\Phi$가 단조증가연속함수로 정의하였으니,  
   activation function으로 아래와 같은 적절한 함수를 지정할 수 있다.  
-  //(그래프 첨부)  
   
   <br>
-  * sigmoid  
+  * Sigmoid  
+![Sigmoid](http://artrointel.github.io/assets/projects/neural-network/sigmoid.JPG)
   $ \Large f(x) = \frac{1}{1+e^{-x}}$ , $ \frac {d f}{d x} = f(x) (1-f(x)) $  
   <br>
   $ pf) $ <br>
@@ -90,6 +94,7 @@ $$ \Large J = \frac{1}{2} \sum_{i=1}^N (t_{i} - x_{i})^2 $$
      
   <br>
   * ReLU  
+![ReLU](http://artrointel.github.io/assets/projects/neural-network/relu.JPG)
   $ \Large f(x) = \begin{cases} \\
   0 \text{, if } x \le 0  \\\\ 
   x \text{, if } x \gt 1  \\\\ 
@@ -104,11 +109,12 @@ $$ \Large J = \frac{1}{2} \sum_{i=1}^N (t_{i} - x_{i})^2 $$
   * softmax  
   $ f(x_{i}) = \frac {e^{x_{i}}}{\sum_{j=1}^N e^{x_{j}}} $  
   
-  
+<br>
+
 ----------------------------------------------------------------------------------------------------------------------------------
-  
+
 ### 5. Back propagation  
-  실제 Neural network 구성에서는 Single perceptron이 아닌 다수의 Neurons와 Layers가 존재할 것이므로,  
+  실제 network 구성 시 Single perceptron이 아닌 다수의 Neurons, Layers가 존재할 것이므로,  
   최종 결과 값 $ x_{j}^{(d)} $에 대한 손실률은 다변수 함수에 대한 편미분을 통해 $w$, $b$ 값을 업데이트할 수 있다. 가령,  
   어떤 $ w_{1,1}^{(0)} $ 값에 의한 손실률 J의 미분 즉 $\nabla_{w_{1,1}^{(0)}} J$ 는, 전파하였던 레이어들의 모든 $ w_{i,j}^{(1)}, w_{i,j}^{(2)}, ...$의 영향을 받는다.  
   따라서 하나의 $w_{i,j}^{(d)} $를 update 하기 위해서는 매우 큰 계산비용이 필요하다.  
@@ -195,5 +201,3 @@ $$ \Large J = \frac{1}{2} \sum_{i=1}^N (t_{i} - x_{i})^2 $$
   
   
 ----------------------------------------------------------------------------------------------------------------------------------
-
-
