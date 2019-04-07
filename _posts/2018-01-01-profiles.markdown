@@ -8,11 +8,11 @@ profiles: profile
 ---
 
 # Woohyun Kim
-* Graphics R&D Group, Samsung Electronics (Feb. 2016 ~ current)
+* Software Engineer at Samsung Electronics (Feb. 2016 ~ current)
 * Dept. of Software Engineering & Dept. of Applied Mathematics, [Kumoh National Institute of Technology](http://kumoh.ac.kr) (Mar. 2008 ~ Aug. 2015)
 
 # * Fields of Interest
-* Deep Learning, Game Engine
+* 3D Graphics, Game Engine, Deep Learning
 
 --------------------------------------------------------------------------------
   
@@ -30,22 +30,21 @@ lattice*, AIP Advances (2016). ([PDF](http://aip.scitation.org/doi/pdf/10.1063/1
 
 # * Working Experiences
 * Samsung Electronics (Feb. 2016 ~ current)  
-  * Tizen Graphics (DALi Engine) Development for Samsung watch products (SamsungGear)(Jul. 2018 ~ current)  
-  * Managing Mobile GPU Driver (ARM Mali GPU) for Samsung mobile products (Exynos) (Feb. 2016 ~ Jul. 2018)  
+  * Tizen Graphics engineer (OpenGL, DALi Engine) for Samsung watch products (Jul. 2018 ~ current)  
+  * Mobile GPU Driver engineer (ARM Mali GPU) for Samsung android mobile products (Feb. 2016 ~ Jul. 2018)  
 
 * Samsung Software Membership (Jan. 2014 ~ Jul. 2015)  
   * Regular member (24-1)  
-  * Education Team Leader (Sep. 2014 ~ Mar. 2015)  
+  * Education Team Leader (Sep. 2014 ~ Mar. 2015)  
 
 # * History
   
 | Date    | Description |
 |:-------:| :---------- |
-| '18.07. | * Moved Dept. of PL Group, Interaction Device Part for Tizen Graphics Engineering |
 | '16.09. | * Participated in the project 'CRM' as a developer (Ref.: Choi *et al.*, AIP Advance (2016)) ('14.11. ~ ) |
-| '16.02. | * Joined in Samsung Electronics, Mobile Communications Division, Graphics R&D Group |
+| '16.02. | * Joined in **Samsung Electronics, Mobile Communications Division** |
 | '16.01. | * Sword Art Online ~ Babel of dungeon ~ (Indie Local Game), developed with an artist ('15.11. ~ ) |
-| '15.09. | * Graduated from Kumoh National Institute of Technology (KIT) <br> * Team _Globell_ (front-end developer), K-Hackathon 3 |
+| '15.09. | * Graduated from **Kumoh National Institute of Technology (KIT)** <br> * Team _Globell_ (front-end developer), K-Hackathon 3 |
 | '15.07. | * Completed Samsung Software Membership ('14.01. ~ ) |
 | '15.03. | * 'SmartVoice,' Voice-based android system service (developer) |
 | '14.11. | * KIT Engineering Fair 2014, 'Friendly Farm' (project leader) (14.05. ~ ) |
@@ -63,14 +62,13 @@ lattice*, AIP Advances (2016). ([PDF](http://aip.scitation.org/doi/pdf/10.1063/1
   
 # * Personal Projects
 
+### 2019
+* Advanced rotating object solutions [[POST]()]  
+<br>
+
 ### 2018
 * Mali GPU Blog for Korean  
 Architecture and Performance of Mali GPU [[POST](https://artrointel.github.io/mali-gpu-1/)]  
-<br>
-
-* `In progress` Convolutional Neural Network  
-C++ project (w/o external libraries)  
-  * Parallelized CNN  is now in progress [github [CNN](https://github.com/Team-AI-Learning/mnist_nn/tree/kim_dev)]  
 <br>
 
 ### 2017
@@ -123,6 +121,11 @@ GLES 3.0 based on android native C++
 
 # * Seminars
 
+### 3D Graphics seminar  
+for Samsung graphics engineer (2018)  
+<!-- TODO: attach ppt to slideshare -->
+<br>
+
 ### Vector, Matrix and Quaternion for 3D Programming  
 for DGSSM (2014)  
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/j8r1JUnNZet8E0" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/WoohyunKim16/3d-85975448" title="3D프로그래밍을 위한 벡터,행렬과 사원수" target="_blank">3D프로그래밍을 위한 벡터,행렬과 사원수</a> </strong> from <strong><a href="https://www.slideshare.net/WoohyunKim16" target="_blank">WoohyunKim16</a></strong> </div>
@@ -133,12 +136,14 @@ for DGSSM (2014)
 
 --------------------------------------------------------------------------------
   
-# * Basic Skills  
+# * Skills  
+Android Application, OpenGL, GLSL, OpenMP, MPI  
+
 ### Languages  
 C, C++, C#, Java, HTML, Shell, Python et al.  
 
 ### Tools  
-Android Studio, Unity3D, DS-5, Renderdoc et al.  
+Android Studio, Tizen Studio, Visual Studio, Eclipse, Unity3D, MGD, Renderdoc et al.  
 
 --------------------------------------------------------------------------------
 #### Old profile - [[PDF](http://artrointel.github.io/assets/data/woohyun_kim_portfolio.pdf)] - last update: '2015.10  
