@@ -1,21 +1,24 @@
 ---
 layout: post
 title: Rotating objects in 3D Engines
-date: 2017-09-12 13:32:20 +0300
+date: 2019-04-28 13:32:20 +0300
 description: Rotating object in 3D Engines
 tags: [Unity, Unreal, Rotation, Rotating]
 language: kr
 ---
 ## Rotating Objects
 
-We frequently rotate objects using 3D Engines. I'm sharing some rotating algorithms with descriptions based on 
-mathematical theorems. Note that there could be lots of ways to do it, though.
+  We frequently rotate objects using 3D Engines. I'm sharing some rotating algorithms with descriptions based on 
+  mathematical theorems.  
+  Note that there could be lots of ways to do it, though.
+  
+  <br>
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-### 1. Object rotated in 3D space by mouse drag motion on 2d screen space.  
+### 1. Object rotated in 3D space by mouse drag motion on 2D display screen.  
 
-  Assume that the user wants to rotate an object by mouse drag on the screen.
+   Assume that the user wants to rotate an object by mouse drag on the screen.
   It means that we have to rotate the object with two specific mouse position of the screen, 
   on click down and on drag. Assume that a transform matrix of the camera is also fixed for convenience.  
   Then the mouse drag motion with an object would be like this.  
@@ -24,14 +27,13 @@ mathematical theorems. Note that there could be lots of ways to do it, though.
 
   A circle left one is a starting point of the drag(on click down), and the right one is 
   the last position of on drag at the frame. Then, we can suppose that the user wanted to 
-  rotate the box(object) by right-top direction with the amount of drag length.
+  rotate the box(object) by right-top direction with the amount of drag length. It means that we have to 
+  translate those points of display space into world space positions.
   
-  It means that we have to translate those points of display space into world space positions.
-  
-  ##1) Let define P=(x, y) and P'=(x', y'), when dragging on the display screen  P → P'. 
+  #### 1) Let define P=(x, y) and P'=(x', y'), when dragging on the display screen  P → P'.  
   Then, the size of the angle can be a scalar value of MouseDirection M = P' - P.
   
-  ##2) Assume that the fixed camera is positioned at (0, 0, a > 0) to show the object.
+  #### 2) Assume that the fixed camera is positioned at (0, 0, a > 0) to show the object.  
   Then, we can get an axis by the cross product of the M and direction of the camera 'LookAt'
   vector (0, 0, -a) like below image.
 
@@ -69,7 +71,7 @@ public void onDrag(MouseEvent e, Object o) {
 	Quaternionf rotation = new Quaternionf(new AxisAngle4f(angle, rotAxis));
 	Quaternionf newOrientation = new Quaternionf(prevOrientation).mul(rotation);
 
-	// this newOrientation could be replaced by rotation * prevOrientation as needed.
+	// This newOrientation could be replaced by rotation * prevOrientation as needed.
 	o.get().getTransformData().setOrientation(newOrientation);
 }
 ```
@@ -80,9 +82,7 @@ public void onDrag(MouseEvent e, Object o) {
   because of the fixed camera view matrix.
   
   This rotating local based way is for first-person's camera view like FPS game. But, we've assumed to use 
-  the fixed camera like third-person's camera view.
-  
-  So, let's try the next solution.
+  the fixed camera like third-person's camera view. So, let's try the next solution.
   
   <br>
 
@@ -90,7 +90,7 @@ public void onDrag(MouseEvent e, Object o) {
 
 ### 2. The orbital rotation of camera by mouse drag motion  
   We are going to rotate the camera, not the object this time. Showing objects on every drag event on
-  the screen can be transformed by the camera view matrix, too.
+  the display screen can be transformed by the camera view matrix, too.
   
   Imagine what should be done after the drag operation. Maybe the user wants to look around on the sphere.
   It is actually same as The Google Earth.
@@ -99,7 +99,7 @@ public void onDrag(MouseEvent e, Object o) {
   we would rotate the camera orientation based on the local coordinate system of the camera.
   Then, we can create a new rotation and apply the rotation with the previous solution based on this orthogonal basis.
   
-  ##1) Orthogonal basis of Camera  
+  #### 1) Orthogonal basis of Camera  
   
   The camera LookAt is generally defined using two parameters, up vector and look at position data like below.
   
@@ -115,13 +115,9 @@ public void onDrag(MouseEvent e, Object o) {
   
   <br>
   $$ O.z = -L $$  
-  <br>
   
-  <br>
   $$ O.y = U $$  
-  <br>
   
-  <br>
   $$ O.x = cross(L, U) $$  
   <br>
   
@@ -131,7 +127,7 @@ public void onDrag(MouseEvent e, Object o) {
   Since the display screen shows based on the camera, every all data on mouse event should be translated to camera 
   view based data. In other words, it's based on the orthogonal basis. *(1)
   
-  ##2) Applying the rotation to the camera  
+  #### 2) Applying the rotation to the camera  
   
   In the previous solution, we've found the way to get the rotation by angle and axis data from on drag event. 
   Hence, we can get the new rotation based on the orthogonal basis in the same way. It is time to apply 
@@ -204,32 +200,32 @@ public static Matrix4f getOrbitalRotationLookup(Matrix4f xForm, Vector3f center,
   
 ### 3. Rotating objects based on the movable camera view  
   
-  We've figured out the way to rotate object based on fixed camera view. But, it is necessary to transform the camera view.
+   We've figured out the way to rotate object based on fixed camera view. But, it is necessary to transform the camera view.
   So, We're going to find out the way to rotate the object right way even if the camera view is deformed.
   
-  Previously we've found rotation data by angle-axis from mouse drag, and It was a rotation data in the world coordinate 
+   Previously we've found rotation data by angle-axis from mouse drag, and It was a rotation data in the world coordinate 
   system(WCS). That's why we fixed the camera at (0,0,-a). This position is on the z-axis, so we're able to get 
-  the rotation data in WCS.
-  
-  We're now going to transform the rotation data in WCS to CCS because the display screen would show objects in 
+  the rotation data in WCS. We're now going to transform the rotation data in WCS to CCS because the display screen would show objects in 
   CCS from now on, not WCS anymore.
   
   Remind that
   
-  #1) rotation R in WCS by $ R = x_w * o $, where $ x_w $ is a rotation matrix to rotate it in WCS and o is the object to be rotated.
-  #2) rotation R in WCS by $ R = o * x_l $, where $ x_l $ is a rotation matrix to rotate it in LCS.
+  #### 1) rotation R in WCS by $ R = x_w * o $, where $ x_w $ is a rotation matrix to rotate it in WCS and 
+  o is the object to be rotated.  
+  
+  #### 2) rotation R in WCS by $ R = o * x_l $, where $ x_l $ is a rotation matrix to rotate it in LCS.  
   
   
   Let define R =  x_w * v, where R is a result matrix of the rotation, v is the camera matrix.
   It means that R is the result rotated by x_w based in CCS (since we multiplied v to the right side).
-  Definitely, We're able to get the same R-value with x_l if we do rotate the camera (view) by local rotation formula.
+  Definitely, we're able to get the same R-value with x_l if we do rotate the camera (view) by local rotation formula.
   We can find the x_l to get the same R-value by above 1) and 2).
   
-  $$ R = x_w * v = v * x_l. $$
-  $$ So, x_l = v^-1 * x_w * v $$
+  $$ R = x_w * v = v * x_l. $$  
+  So, $$ x_l = v^-1 * x_w * v $$  
   
-  $ x_l $ value now can be denoted by $ x_v $ that indicates the rotation in CCS since 'local' is now 'camera'.
-  $ Hence, x_v = v^-1 * x_w * v $.
+  $ x_l $ value now can be denoted by $ x_v $ that indicates the rotation in CCS since 'local' is now 'camera'.  
+  Hence, $ x_v = v^-1 * x_w * v $.  
   
   Finally, we use the rotation in WCS formula again, R = x_w * o. (you can also apply the rotation in LCS here, too.)
   
