@@ -63,7 +63,7 @@ lattice*, AIP Advances (2016). ([PDF](http://aip.scitation.org/doi/pdf/10.1063/1
 # * Personal Projects
 
 ### 2019
-* Advanced rotating object solutions [[POST]()]  
+* Advanced rotating object solutions [[POST](https://artrointel.github.io/rotating-objects/)]  
 <br>
 
 ### 2018
