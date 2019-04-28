@@ -30,10 +30,10 @@ language: kr
   rotate the box(object) by right-top direction with the amount of drag length. It means that we have to 
   translate those points of display space into world space positions.
   
-  #### 1) Let define P=(x, y) and P'=(x', y'), when dragging on the display screen  P → P'.  
+  **1) Let define P=(x, y) and P'=(x', y'), when dragging on the display screen  P → P'.**  
   Then, the size of the angle can be a scalar value of MouseDirection M = P' - P.
   
-  #### 2) Assume that the fixed camera is positioned at (0, 0, a > 0) to show the object.  
+  **2) Assume that the fixed camera is positioned at (0, 0, a > 0) to show the object.**  
   Then, we can get an axis by the cross product of the M and direction of the camera 'LookAt'
   vector (0, 0, -a) like below image.
 
@@ -90,16 +90,14 @@ public void onDrag(MouseEvent e, Object o) {
 
 ### 2. The orbital rotation of camera by mouse drag motion  
   We are going to rotate the camera, not the object this time. Showing objects on every drag event on
-  the display screen can be transformed by the camera view matrix, too.
-  
-  Imagine what should be done after the drag operation. Maybe the user wants to look around on the sphere.
-  It is actually same as The Google Earth.
+  the display screen can be transformed by the camera view matrix, too. Imagine what should be done after
+  the drag operation. Maybe the user wants to look around on the sphere. It is actually same as The Google Earth.
   
   To do this, we have to get an orthogonal basis of the camera matrix first, because 
   we would rotate the camera orientation based on the local coordinate system of the camera.
   Then, we can create a new rotation and apply the rotation with the previous solution based on this orthogonal basis.
   
-  #### 1) Orthogonal basis of Camera  
+  **1) Orthogonal basis of Camera**  
   
   The camera LookAt is generally defined using two parameters, up vector and look at position data like below.
   
@@ -114,11 +112,11 @@ public void onDrag(MouseEvent e, Object o) {
   Then,
   
   <br>
-  $$ O.z = -L $$  
+  $ O.z = -L $  
   
-  $$ O.y = U $$  
+  $ O.y = U $  
   
-  $$ O.x = cross(L, U) $$  
+  $ O.x = cross(L, U) $  
   <br>
   
 ```java
@@ -127,7 +125,7 @@ public void onDrag(MouseEvent e, Object o) {
   Since the display screen shows based on the camera, every all data on mouse event should be translated to camera 
   view based data. In other words, it's based on the orthogonal basis. *(1)
   
-  #### 2) Applying the rotation to the camera  
+  **2) Applying the rotation to the camera**  
   
   In the previous solution, we've found the way to get the rotation by angle and axis data from on drag event. 
   Hence, we can get the new rotation based on the orthogonal basis in the same way. It is time to apply 
@@ -210,10 +208,10 @@ public static Matrix4f getOrbitalRotationLookup(Matrix4f xForm, Vector3f center,
   
   Remind that
   
-  #### 1) rotation R in WCS by $ R = x_w * o $, where $ x_w $ is a rotation matrix to rotate it in WCS and 
+  **1) rotation R in WCS by $ R = x_w * o $,** where $ x_w $ is a rotation matrix to rotate it in WCS and 
   o is the object to be rotated.  
   
-  #### 2) rotation R in WCS by $ R = o * x_l $, where $ x_l $ is a rotation matrix to rotate it in LCS.  
+  **2) rotation R in WCS by $ R = o * x_l $,** where $ x_l $ is a rotation matrix to rotate it in LCS.  
   
   
   Let define R =  x_w * v, where R is a result matrix of the rotation, v is the camera matrix.
@@ -221,17 +219,18 @@ public static Matrix4f getOrbitalRotationLookup(Matrix4f xForm, Vector3f center,
   Definitely, we're able to get the same R-value with x_l if we do rotate the camera (view) by local rotation formula.
   We can find the x_l to get the same R-value by above 1) and 2).
   
-  $$ R = x_w * v = v * x_l. $$  
-  So, $$ x_l = v^-1 * x_w * v $$  
+  $$ R = x_w * v = v * x_l $$  
+  So, $$ x_l = v^{-1} * x_w * v $$  
   
   $ x_l $ value now can be denoted by $ x_v $ that indicates the rotation in CCS since 'local' is now 'camera'.  
-  Hence, $ x_v = v^-1 * x_w * v $.  
+  Hence, $ x_v = v^{-1} * x_w * v $.  
   
-  Finally, we use the rotation in WCS formula again, R = x_w * o. (you can also apply the rotation in LCS here, too.)
+  Finally, we use the rotation in WCS formula again, $ R = x_w * o. $
+  (you can also apply the rotation in LCS here, too.)
   
 ```java
-// (SAME AS ABOVE 1)
-// note that object for rotation is cube map in this code
+// (SAME AS ABOVE SOLUTION 1.)
+// Note that object for rotation is cube map in this code
 @Override
 public void onDown(MouseEvent e, GLPreview preview) {
 	prevOrientation = TypeConverter.FloatArrayToQuaternionf(preview.getCubemap());
@@ -244,19 +243,19 @@ public void onDrag(MouseEvent e, GLPreview preview) {
 	int dx = e.x - prevX;
 	int dy = e.y - prevY;
 	Vector3f delta = new Vector3f(dx, -dy, 0);
-	// sets rotated orientation.
+	// Sets rotated orientation.
 	float angle = delta.length() / CAM_SENSITIVITY;
 	Vector3f rotAxis = new Vector3f(0, 0, -1).cross(delta).normalize();
 	Matrix4f rotationMat = new Matrix4f().set(new AxisAngle4f(angle, rotAxis));
 
-	/** ADDED HERE **/
+	/** ADDED SOLUTION HERE **/
 	// Get x_v from x_w and view matrix.
 	Matrix4f viewMatrix = new Matrix4f().set(mCamera.getViewMatrix());
 	Matrix4f viewMatrixInv = new Matrix4f(viewMatrix).invert();
 	rotationMat = viewMatrixInv.mul(rotationMat).mul(viewMatrix); // x_v
 	Quaternionf rotationCameraBased = new Quaternionf();
 	rotationMat.getUnnormalizedRotation(rotationCameraBased);
-	/** ADDED HERE END **/
+	/** ADDED SOLUTION HERE END **/
 
 	Quaternionf newOrientation = rotationCameraBased.mul(new Quaternionf(prevOrientation)); // x_w * o
 	mPreviewCanvas.setCubemap(TypeConverter.quaternionfToFloatArray(newOrientation));
