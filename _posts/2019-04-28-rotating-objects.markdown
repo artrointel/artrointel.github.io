@@ -202,7 +202,7 @@ public static Matrix4f getOrbitalRotationLookup(Matrix4f xForm, Vector3f center,
   So, We're going to find out the way to rotate the object right way even if the camera view is deformed.
   
    Previously we've found rotation data by angle-axis from mouse drag, and It was a rotation data in the world coordinate 
-  system(WCS). That's why we fixed the camera at (0,0,-a). This position is on the z-axis, so we're able to get 
+  system(WCS). That's why we fixed the camera at (0, 0, -a). This position is on the z-axis, so we're able to get 
   the rotation data in WCS. We're now going to transform the rotation data in WCS to CCS because the display screen would show objects in 
   CCS from now on, not WCS anymore.
   
@@ -214,10 +214,10 @@ public static Matrix4f getOrbitalRotationLookup(Matrix4f xForm, Vector3f center,
   **2) rotation R in WCS by $ R = o * x_l $,** where $ x_l $ is a rotation matrix to rotate it in LCS.  
   
   
-  Let define R =  x_w * v, where R is a result matrix of the rotation, v is the camera matrix.
-  It means that R is the result rotated by x_w based in CCS (since we multiplied v to the right side).
-  Definitely, we're able to get the same R-value with x_l if we do rotate the camera (view) by local rotation formula.
-  We can find the x_l to get the same R-value by above 1) and 2).
+  Let define $ R =  x_w * v $, where R is a result matrix of the rotation, v is the camera matrix.
+  It means that R is the result rotated by $ x_w $ based in CCS (since we multiplied v to the right side).
+  Definitely, we're able to get the same R-value with $ x_l $ if we do rotate the camera (view) by local rotation formula.
+  We can find the $ x_l $ to get the same R-value by above 1) and 2).
   
   $$ R = x_w * v = v * x_l $$  
   So, $$ x_l = v^{-1} * x_w * v $$  
