@@ -2,8 +2,8 @@
 layout: post
 title: Profile
 date: 1989-01-10 01:31:00 +0300
-description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
-tags: [artrointel, we.kim, Woohyun.Kim] # add tag
+description: artrointel's profile
+tags: [artrointel, we.kim, Woohyun.Kim, 김우현] # add tag
 profiles: profile
 ---
 
@@ -41,8 +41,9 @@ lattice*, AIP Advances (2016). ([PDF](http://aip.scitation.org/doi/pdf/10.1063/1
   
 | Date    | Description |
 |:-------:| :---------- |
+| '18.07. | * Joined in **Tizen Graphics division as an Engineer of Graphic Watch faces** |
 | '16.09. | * Participated in the project 'CRM' as a developer (Ref.: Choi *et al.*, AIP Advance (2016)) ('14.11. ~ ) |
-| '16.02. | * Joined in **Samsung Electronics, Mobile Communications Division** |
+| '16.02. | * Joined in **Samsung Electronics, Mobile Communications Division, Graphics R&D Group as an Engineer of Mobile GPU Driver** |
 | '16.01. | * Sword Art Online ~ Babel of dungeon ~ (Indie Local Game), developed with an artist ('15.11. ~ ) |
 | '15.09. | * Graduated from **Kumoh National Institute of Technology (KIT)** <br> * Team _Globell_ (front-end developer), K-Hackathon 3 |
 | '15.07. | * Completed Samsung Software Membership ('14.01. ~ ) |
@@ -63,11 +64,12 @@ lattice*, AIP Advances (2016). ([PDF](http://aip.scitation.org/doi/pdf/10.1063/1
 # * Personal Projects
 
 ### 2020
-`In progress`
+`In progress` TODO pending blog items   
 * Playing around with shaders [[POST](https://artrointel.github.io/playing-around-with-shaders/)]  
-* General shader optimizations [[POST](https://artrointel.github.io/shader-optimizations/)]  
+* Shader optimizations [[POST](https://artrointel.github.io/shader-optimizations/)]  
+* Runtime Gradient blur shader implementation [[POST](https://artrointel.github.io/runtime-gradient-blur-shader/)]  
 * Android View blur within multiple windows [[POST](https://artrointel.github.io/android-blur-view-within-multi-windows/)]  
-* Fast Blur Optimizations [[POST](https://artrointel.github.io/fast-blur-optimizations/)]  
+* Fastest Blur implementation in Shader [[POST](https://artrointel.github.io/fast-blur-optimizations/)]  
 <br>
 
 ### 2019
@@ -133,6 +135,7 @@ for Samsung graphics engineer (2018)
 for DGSSM (2014)  
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/j8r1JUnNZet8E0" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/WoohyunKim16/3d-85975448" title="3D프로그래밍을 위한 벡터,행렬과 사원수" target="_blank">3D프로그래밍을 위한 벡터,행렬과 사원수</a> </strong> from <strong><a href="https://www.slideshare.net/WoohyunKim16" target="_blank">WoohyunKim16</a></strong> </div>
 <br>
+
 ### OpenMP and MPI for Beginners  
 for DGSSM (2014)  
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/b8E8s3PsQjwKqr" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/WoohyunKim16/openmp-for-beginners" title="OpenMP for beginners" target="_blank">OpenMP for beginners</a> </strong> from <strong><a href="https://www.slideshare.net/WoohyunKim16" target="_blank">WoohyunKim16</a></strong> </div>
@@ -140,7 +143,7 @@ for DGSSM (2014)
 --------------------------------------------------------------------------------
   
 # * Skills  
-Android Application, OpenGL, GLSL, OpenMP, MPI  
+Android, OpenGL, GLSL, OpenMP, MPI  
 
 ### Expertise
 Graphic Rendering and Debugging  
