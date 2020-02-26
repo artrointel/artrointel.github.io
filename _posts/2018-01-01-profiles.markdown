@@ -62,6 +62,14 @@ lattice*, AIP Advances (2016). ([PDF](http://aip.scitation.org/doi/pdf/10.1063/1
   
 # * Personal Projects
 
+### 2020
+`In progress`
+* Playing around with shaders [[POST](https://artrointel.github.io/playing-around-with-shaders/)]  
+* General shader optimizations [[POST](https://artrointel.github.io/shader-optimizations/)]  
+* Android View blur within multiple windows [[POST](https://artrointel.github.io/android-blur-view-within-multi-windows/)]  
+* Fast Blur Optimizations [[POST](https://artrointel.github.io/fast-blur-optimizations/)]  
+<br>
+
 ### 2019
 * Rotating objects in 3D Engines [[POST](https://artrointel.github.io/rotating-objects/)]  
 <br>
@@ -76,11 +84,6 @@ Architecture and Performance of Mali GPU [[POST](https://artrointel.github.io/ma
 C++ project (w/o external libraries)  
   * Neural Network based on Mathematics [[POST](https://artrointel.github.io/neural-network/)]  
   * Neural Network [github [NN](https://github.com/Team-AI-Learning/mnist_nn/tree/kim) over 92% with mnist example]  
-<br>
-
-* `In progress` opengl es study  
-GLES 3.0 based on android native C++  
-  * OpenGLES for learning _[OpenGL ES 3.0 Programming Guide SE](http://opengles-book.com/)_ is in progress [[ESRenderEngine](https://github.com/artrointel/ESRenderEngine)]  
 <br>
 
 ### 2016  
@@ -139,11 +142,14 @@ for DGSSM (2014)
 # * Skills  
 Android Application, OpenGL, GLSL, OpenMP, MPI  
 
+### Expertise
+Graphic Rendering and Debugging  
+
 ### Languages  
 C, C++, C#, Java, HTML, Shell, Python et al.  
 
-### Tools  
-Android Studio, Tizen Studio, Visual Studio, Eclipse, Unity3D, MGD, Renderdoc et al.  
+### Experienced Tools  
+Android Studio, Tizen Studio, Visual Studio, Eclipse, Unity3D, Unreal, MGD, Renderdoc et al.  
 
 --------------------------------------------------------------------------------
 #### Old profile - [[PDF](http://artrointel.github.io/assets/data/woohyun_kim_portfolio.pdf)] - last update: '2015.10  
