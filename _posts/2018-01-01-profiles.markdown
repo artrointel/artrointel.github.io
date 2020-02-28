@@ -69,7 +69,7 @@ lattice*, AIP Advances (2016). ([PDF](http://aip.scitation.org/doi/pdf/10.1063/1
 * Shader optimizations [[POST](https://artrointel.github.io/shader-optimizations/)]  
 * Runtime Gradient blur shader implementation [[POST](https://artrointel.github.io/runtime-gradient-blur-shader/)]  
 * Android View blur within multiple windows [[POST](https://artrointel.github.io/android-blur-view-within-multi-windows/)]  
-* Fastest Blur implementation in Shader [[POST](https://artrointel.github.io/fast-blur-optimizations/)]  
+* Fastest Blur implementation in Shader [[POST](https://artrointel.github.io/efficient-blur-rendering/)]  
 <br>
 
 ### 2019
