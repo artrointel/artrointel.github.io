@@ -121,13 +121,19 @@ C++ project (w/o external libraries)
 
 * Cross the bridge [[YouTube](https://www.youtube.com/watch?v=j9WeBjJaUlE&list=PLFvdltGhnoAOEi8856S_SpO5De_5REK_o)] [[Doc](http://artrointel.github.io/assets/projects/cross-the-bridge/docs.zip)]  
   * 3D Game Engine development and bridge simulation, project leader & developer of physics engine([RPEngine](https://github.com/artrointel/RPEngine))  
+  <details>
+    <summary>Thumbnail</summary>
 
-![(CrossTheBridge)](http://artrointel.github.io/assets/projects/cross-the-bridge/bridge.jpg)  
+    * Preview  
+      ![(CrossTheBridge)](http://artrointel.github.io/assets/projects/cross-the-bridge/bridge.jpg)  
+  </details>
   
 * SmartVoice [[YouTube](https://www.youtube.com/playlist?list=PLFvdltGhnoANUmPkSl9IVSECUSKcswDoK)]  [[Doc](http://artrointel.github.io/assets/projects/smart-voice/docs.zip)]  
   * Voice-based android system service based on the third-party collective intelligence, API developer  
   <details>
-    <summary>Preview</summary>
+    <summary>Thumbnail</summary>
+
+    * Preview  
       ![(SmartVoice)](http://artrointel.github.io/assets/projects/smart-voice/settings.jpg)  
   </details>
 
@@ -135,12 +141,22 @@ C++ project (w/o external libraries)
 
 * Friendly Farm  [[YouTube](https://www.youtube.com/watch?v=8CI9qfpottU&list=PLFvdltGhnoAPDOS2YjjSNd1FlrL-JpJZt&index=1)]  [[Doc](http://artrointel.github.io/assets/projects/friendly-farm/docs.zip)]  
   * Social network game(SNG) with farming simulation & defense game, project leader  
-  ![Farming](http://artrointel.github.io/assets/projects/friendly-farm/farming.jpg)  
-  ![Defense](http://artrointel.github.io/assets/projects/friendly-farm/defense.jpg)  
+  <details>
+    <summary>Thumbnail</summary>
+
+    * Preview  
+      ![Farming](http://artrointel.github.io/assets/projects/friendly-farm/farming.jpg)  
+      ![Defense](http://artrointel.github.io/assets/projects/friendly-farm/defense.jpg)  
+  </details>
 
 * Family Story  [[Doc](http://artrointel.github.io/assets/projects/family-story/docs.zip)]  
   * Family-specific SNS application based on android hybrid web app, project leader  
-  ![FamilyStory](http://artrointel.github.io/assets/projects/family-story/family-story.jpg)  
+  <details>
+    <summary>Thumbnail</summary>
+  
+    * Preview  
+      ![FamilyStory](http://artrointel.github.io/assets/projects/family-story/family-story.jpg)  
+  </details>
 
 * Seminar: Vector, Matrix and Quaternion for 3D Programming  
   <details>
