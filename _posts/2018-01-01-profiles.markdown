@@ -125,7 +125,7 @@ C++ project (w/o external libraries)
     <summary>Thumbnail</summary>
 
     * Preview  
-      ![(CrossTheBridge)](http://artrointel.github.io/assets/projects/cross-the-bridge/bridge.jpg)  
+    <img src="http://artrointel.github.io/assets/projects/cross-the-bridge/bridge.jpg" alt="CrossTheBridge"> 
   </details>
   
 * SmartVoice [[YouTube](https://www.youtube.com/playlist?list=PLFvdltGhnoANUmPkSl9IVSECUSKcswDoK)]  [[Doc](http://artrointel.github.io/assets/projects/smart-voice/docs.zip)]  
@@ -134,7 +134,7 @@ C++ project (w/o external libraries)
     <summary>Thumbnail</summary>
 
     * Preview  
-      ![(SmartVoice)](http://artrointel.github.io/assets/projects/smart-voice/settings.jpg)  
+    <img src="http://artrointel.github.io/assets/projects/smart-voice/settings.jpg" alt="SmartVoice">
   </details>
 
 ### 2014  
@@ -145,8 +145,8 @@ C++ project (w/o external libraries)
     <summary>Thumbnail</summary>
 
     * Preview  
-      ![Farming](http://artrointel.github.io/assets/projects/friendly-farm/farming.jpg)  
-      ![Defense](http://artrointel.github.io/assets/projects/friendly-farm/defense.jpg)  
+    <img src="http://artrointel.github.io/assets/projects/friendly-farm/farming.jpg" alt="Farming">
+    <img src="http://artrointel.github.io/assets/projects/friendly-farm/defense.jpg" alt="Defense">
   </details>
 
 * Family Story  [[Doc](http://artrointel.github.io/assets/projects/family-story/docs.zip)]  
@@ -155,7 +155,7 @@ C++ project (w/o external libraries)
     <summary>Thumbnail</summary>
   
     * Preview  
-      ![FamilyStory](http://artrointel.github.io/assets/projects/family-story/family-story.jpg)  
+    <img src="http://artrointel.github.io/assets/projects/family-story/family-story.jpg" alt="FamilyStory">
   </details>
 
 * Seminar: Vector, Matrix and Quaternion for 3D Programming  
