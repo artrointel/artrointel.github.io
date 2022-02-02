@@ -72,11 +72,12 @@ lattice*, AIP Advances (2016). ([PDF](http://aip.scitation.org/doi/pdf/10.1063/1
   
 ## * Archive
 
-### (2022 Planning)
+### 2022
 
-* [KotESRenderEngine]() Project
-* Android project: Canvas Over GLES [GitHub]
-* Publishing Android Watch Faces made with Blender and Watch Face Studio
+* Android KotESRenderEngine Project (`Planning`)
+* Android Wear OS [EveryonesComplication](https://github.com/artrointel/EveryonesComplication) Project (`In Progress`)
+* Android [CanvasOverGLES](https://github.com/artrointel/CanvasOverGLES) Project (`In Progress`)
+* Android Watch Faces made with Blender and Watch Face Studio : Search 'Artrointel' in GooglePlay
 
 ### 2021
 
