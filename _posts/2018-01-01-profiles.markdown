@@ -86,7 +86,7 @@ lattice*, AIP Advances (2016). ([PDF](http://aip.scitation.org/doi/pdf/10.1063/1
 ### 2020
 
 * [Weather-Raindrop](https://youtu.be/h2JTjnJyqqI?list=PLFvdltGhnoAOM8aN412ZCcp01I8_AUxvL&t=13) rendering for Samsung Watch Face
-* Developed Runtime Gradient blur shader implemented (Patent)
+* Developed Runtime Gradient blur shader implemented (Patent Grade A in Samsung)
 * Android View blur within multiple windows [[POST](https://artrointel.github.io/android-blur-view-within-multi-windows/)]  
 * Efficient Blur rendering [[POST](https://artrointel.github.io/efficient-blur-rendering/)]  
 
