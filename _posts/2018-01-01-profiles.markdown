@@ -51,7 +51,7 @@ lattice*, AIP Advances (2016). ([PDF](http://aip.scitation.org/doi/pdf/10.1063/1
   
 | Date    | Description |
 |:-------:| :---------- |
-| '19.09. | * Joined in **Android Graphics division as an Engineer of Graphic Watch faces** |
+| '19.09. | * Joined in **Android Wear Graphics division as an Engineer of Watch faces** (~Current) |
 | '18.07. | * Joined in **Tizen Graphics division as an Engineer of Graphic Watch faces** |
 | '16.09. | *Participated in the project 'CRM' as a developer (Ref.: Choi*et al.*, AIP Advance (2016)) ('14.11. ~ ) |
 | '16.02. | * Joined in **Samsung Electronics, Mobile Communications Division, Graphics R&D Group as an Engineer of Mobile GPU Driver** |
@@ -74,19 +74,27 @@ lattice*, AIP Advances (2016). ([PDF](http://aip.scitation.org/doi/pdf/10.1063/1
 
 ### 2022
 
-* Android KotESRenderEngine Project (`Planning`)
-* Android Wear OS [EveryonesComplication](https://github.com/artrointel/EveryonesComplication) Project (`In Progress`)
-* Android [CanvasOverGLES](https://github.com/artrointel/CanvasOverGLES) Project (`In Progress`)
-* Android Watch Faces made with Blender and Watch Face Studio : Search 'Artrointel' in GooglePlay
+* `Planning`: Android KotESRenderEngine Project.
+
+* Android Wear OS [EveryonesComplication](https://github.com/artrointel/EveryonesComplication) Project,  
+  It Shows Bitcoin price and alarm made with Android Wear OS Complication for android watch face.
+
+* Android [CanvasOverGLView](https://github.com/artrointel/CanvasOverGLES) Project,  
+  Android Canvas can be drawn over GLES-based  Android View and Surface objects.
+
+* **Android Wear OS Watch Face** products made with Blender and Watch Face Studio, [Artrointel from GooglePlay](https://play.google.com/store/search?q=artrointel&c=apps).
 
 ### 2021
 
-* Developed [Avengers Key](https://github.com/artrointel/streamdeck-avengers) for [Elgato Streamdeck](https://www.elgato.com/en/stream-deck) device
+* Developed [Avengers Key](https://github.com/artrointel/streamdeck-avengers) for [Elgato Streamdeck](https://www.elgato.com/en/stream-deck) device,  
+User-customized Animated Graphic button with convenient commands to control local PC.
 
 ### 2020
 
-* [Weather-Raindrop](https://youtu.be/h2JTjnJyqqI?list=PLFvdltGhnoAOM8aN412ZCcp01I8_AUxvL&t=13) rendering for Samsung Watch Face
-* Developed Runtime Gradient blur shader implemented (Patent Grade A in Samsung)
+* [Weather-Raindrop](https://youtu.be/h2JTjnJyqqI?list=PLFvdltGhnoAOM8aN412ZCcp01I8_AUxvL&t=13) rendering for Samsung Watch Face,  
+  Reverse-engineering from open source solution [tympanus RainEffect](https://tympanus.net/Development/RainEffect/)
+
+* Developed Runtime Gradient blur shader implemented (Patent Grade A at Samsung)
 * Android View blur within multiple windows [[POST](https://artrointel.github.io/android-blur-view-within-multi-windows/)]  
 * Efficient Blur rendering [[POST](https://artrointel.github.io/efficient-blur-rendering/)]  
 
@@ -175,8 +183,8 @@ C++ project (w/o external libraries)
 
 ## * Language and Skills  
 
-C, C++, C#, Java, Kotlin, JavaScript, HTML, Bash Shell, Python, XSD
-Android, OpenGL ES, GLSL, OpenMP, MPI (+Planning React-Redux)  
+C++, C#, Java, Kotlin, JavaScript, HTML, Bash Shell, Python, XSD,
+Android Framework and Android Wear OS, OpenGL ES, GLSL, OpenMP, MPI (+ 2022Planning React-Redux)  
 
 ## * Experienced Tools  
 
