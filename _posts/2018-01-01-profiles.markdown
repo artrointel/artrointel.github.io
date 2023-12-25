@@ -8,6 +8,13 @@ profiles: profile
 ---
 
 # Woohyun Kim
+```
+> Hi.
+> I am a developer working at Samsung Electronics. 
+> I'm specialized in graphical things like glsl, 3d rendering engine and framework.
+> I'm interested in AI as well.
+```
+--------------------------------------------------------------------------------
 
 * Software Engineer at Samsung Electronics (Feb. 2016 ~ current)
 * Dept. of Software Engineering & Dept. of Applied Mathematics, [Kumoh National Institute of Technology](http://kumoh.ac.kr) (Mar. 2008 ~ Aug. 2015)
@@ -38,7 +45,8 @@ lattice*, AIP Advances (2016). ([PDF](http://aip.scitation.org/doi/pdf/10.1063/1
 ## * Working Experiences
 
 * Samsung Electronics (Feb. 2016 ~ Current)  
-  * Software Engineer of [Watch Face Studio](https://developer.samsung.com/watch-face-studio/overview.html) (Sep. 2020 ~ Current)
+  * Developer of Samsung [Wonderland](https://galaxystore.samsung.com/detail/com.samsung.android.wonderland.wallpaper) (Mar.2023 ~ Current)
+  * Software Engineer of [Watch Face Studio](https://developer.samsung.com/watch-face-studio/overview.html) (DWF, XSD) (Sep. 2020 ~ Current)
   * Android Graphics engineer for Samsung internal graphics projects (Sep. 2019 ~ Sep. 2020)
   * Tizen Graphics engineer (OpenGL, DALi Engine) for Samsung tizen watch products (Jul. 2018 ~ Sep. 2019)  
   * Mobile GPU Driver engineer (ARM Mali GPU) for Samsung android mobile products (Feb. 2016 ~ Jul. 2018)  
@@ -51,7 +59,7 @@ lattice*, AIP Advances (2016). ([PDF](http://aip.scitation.org/doi/pdf/10.1063/1
   
 | Date    | Description |
 |:-------:| :---------- |
-| '20.09. | * Joined in **Android Watch Face division** |
+| '20.09. | * Joined in **Android Watch Face and Tool Kit division** (~ Current) |
 | '19.09. | * Joined in **Android Wear Graphics division** |
 | '18.07. | * Joined in **Tizen Graphics division** |
 | '16.09. | *Participated in the project 'CRM' as a developer (Ref.: Choi*et al.*, AIP Advance (2016)) ('14.11. ~ ) |
@@ -72,6 +80,10 @@ lattice*, AIP Advances (2016). ([PDF](http://aip.scitation.org/doi/pdf/10.1063/1
 --------------------------------------------------------------------------------
   
 ## * Archive
+### 2023
+
+* Contributed shaders to [ShaderToy](https://www.shadertoy.com/results?query=artrointel)  
+  transition effects were just for the Wonderland project.
 
 ### 2022
 
