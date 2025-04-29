@@ -174,7 +174,7 @@
     const eventLabel = eventLabelEl.textContent;
     eventLabelEl.style.opacity = '0.5';
     const characterName = el.closest('.character-box').querySelector('.character-name').value || '캐릭터';
-    let remaining = 6;
+    let remaining = 60 * 60;
     const interval = setInterval(() => {
       const h = String(Math.floor(remaining / 3600)).padStart(2, '0');
       const m = String(Math.floor((remaining % 3600) / 60)).padStart(2, '0');
