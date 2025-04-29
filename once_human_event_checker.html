@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>원스 휴먼 이벤트 타이머</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: row;
+      padding: 20px;
+      background: #f0f0f0;
+      align-items: flex-start;
+    }
+    #container-wrapper {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+    }
+    .character-box {
+      background: white;
+      border: 3px solid black;
+      border-radius: 15px;
+      margin: 10px 0;
+      padding: 15px;
+      width: 250px;
+      flex-shrink: 0;
+    }
+    .character-name {
+      border: 3px solid red;
+      padding: 10px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .event-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      gap: 5px;
+    }
+    .event-label {
+      width: 60px;
+      font-size: 14px;
+      color: gray;
+    }
+    .timer {
+      border: 3px solid #3f51b5;
+      border-radius: 10px;
+      padding: 5px 10px;
+      font-size: 14px;
+      width: 80px;
+      text-align: center;
+      background: white;
+    }
+    .complete-btn {
+      background: lightgray;
+      border: 2px solid #333;
+      padding: 5px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    .alarm-toggle {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      gap: 5px;
+    }
+    .alarm-toggle input {
+      width: 20px;
+      height: 20px;
+      accent-color: purple;
+    }
+    .add-button {
+      font-size: 40px;
+      font-weight: bold;
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      background-color: #aaf;
+      border: 3px solid #333;
+      cursor: pointer;
+      text-align: center;
+      line-height: 60px;
+      user-select: none;
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+<div id="container-wrapper">
+  <div id="container">
+    <div class="character-box">
+      <input class="character-name" type="text" placeholder="캐릭터명" />
+      <div class="event-row">
+        <div class="event-label">지옥길</div>
+        <div class="timer">00:00:00</div>
+        <button class="complete-btn">완료</button>
+      </div>
+      <div class="event-row">
+        <div class="event-label">케이론</div>
+        <div class="timer">00:00:00</div>
+        <button class="complete-btn">완료</button>
+      </div>
+      <div class="event-row">
+        <div class="event-label">다크사이트</div>
+        <div class="timer">00:00:00</div>
+        <button class="complete-btn">완료</button>
+      </div>
+      <div class="event-row">
+        <div class="event-label">타락한낙원</div>
+        <div class="timer">00:00:00</div>
+        <button class="complete-btn">완료</button>
+      </div>
+      <div class="alarm-toggle">
+        <input type="checkbox" class="alarm-check" checked />
+        <label>알림 켜기</label>
+      </div>
+    </div>
+  </div>
+  <div class="add-button" onclick="addCharacterBox()">+</div>
+</div>
+
+<script>
+  let boxId = 1;
+  const timers = new Map();
+
+  function speak(text) {
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = "ko-KR";
+    utterance.pitch = 1.2;
+    utterance.rate = 1.0;
+    utterance.volume = 1.0;
+    speechSynthesis.speak(utterance);
+  }
+
+  function startTimer(el) {
+    const timerEl = el.previousElementSibling;
+    const eventLabel = el.parentElement.querySelector('.event-label').textContent;
+    const characterName = el.closest('.character-box').querySelector('.character-name').value || '캐릭터';
+    let remaining = 60 * 60;
+    const interval = setInterval(() => {
+      const h = String(Math.floor(remaining / 3600)).padStart(2, '0');
+      const m = String(Math.floor((remaining % 3600) / 60)).padStart(2, '0');
+      const s = String(remaining % 60).padStart(2, '0');
+      timerEl.textContent = `${h}:${m}:${s}`;
+      if (remaining-- <= 0) {
+        clearInterval(interval);
+        const alarmToggle = el.closest('.character-box').querySelector('.alarm-check');
+        if (alarmToggle.checked) {
+          speak(`${characterName}, ${eventLabel} 이벤트 고고!`);
+        }
+      }
+    }, 1000);
+    timers.set(timerEl, interval);
+  }
+
+  document.querySelectorAll('.complete-btn').forEach(btn => {
+    btn.addEventListener('click', () => startTimer(btn));
+  });
+
+  function addCharacterBox() {
+    const box = document.querySelector('.character-box').cloneNode(true);
+    box.querySelectorAll('.timer').forEach(t => t.textContent = '00:00:00');
+    box.querySelectorAll('.complete-btn').forEach(btn => {
+      btn.addEventListener('click', () => startTimer(btn));
+    });
+    document.getElementById('container').appendChild(box);
+  }
+</script>
+</body>
+</html>
