@@ -262,18 +262,26 @@ function startTimer(el) {
   progressBar.style.display = 'block';
   el.textContent = '쿨타임중';
 
-  let remaining = 60 * 60;
-  const total = remaining;
+  const startTimestamp = Date.now();
+  const endTimestamp = startTimestamp + 60 * 60 * 1000;
+
   const interval = setInterval(() => {
+    const now = Date.now();
+    let remaining = Math.max(0, Math.floor((endTimestamp - now) / 1000));
+    
     const h = String(Math.floor(remaining / 3600)).padStart(2, '0');
     const m = String(Math.floor((remaining % 3600) / 60)).padStart(2, '0');
     const s = String(remaining % 60).padStart(2, '0');
     timerEl.textContent = `${h}:${m}:${s}`;
-    progressEl.style.width = `${((total - remaining) / total) * 100}%`;
-    if (remaining-- <= 0) {
+
+    progressEl.style.width = `${((3600 - remaining) / 3600) * 100}%`;
+
+    if (remaining <= 0) {
+      clearInterval(interval);
       resetTimer(el);
     }
   }, 1000);
+
   timers.set(timerEl, interval);
 }
 
@@ -346,7 +354,8 @@ function deleteCharacterBox(btn) {
 }
 
 function toggleTheme() {
-  document.body.classList.toggle('dark');
+  const isDark = document.body.classList.toggle('dark');
+  document.cookie = `theme=${isDark ? 'dark' : 'light'}; path=/; max-age=31536000`;
 }
 
 function saveCharacterNamesToCookie() {
@@ -371,6 +380,12 @@ function loadCharacterNamesFromCookie() {
 }
 
 loadCharacterNamesFromCookie();
+(function loadThemeFromCookie() {
+  const match = document.cookie.match(/(?:^|; )theme=([^;]*)/);
+  if (match && match[1] === 'dark') {
+    document.body.classList.add('dark');
+  }
+})();
 </script>
 </body>
 </html>
