@@ -50,9 +50,8 @@
     }
     .character-name {
       border: 2px solid var(--border-color);
-      padding: 8px;
       text-align: center;
-      font-size: 16px;
+      font-size: 20px;
       font-weight: bold;
       border-radius: 8px;
       margin-bottom: 15px;
@@ -68,7 +67,7 @@
     }
     .event-label {
       width: 90px;
-      font-size: 14px;
+      font-size: 18px;
       color: var(--text-color);
       white-space: nowrap;
       overflow: hidden;
@@ -171,9 +170,11 @@
 
   function startTimer(el) {
     const timerEl = el.previousElementSibling;
-    const eventLabel = el.parentElement.querySelector('.event-label').textContent;
+    const eventLabelEl = el.parentElement.querySelector('.event-label');
+    const eventLabel = eventLabelEl.textContent;
+    eventLabelEl.style.opacity = '0.5';
     const characterName = el.closest('.character-box').querySelector('.character-name').value || '캐릭터';
-    let remaining = 60 * 60;
+    let remaining = 6;
     const interval = setInterval(() => {
       const h = String(Math.floor(remaining / 3600)).padStart(2, '0');
       const m = String(Math.floor((remaining % 3600) / 60)).padStart(2, '0');
@@ -181,6 +182,7 @@
       timerEl.textContent = `${h}:${m}:${s}`;
       if (remaining-- <= 0) {
         clearInterval(interval);
+        eventLabelEl.style.opacity = '1.0';
         const alarmToggle = el.closest('.character-box').querySelector('.alarm-check');
         if (alarmToggle.checked) {
           speak(`${characterName}, ${eventLabel} 이벤트 고고!`);
@@ -194,7 +196,7 @@
     const box = document.createElement('div');
     box.className = 'character-box';
     box.innerHTML = `
-      <input class="character-name" type="text" placeholder="캐릭터명" />
+      <input class="character-name" type="text" placeholder="캐릭터명"/>
       <div class="event-row">
         <div class="event-label">지옥길</div>
         <div class="timer">00:00:00</div>
