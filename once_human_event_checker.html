@@ -241,13 +241,13 @@
       background-color: #ccc;
     }
     .memo-list {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+      flex-grow: 1;
       overflow-y: auto;
-      max-height: calc(100vh - 80px);
+      padding-right: 4px;
     }
     .memo {
+      margin-top: 5px;
+      margin-bottom: 5px;
       border: 1px solid #ccc;
       border-radius: 6px;
       background-color: #fff;
@@ -300,6 +300,40 @@
     .quill-editor {
       height: 150px;
     }
+    .memo-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      height: 100%;
+      overflow: hidden;
+    }
+    .memo-group.collapsed {
+      max-height: 0;
+      overflow: hidden;
+    }
+    .memo-float-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 90px; /* 기존 + 버튼의 right: 20px 기준 좌측으로 이동 */
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      background: var(--button-bg);
+      border: none;
+      color: white;
+      font-size: 22px;
+      cursor: pointer;
+      text-align: center;
+      line-height: 60px;
+      user-select: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+      z-index: 100;
+    }
+    .memo-float-toggle:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    }
     body.dark .ql-toolbar.ql-snow {
       background-color: #444;
       border-color: #666;
@@ -334,12 +368,15 @@
 <body>
   <div class="split-container">
     <div class="pane left-pane" id="memo-pane">
-      <button class="add-btn" onclick="addMemo()">메모 추가</button>
-      <div class="memo-list" id="memo-list"></div>
+      <div id="memo-group" class="memo-group">
+        <button class="add-btn" onclick="addMemo()">메모 추가</button>
+        <div class="memo-list" id="memo-list"></div>
+      </div>
     </div>
     <div class="resizer" id="resizer"></div>
     <div class="pane right-pane" id="event-pane">
       <div id="container"></div>
+      <button id="memo-float-toggle" class="memo-float-toggle" onclick="toggleMemoGroupFloating()">📑</button>
       <button class="add-button" onclick="addCharacterBox()">+</button>
       <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
     </div>
@@ -434,6 +471,13 @@
       el.classList.add('fade-out');
       setTimeout(() => el.remove(), 1000);
       saveMemosToCookie();
+    }
+
+    function toggleMemoGroupFloating() {
+      const group = document.getElementById('memo-group');
+      const btn = document.getElementById('memo-float-toggle');
+      const collapsed = group.classList.toggle('collapsed');
+      btn.textContent = collapsed ? '📂' : '📑';
     }
 
     document.addEventListener('keydown', function (e) {
