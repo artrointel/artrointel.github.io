@@ -403,6 +403,9 @@
     }
 
     function loadMemosFromCookie() {
+      if (memosLoaded) return;
+      memosLoaded = true;
+
       const match = document.cookie.match(/(?:^|; )memoList=([^;]*)/);
       if (match) {
         try {
