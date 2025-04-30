@@ -236,9 +236,85 @@
       box-sizing: border-box;
     }
     .resizer {
-      width: 5px;
+      width: 3px;
       cursor: col-resize;
-      background-color: #ccc;
+      background-color: var(--border-color);
+      transition: background-color 0.3s ease;
+    }
+    .resizer:hover {
+      background-color: var(--accent-color);
+    }
+    body.dark .resizer {
+      background-color: #666;
+    }
+    body.dark .resizer:hover {
+      background-color: var(--accent-color);
+    }
+    .server-status {
+      background: var(--box-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 12px;
+      margin-bottom: 15px;
+      font-size: 15px;
+      color: var(--text-color);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .server-status table {
+      width: 100%;
+      border-spacing: 10px;
+    }
+    .server-status label {
+      font-weight: bold;
+    }
+    .server-status input[type="time"],
+    .server-status select {
+      width: 100%;
+      padding: 4px 6px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      background: var(--box-bg);
+      color: var(--text-color);
+      box-sizing: border-box;
+    }
+    .server-status button {
+      padding: 6px 12px;
+      font-size: 14px;
+      border: none;
+      border-radius: 6px;
+      background: var(--button-bg);
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .server-status button:hover {
+      opacity: 0.9;
+    }
+    .moon-alarm-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 6px;
+    }
+    .moon-alarm-row input[type="time"] {
+      flex: 0 0 100px;
+    }
+    .moon-alarm-row label {
+      flex-grow: 1;
+    }
+    .moon-alarm-row input[type="checkbox"] {
+      transform: scale(1.2);
+    }
+    .moon-alarm-row button {
+      background: #ffaaaa;
+      border: 1px solid #cc6666;
+      padding: 4px 8px;
+      font-size: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .moon-alarm-row button:hover {
+      background: #ff8888;
     }
     .memo-list {
       flex-grow: 1;
@@ -368,6 +444,43 @@
 <body>
   <div class="split-container">
     <div class="pane left-pane" id="memo-pane">
+      <div class="server-status">
+        <table>
+          <tr>
+            <td><label for="trans-mode">트랜스 현상</label></td>
+            <td colspan="2">
+              <select id="trans-mode" onchange="saveTransToCookie(); toggleMoonAlarms();">
+                <option value="없음">없음</option>
+                <option value="달의 징조">달의 징조</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="ingame-time">현재 인게임 시간</label></td>
+            <td colspan="2"><input type="time" id="ingame-time" value="00:00" onchange="setIngameClockBase()"></td>
+          </tr>
+        </table>
+      </div>
+      <div id="moon-alarm-section" style="display: none; margin-top: 10px;">
+        <div class="moon-alarm-row">
+          <input type="time" value="21:00" disabled>
+          <label>달의 징조 시작</label>
+          <input type="checkbox" id="alarm1" checked onchange="saveMoonAlarmsToCookie()">
+          <button onclick="removeMoonAlarm(this)">X</button>
+        </div>
+        <div class="moon-alarm-row">
+          <input type="time" value="00:00" disabled>
+          <label>자정 알림</label>
+          <input type="checkbox" id="alarm2" checked onchange="saveMoonAlarmsToCookie()">
+          <button onclick="removeMoonAlarm(this)">X</button>
+        </div>
+        <div class="moon-alarm-row">
+          <input type="time" value="03:00" disabled>
+          <label>달의 징조 종료</label>
+          <input type="checkbox" id="alarm3" checked onchange="saveMoonAlarmsToCookie()">
+          <button onclick="removeMoonAlarm(this)">X</button>
+        </div>
+      </div>
       <div id="memo-group" class="memo-group">
         <button class="add-btn" onclick="addMemo()">메모 추가</button>
         <div class="memo-list" id="memo-list"></div>
@@ -386,13 +499,97 @@
   <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
   <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
   <script>
-    const EVENT_MAP = {
-      '케이론': 'https://icons.iconarchive.com/icons/seanau/user/256/Thief-icon.png',
-      '다크사이트': 'https://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/amnesia-the-dark-descent-icon.png',
-      '타락한낙원': 'https://icons.iconarchive.com/icons/mathijssen/tuxlets/256/Devil-Tux-icon.png',
-      '디스코': 'https://icons.iconarchive.com/icons/tanitakawkaw/simple-cute/256/music-icon.png',
-      '지옥길': 'https://icons.iconarchive.com/icons/google/noto-emoji-travel-places/256/42697-fire-icon.png'
-    };
+    function saveTransToCookie() {
+      const value = document.getElementById('trans-mode').value;
+      document.cookie = `transMode=${value}; path=/; max-age=31536000`;
+    }
+
+    function loadTransFromCookie() {
+      const match = document.cookie.match(/(?:^|; )transMode=([^;]*)/);
+      if (match) {
+        document.getElementById('trans-mode').value = match[1];
+      }
+    }
+
+    function toggleMoonAlarms() {
+      const selected = document.getElementById('trans-mode').value;
+      const section = document.getElementById('moon-alarm-section');
+      section.style.display = selected === '달의 징조' ? 'block' : 'none';
+    }
+
+    function saveMoonAlarmsToCookie() {
+      const values = [1, 2, 3].map(i => document.getElementById(`alarm${i}`).checked);
+      document.cookie = `moonAlarms=${JSON.stringify(values)}; path=/; max-age=31536000`;
+    }
+
+    function loadMoonAlarmsFromCookie() {
+      const match = document.cookie.match(/(?:^|; )moonAlarms=([^;]*)/);
+      if (match) {
+        try {
+          const values = JSON.parse(match[1]);
+          [1, 2, 3].forEach((i, idx) => {
+            const el = document.getElementById(`alarm${i}`);
+            if (el) el.checked = values[idx];
+          });
+        } catch {}
+      }
+    }
+
+    function removeMoonAlarm(btn) {
+      btn.closest('.moon-alarm-row').remove();
+      saveMoonAlarmsToCookie();
+    }
+
+    let ingameBaseRealTime = null;
+    let ingameBaseTimeMinutes = 0;
+    let ingameInterval = null;
+
+    function saveIngameTimeToCookie() {
+      document.cookie = `ingameBase=${ingameBaseTimeMinutes}; path=/; max-age=31536000`;
+      document.cookie = `ingameRealBase=${new Date().toISOString()}; path=/; max-age=31536000`;
+    }
+
+    function loadIngameTimeFromCookie() {
+      const baseTimeMatch = document.cookie.match(/(?:^|; )ingameBase=([^;]*)/);
+      const baseRealMatch = document.cookie.match(/(?:^|; )ingameRealBase=([^;]*)/);
+      if (baseTimeMatch && baseRealMatch) {
+        ingameBaseTimeMinutes = parseInt(baseTimeMatch[1]);
+        ingameBaseRealTime = new Date(baseRealMatch[1]);
+        if (!isNaN(ingameBaseTimeMinutes) && ingameBaseRealTime instanceof Date && !isNaN(ingameBaseRealTime)) {
+          ingameInterval = setInterval(updateIngameClock, 1000);
+          updateIngameClock();
+        }
+      }
+    }
+
+    function setIngameClockBase() {
+      const input = document.getElementById('ingame-time');
+      const [hh, mm] = input.value.split(":").map(Number);
+      ingameBaseRealTime = new Date();
+      ingameBaseTimeMinutes = hh * 60 + mm;
+      if (ingameInterval) clearInterval(ingameInterval);
+      ingameInterval = setInterval(updateIngameClock, 1000);
+      updateIngameClock();
+      saveIngameTimeToCookie();
+    }
+
+    function updateIngameClock() {
+      const input = document.getElementById('ingame-time');
+      const now = new Date();
+      const elapsedRealSec = (now - ingameBaseRealTime) / 1000;
+      const elapsedIngameMin = Math.floor(elapsedRealSec * 24 / 60);
+      const totalMinutes = (ingameBaseTimeMinutes + elapsedIngameMin) % 1440;
+      const h = String(Math.floor(totalMinutes / 60)).padStart(2, '0');
+      const m = String(totalMinutes % 60).padStart(2, '0');
+      input.value = `${h}:${m}`;
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      loadTransFromCookie();
+      loadIngameTimeFromCookie();
+      loadMoonAlarmsFromCookie();
+      toggleMoonAlarms();
+    });
 
     const memos = [];
     let memoId = 0;
@@ -586,6 +783,14 @@
 
       timers.set(timerEl, interval);
     }
+
+    const EVENT_MAP = {
+      '케이론': 'https://icons.iconarchive.com/icons/seanau/user/256/Thief-icon.png',
+      '다크사이트': 'https://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/amnesia-the-dark-descent-icon.png',
+      '타락한낙원': 'https://icons.iconarchive.com/icons/mathijssen/tuxlets/256/Devil-Tux-icon.png',
+      '디스코': 'https://icons.iconarchive.com/icons/tanitakawkaw/simple-cute/256/music-icon.png',
+      '지옥길': 'https://icons.iconarchive.com/icons/google/noto-emoji-travel-places/256/42697-fire-icon.png'
+    };
 
     function addCharacterBox(name = '') {
     const box = document.createElement('div');
