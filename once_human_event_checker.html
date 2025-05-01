@@ -675,7 +675,6 @@
       if (!alarmPresets[trans]) return;
 
       const alarmStates = loadAlarmStatesFromCookie(trans);
-      alert(alarmStates);
 
       alarmPresets[trans].forEach((alarm, index) => {
         const row = createAlarmRow(alarm.time, alarm.label, alarmStates[index], trans);
@@ -702,9 +701,8 @@
 
     function resetAlarmsToDefault() {
       const trans = document.getElementById('trans-mode').value;
-      if (!defaultPresets[trans]) return;
-      alarmPresets[trans] = JSON.parse(JSON.stringify(defaultPresets[trans] || []));
-      saveAlarmStatesToCookie();
+      alarmPresets[trans] = JSON.parse(JSON.stringify(defaultPresets[trans]));
+      saveAlarmStatesToCookie(false);
       renderAlarmList();
     }
 
@@ -715,17 +713,24 @@
       saveAlarmStatesToCookie();
     }
 
-    function saveAlarmStatesToCookie() {
+    function saveAlarmStatesToCookie(fromDOM = true) {
       const trans = document.getElementById('trans-mode').value;
-      const rows = document.querySelectorAll('#alarm-section .alarm-row');
-      const data = Array.from(rows).map(row => {
-        return {
-          time: row.querySelector('input[type="time"]').value,
-          label: row.querySelector('input.desc').value,
-          checked: row.querySelector('input[type="checkbox"]').checked
-        };
-      });
-      document.cookie = `alarmData_${trans}=${JSON.stringify(data)}; path=/; max-age=31536000`;
+      if (!trans) return;
+
+      if (fromDOM) {
+        const rows = document.querySelectorAll('#alarm-section .alarm-row');
+        const data = Array.from(rows).map(row => {
+          return {
+            time: row.querySelector('input[type="time"]').value,
+            label: row.querySelector('input.desc').value,
+            checked: row.querySelector('input[type="checkbox"]').checked
+          };
+        });
+        alarmPresets[trans] = data;
+      }
+
+      const dataToSave = alarmPresets[trans];
+      document.cookie = `alarmData_${trans}=${JSON.stringify(dataToSave)}; path=/; max-age=31536000`;
     }
 
     function loadAlarmStatesFromCookie(trans) {
