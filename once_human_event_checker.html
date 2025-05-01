@@ -819,13 +819,6 @@
       checkAlarmTrigger(totalMinutes);
     }
 
-    window.addEventListener('DOMContentLoaded', () => {
-      loadTransFromCookie();
-      loadIngameTimeFromCookie();
-      loadAlarmStatesFromCookie();
-      renderAlarmList();
-    });
-
     const memos = [];
     let memoId = 0;
 
@@ -919,10 +912,6 @@
       const width = Math.max(250, e.clientX);
       leftPane.style.width = width + 'px';
     }
-
-    window.addEventListener('DOMContentLoaded', () => {
-      loadMemosFromCookie();
-    });
     
     const timers = new Map();
 
@@ -1076,6 +1065,11 @@
     })();
 
     window.addEventListener('DOMContentLoaded', () => {
+      loadTransFromCookie();
+      loadIngameTimeFromCookie();
+      loadAlarmStatesFromCookie();
+      renderAlarmList();
+
       loadGlobalSettingsFromCookie();
       loadCharacterNamesFromCookie();
       loadMemosFromCookie();
