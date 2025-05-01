@@ -701,7 +701,7 @@
 
     function resetAlarmsToDefault() {
       const trans = document.getElementById('trans-mode').value;
-      if (!alarmPresets[trans]) return;
+      if (!defaultPresets[trans]) return;
       alarmPresets[trans] = JSON.parse(JSON.stringify(defaultPresets[trans] || []));
       saveAlarmStatesToCookie();
       renderAlarmList();
