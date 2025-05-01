@@ -835,14 +835,12 @@
     }
 
     function loadMemosFromCookie() {
-      if (memosLoaded) return;
-      memosLoaded = true;
-
       const match = document.cookie.match(/(?:^|; )memoList=([^;]*)/);
       if (match) {
         try {
           const list = JSON.parse(decodeURIComponent(match[1]));
           if (Array.isArray(list)) list.forEach(html => addMemo(html));
+          memoId = list.length;
         } catch (e) {
           console.error('메모 로드 오류:', e);
         }
