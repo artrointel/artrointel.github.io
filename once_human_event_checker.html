@@ -657,7 +657,7 @@
       }
     }
 
-    const alarmPresets = {
+    const defaultPresets = {
       '없음': [],
       '달의 징조': [
         { time: '21:00', label: '달의 징조 시작' },
@@ -665,6 +665,8 @@
         { time: '03:00', label: '달의 징조 종료' }
       ]
     };
+
+    let alarmPresets = JSON.parse(JSON.stringify(defaultPresets));
 
     function renderAlarmList() {
       const trans = document.getElementById('trans-mode').value;
@@ -698,11 +700,11 @@
     }
 
     function resetAlarmsToDefault() {
-      const trans = document.getElementById('trans-mode').value;
+      const trans = document.getElementById('trans-mode')?.value;
       if (!alarmPresets[trans]) return;
-      alarmPresets[trans] = JSON.parse(JSON.stringify(alarmPresets[trans] || []));
-      saveAlarmStatesToCookie();
-      renderAlarmList();
+      alarmPresets[trans] = JSON.parse(JSON.stringify(defaultPresets[trans] || []));
+      saveAlarmStatesToCookie?.();
+      renderAlarmList?.();
     }
 
     function addAlarmRow() {
