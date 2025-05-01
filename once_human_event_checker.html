@@ -700,11 +700,11 @@
     }
 
     function resetAlarmsToDefault() {
-      const trans = document.getElementById('trans-mode')?.value;
+      const trans = document.getElementById('trans-mode').value;
       if (!alarmPresets[trans]) return;
       alarmPresets[trans] = JSON.parse(JSON.stringify(defaultPresets[trans] || []));
-      saveAlarmStatesToCookie?.();
-      renderAlarmList?.();
+      saveAlarmStatesToCookie();
+      renderAlarmList();
     }
 
     function addAlarmRow() {
@@ -739,10 +739,6 @@
       }
       return alarmPresets[trans].map(() => true);
     }
-
-    window.addEventListener('DOMContentLoaded', () => {
-      renderAlarmList();
-    });
 
     function checkAlarmTrigger(currentIngameMinutes) {
       const rows = document.querySelectorAll('#alarm-section .alarm-row');
@@ -821,6 +817,7 @@
       loadTransFromCookie();
       loadIngameTimeFromCookie();
       loadAlarmStatesFromCookie();
+      renderAlarmList();
     });
 
     const memos = [];
