@@ -675,6 +675,7 @@
       if (!alarmPresets[trans]) return;
 
       const alarmStates = loadAlarmStatesFromCookie(trans);
+      alert(alarmStates);
 
       alarmPresets[trans].forEach((alarm, index) => {
         const row = createAlarmRow(alarm.time, alarm.label, alarmStates[index], trans);
