@@ -829,23 +829,6 @@
     const memos = [];
     let memoId = 0;
 
-    function saveMemosToCookie() {
-      const contents = memos.map(q => q.editor.root.innerHTML);
-      document.cookie = `memoList=${encodeURIComponent(JSON.stringify(contents))}; path=/; max-age=31536000`;
-    }
-
-    function loadMemosFromCookie() {
-      const match = document.cookie.match(/(?:^|; )memoList=([^;]*)/);
-      if (match) {
-        try {
-          const list = JSON.parse(decodeURIComponent(match[1]));
-          if (Array.isArray(list)) list.forEach(html => addMemo(html, false));
-        } catch (e) {
-          console.error('메모 로드 오류:', e);
-        }
-      }
-    }
-
     function addMemo(content = '', title = '', saveCookie = true) {
       const id = `memo-${memoId++}`;
       const memoWrapper = document.createElement('div');
@@ -884,7 +867,7 @@
       if (match) {
         try {
           const list = JSON.parse(decodeURIComponent(match[1]));
-          if (Array.isArray(list)) list.forEach(m => addMemo(m.html, m.title));
+          if (Array.isArray(list)) list.forEach(m => addMemo(m.html, m.title, false));
         } catch (e) {
           console.error('메모 로드 오류:', e);
         }
