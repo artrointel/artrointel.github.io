@@ -839,15 +839,14 @@
       if (match) {
         try {
           const list = JSON.parse(decodeURIComponent(match[1]));
-          if (Array.isArray(list)) list.forEach(html => addMemo(html));
-          memoId = list.length;
+          if (Array.isArray(list)) list.forEach(html => addMemo(html, false));
         } catch (e) {
           console.error('메모 로드 오류:', e);
         }
       }
     }
 
-    function addMemo(content = '', title = '') {
+    function addMemo(content = '', title = '', saveCookie = true) {
       const id = `memo-${memoId++}`;
       const memoWrapper = document.createElement('div');
       memoWrapper.className = 'memo';
@@ -868,7 +867,8 @@
       editor.root.innerHTML = content;
       editor.on('text-change', saveMemosToCookie);
       memos.push({ id, editor, titleInput: memoWrapper.querySelector('.memo-title') });
-      saveMemosToCookie();
+
+      if (saveCookie) saveMemosToCookie();
     }
 
     function saveMemosToCookie() {
