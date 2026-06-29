@@ -11,6 +11,10 @@ export const headerData = {
       href: getPermalink('/resume'),
     },
     {
+      text: 'Lab',
+      href: getPermalink('/lab'),
+    },
+    {
       text: 'Blog',
       href: getBlogPermalink(),
     },
@@ -25,6 +29,7 @@ export const footerData = {
       links: [
         { text: 'About', href: getPermalink('/about') },
         { text: 'Resume', href: getPermalink('/resume') },
+        { text: 'Lab', href: getPermalink('/lab') },
         { text: 'Blog', href: getBlogPermalink() },
       ],
     },
