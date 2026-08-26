@@ -6,32 +6,51 @@ import Hero from '~/components/widgets/Hero.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Content from '~/components/widgets/Content.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import type { Locale } from '~/i18n';
+
+export interface Props {
+  locale?: Locale;
+}
+
+const { locale } = Astro.props;
 
 const metadata = {
   title: 'About Me',
 };
 ---
 
-<Layout metadata={metadata}>
+<Layout metadata={metadata} locale={locale}>
   <!-- Hero Widget ******************* -->
 
   <Hero
     tagline="About Me"
+    classes={{
+      container: 'py-10 md:py-14',
+      copy: 'pb-8 md:pb-10',
+      title: 'text-4xl leading-tight md:text-5xl',
+      subtitle: 'text-base leading-7 sm:text-lg sm:leading-8',
+    }}
     image={{
       src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
       alt: 'Woohyun Kim Workspace',
     }}
   >
     <Fragment slot="title">
-      Software Engineering Across <br />
-      <span class="text-accent dark:text-white"> Android Graphics, Platforms & Practical AI</span>
+      <span class="block">Software Engineering Across</span>
+      <span class="mt-3 block text-2xl font-semibold leading-snug text-accent dark:text-white sm:text-3xl md:text-4xl">
+        Android Graphics, Platforms & Practical AI
+      </span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      I am a software engineer with 10+ years of experience, including nearly a decade at Samsung Electronics,
-      specializing in Android graphics and platform engineering. I built production rendering systems and creator
-      platforms including Watch Face Studio and Wonderland. My work bridges mathematical foundations with production
-      engineering across graphics, platforms, and practical AI.
+      <span class="block">
+        I am a software engineer with 10+ years of experience, including nearly a decade at Samsung Electronics,
+        specializing in Android graphics and platform engineering.
+      </span>
+      <span class="mt-2 block">
+        I built production rendering systems and creator platforms including Watch Face Studio and Wonderland, bridging
+        mathematical foundations with production engineering across graphics, platforms, and practical AI.
+      </span>
     </Fragment>
   </Hero>
 

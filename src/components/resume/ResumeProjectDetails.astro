@@ -1,0 +1,323 @@
+---
+import vvBreathFocusingDark from '~/assets/multimedia/vanillavibes/vv_breath_focusing_dark.mp4';
+import vvBreathFocusingLight from '~/assets/multimedia/vanillavibes/vv_breath_focusing_light.mp4';
+import vvScanRevealDark from '~/assets/multimedia/vanillavibes/vv_scan_reveal_dark.mp4';
+import vvScanRevealLight from '~/assets/multimedia/vanillavibes/vv_scan_reveal_light.mp4';
+
+const baseUrl = import.meta.env.BASE_URL ?? '/';
+
+type Resource = {
+  label: string;
+  kind: 'video' | 'iframe' | 'image' | 'link';
+  src: string;
+};
+
+type Project = {
+  id: string;
+  title: string;
+  description: string;
+  resources: Resource[];
+};
+
+const projects: Project[] = [
+  {
+    id: 'wonderland-modal',
+    title: 'Wonderland',
+    description:
+      'Wallpaper Transition Effects 적용 사례입니다. 더 많은 영상은 YouTube에서 Samsung Galaxy Wonderland로 확인할 수 있습니다.',
+    resources: [
+      ['영상 1', 'https://www.youtube.com/embed/_sbea9T3yzc'],
+      ['영상 2', 'https://www.youtube.com/embed/ofM3ofy1fek'],
+      ['영상 3', 'https://www.youtube.com/embed/mwvoi2LDb9I'],
+      ['영상 4', 'https://www.youtube.com/embed/yu2Zy00WKEA'],
+      ['영상 5', 'https://www.youtube.com/embed/H25LeNEQTl8'],
+    ].map(([label, src]) => ({ label, kind: 'iframe' as const, src })),
+  },
+  {
+    id: 'vanillavibes-modal',
+    title: 'VanillaVibes',
+    description: 'Galaxy AI 기능에 적용되는 RenderEffect 기반 비주얼 이펙트 렌더링 사례입니다.',
+    resources: [
+      { label: 'Breath Focusing · Light', kind: 'video', src: vvBreathFocusingLight },
+      { label: 'Breath Focusing · Dark', kind: 'video', src: vvBreathFocusingDark },
+      { label: 'Scan Reveal · Light', kind: 'video', src: vvScanRevealLight },
+      { label: 'Scan Reveal · Dark', kind: 'video', src: vvScanRevealDark },
+    ],
+  },
+  {
+    id: 'seminar-3d-math-modal',
+    title: '3D 프로그래밍을 위한 벡터·행렬·쿼터니언',
+    description: '삼성소프트웨어멤버십에서 진행한 세미나 자료입니다.',
+    resources: [
+      {
+        label: '슬라이드 미리보기',
+        kind: 'iframe',
+        src: 'https://www.slideshare.net/slideshow/embed_code/key/j8r1JUnNZet8E0',
+      },
+      { label: 'SlideShare에서 보기', kind: 'link', src: 'https://www.slideshare.net/WoohyunKim16/3d-85975448' },
+      { label: 'SlideShare 프로필', kind: 'link', src: 'https://www.slideshare.net/WoohyunKim16' },
+    ],
+  },
+  {
+    id: 'seminar-openmp-modal',
+    title: 'OpenMP·MPI 입문',
+    description: '삼성소프트웨어멤버십에서 진행한 세미나 자료입니다.',
+    resources: [
+      {
+        label: '슬라이드 미리보기',
+        kind: 'iframe',
+        src: 'https://www.slideshare.net/slideshow/embed_code/key/b8E8s3PsQjwKqr',
+      },
+      {
+        label: 'SlideShare에서 보기',
+        kind: 'link',
+        src: 'https://www.slideshare.net/WoohyunKim16/openmp-for-beginners',
+      },
+      { label: 'SlideShare 프로필', kind: 'link', src: 'https://www.slideshare.net/WoohyunKim16' },
+    ],
+  },
+  {
+    id: 'crossbridge-modal',
+    title: 'Cross the Bridge',
+    description: '3D 게임 엔진과 교량 시뮬레이션 프로젝트입니다.',
+    resources: [
+      {
+        label: 'YouTube',
+        kind: 'iframe',
+        src: 'https://www.youtube.com/embed/j9WeBjJaUlE?list=PLFvdltGhnoAOEi8856S_SpO5De_5REK_o',
+      },
+      { label: '프로젝트 이미지', kind: 'image', src: `${baseUrl}assets/projects/cross-the-bridge/bridge.jpg` },
+      { label: 'RPEngine 저장소', kind: 'link', src: 'https://github.com/artrointel/RPEngine' },
+    ],
+  },
+  {
+    id: 'smartvoice-modal',
+    title: 'SmartVoice',
+    description: '음성 기반 Android 시스템 서비스와 AOSP 플랫폼 변경 프로젝트입니다.',
+    resources: [
+      {
+        label: 'YouTube',
+        kind: 'iframe',
+        src: 'https://www.youtube.com/embed/videoseries?list=PLFvdltGhnoANUmPkSl9IVSECUSKcswDoK',
+      },
+      { label: '프로젝트 이미지', kind: 'image', src: `${baseUrl}assets/projects/smart-voice/settings.jpg` },
+    ],
+  },
+  {
+    id: 'friendly-farm-modal',
+    title: 'Friendly Farm',
+    description: '농장 시뮬레이션과 디펜스 게임플레이를 결합한 소셜 네트워크 게임입니다.',
+    resources: [
+      {
+        label: 'YouTube',
+        kind: 'iframe',
+        src: 'https://www.youtube.com/embed/8CI9qfpottU?list=PLFvdltGhnoAPDOS2YjjSNd1FlrL-JpJZt',
+      },
+      { label: '농장 시뮬레이션', kind: 'image', src: `${baseUrl}assets/projects/friendly-farm/farming.jpg` },
+      { label: '디펜스 게임플레이', kind: 'image', src: `${baseUrl}assets/projects/friendly-farm/defense.jpg` },
+    ],
+  },
+  {
+    id: 'family-story-modal',
+    title: 'Family Story',
+    description: '가족 중심 SNS로 개발한 Android 하이브리드 웹 앱입니다.',
+    resources: [
+      { label: '프로젝트 이미지', kind: 'image', src: `${baseUrl}assets/projects/family-story/family-story.jpg` },
+    ],
+  },
+];
+---
+
+{
+  projects.map((project) => {
+    const previewResources = project.resources.filter(({ kind }) => kind !== 'link');
+    return (
+      <div
+        id={project.id}
+        class="resume-detail-modal fixed inset-0 z-[9999] hidden overflow-y-auto"
+        aria-hidden="true"
+        data-modal
+        data-resume-detail-modal
+      >
+        <div class="absolute inset-0 bg-black/45 backdrop-blur-sm" data-modal-close={project.id} />
+        <div class="relative mx-auto flex min-h-full max-w-5xl items-center px-4 py-6 sm:px-6">
+          <div
+            class="modal-panel pointer-events-auto relative z-10 w-full overflow-hidden rounded-lg border border-black/10 bg-white shadow-xl dark:border-white/10 dark:bg-slate-900"
+            role="dialog"
+            aria-modal="true"
+            aria-label={`${project.title} 상세 자료`}
+          >
+            <header class="flex items-start justify-between gap-4 border-b border-black/10 px-4 py-3 dark:border-white/10 sm:px-6">
+              <div class="min-w-0">
+                <h3 class="text-sm font-semibold text-gray-900 dark:text-slate-100">{project.title}</h3>
+                <p class="mt-1 text-xs leading-5 text-gray-500 dark:text-slate-400">{project.description}</p>
+              </div>
+              <button
+                type="button"
+                class="pointer-events-auto relative z-20 shrink-0 cursor-pointer text-sm font-medium text-gray-500 hover:text-gray-900 dark:text-slate-400 dark:hover:text-white"
+                data-modal-close={project.id}
+              >
+                닫기
+              </button>
+            </header>
+            <div class="grid gap-4 p-4 sm:gap-6 sm:p-6 md:grid-cols-[minmax(0,2fr)_minmax(12rem,1fr)]">
+              <div class="detail-stage grid min-h-60 place-items-center rounded-lg bg-black/5 p-2 dark:bg-black/30 sm:p-3">
+                <video class="detail-media hidden w-full rounded-md bg-black" controls preload="metadata" />
+                <iframe
+                  class="detail-media hidden w-full rounded-md bg-white"
+                  src=""
+                  title={`${project.title} 미리보기`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                />
+                <img
+                  class="detail-media hidden w-full rounded-md object-contain"
+                  src=""
+                  alt={`${project.title} 프로젝트 이미지`}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div>
+                <div class="mb-2 text-xs font-semibold text-gray-500 dark:text-slate-400">상세 자료</div>
+                <ul class="space-y-2">
+                  {project.resources.map((resource, index) => (
+                    <li>
+                      {resource.kind === 'link' ? (
+                        <a
+                          class="detail-item block w-full rounded-md border border-black/10 px-3 py-2 text-left text-sm dark:border-white/10"
+                          href={resource.src}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {resource.label}
+                        </a>
+                      ) : (
+                        <button
+                          type="button"
+                          class={`detail-item w-full rounded-md border border-black/10 px-3 py-2 text-left text-sm dark:border-white/10 ${resource === previewResources[0] || (index === 0 && previewResources.length > 0) ? 'is-active' : ''}`}
+                          data-detail-kind={resource.kind}
+                          data-detail-src={resource.src}
+                        >
+                          {resource.label}
+                        </button>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  })
+}
+
+<script is:inline>
+  const initResumeDetailModals = () => {
+    document.querySelectorAll('[data-resume-detail-modal]').forEach((modal) => {
+      if (modal.dataset.detailBound === 'true') return;
+      modal.dataset.detailBound = 'true';
+
+      const video = modal.querySelector('video');
+      const frame = modal.querySelector('iframe');
+      const image = modal.querySelector('img');
+      const buttons = Array.from(modal.querySelectorAll('[data-detail-src]'));
+
+      const close = () => {
+        modal.classList.add('hidden');
+        modal.setAttribute('aria-hidden', 'true');
+        if (!document.querySelector('[data-modal]:not(.hidden)')) {
+          document.body.classList.remove('overflow-hidden');
+        }
+        modal.dispatchEvent(new CustomEvent('modal:close', { bubbles: true }));
+      };
+
+      const reset = () => {
+        video.pause();
+        video.removeAttribute('src');
+        video.load();
+        frame.setAttribute('src', '');
+        image.removeAttribute('src');
+        [video, frame, image].forEach((media) => media.classList.add('hidden'));
+      };
+
+      const show = (button) => {
+        reset();
+        buttons.forEach((item) => item.classList.remove('is-active'));
+        button.classList.add('is-active');
+        const kind = button.dataset.detailKind;
+        const src = button.dataset.detailSrc;
+        const target = kind === 'video' ? video : kind === 'image' ? image : frame;
+        if (!src || !target) return;
+        target.setAttribute('src', src);
+        target.classList.remove('hidden');
+        if (kind === 'video') video.load();
+      };
+
+      modal.addEventListener('modal:open', () => buttons[0] && show(buttons[0]));
+      modal.addEventListener('modal:close', reset);
+      modal.addEventListener('click', (event) => {
+        if (event.target.closest('[data-modal-close]')) {
+          event.preventDefault();
+          event.stopPropagation();
+          close();
+          return;
+        }
+        const button = event.target.closest('[data-detail-src]');
+        if (button) show(button);
+      });
+    });
+  };
+
+  initResumeDetailModals();
+  document.addEventListener('astro:after-swap', initResumeDetailModals);
+</script>
+
+<style>
+  .resume-detail-modal:not(.hidden) {
+    display: block;
+  }
+  .resume-detail-modal,
+  .modal-panel,
+  .modal-panel * {
+    pointer-events: auto;
+  }
+  .detail-media {
+    aspect-ratio: 16 / 9;
+    max-height: 32rem;
+  }
+  iframe.detail-media {
+    aspect-ratio: 16 / 9;
+  }
+  .detail-item {
+    color: #1f2937;
+    background: #fff;
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease;
+  }
+  .detail-item:hover,
+  .detail-item.is-active {
+    color: #1d4ed8;
+    border-color: #93c5fd;
+    background: #eff6ff;
+  }
+  :global(html.dark) .detail-item {
+    color: #e2e8f0;
+    background: #0f172a;
+  }
+  :global(html.dark) .detail-item:hover,
+  :global(html.dark) .detail-item.is-active {
+    color: #bfdbfe;
+    border-color: #1d4ed8;
+    background: #0b1220;
+  }
+  @media (max-width: 767px) {
+    .detail-stage {
+      min-height: 12rem;
+    }
+  }
+</style>

@@ -1,0 +1,17 @@
+---
+import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
+import LocalizedPost from '~/components/blog/LocalizedPost.astro';
+import { fetchPosts } from '~/utils/blog';
+
+export const prerender = true;
+
+export const getStaticPaths = (async () =>
+  (await fetchPosts())
+    .filter((post) => post.language === 'ko')
+    .map((post) => ({ params: { post: post.permalink }, props: { post } }))) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+const { post } = Astro.props as Props;
+---
+
+<LocalizedPost post={post} locale="ko" />

@@ -1,0 +1,21 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import BlogList from '~/components/blog/List.astro';
+import Headline from '~/components/blog/Headline.astro';
+import { fetchPosts, blogListRobots } from '~/utils/blog';
+
+const posts = (await fetchPosts()).filter((post) => post.language === 'ko');
+const metadata = {
+  title: '블로그',
+  description: '김우현의 그래픽스, 플랫폼 아키텍처와 AI 분야 기술 분석 및 개발 기록입니다.',
+  robots: blogListRobots,
+  openGraph: { type: 'blog', locale: 'ko' },
+};
+---
+
+<Layout metadata={metadata} locale="ko">
+  <section class="mx-auto max-w-4xl px-6 py-12 sm:px-6 sm:py-16 lg:py-20">
+    <Headline subtitle="그래픽스 · 플랫폼 아키텍처 · AI 분야의 기술 분석 및 개발 기록입니다.">블로그</Headline>
+    <BlogList posts={posts} locale="ko" />
+  </section>
+</Layout>

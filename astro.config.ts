@@ -30,7 +30,18 @@ export default defineConfig({
     tailwind({
       applyBaseStyles: false,
     }),
-    sitemap(),
+    sitemap({
+      filter: (page) => {
+        const pathname = new URL(page).pathname.replace(/\/$/, '') || '/';
+        return (
+          pathname === '/' ||
+          pathname === '/privacy' ||
+          pathname === '/terms' ||
+          pathname.startsWith('/en') ||
+          pathname.startsWith('/ko')
+        );
+      },
+    }),
     mdx(),
     icon({
       include: {

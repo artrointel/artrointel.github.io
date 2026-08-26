@@ -179,11 +179,18 @@ export const findPostsByIds = async (ids: Array<string>): Promise<Array<Post>> =
 };
 
 /** */
-export const findLatestPosts = async ({ count }: { count?: number }): Promise<Array<Post>> => {
+export const findLatestPosts = async ({
+  count,
+  locale,
+}: {
+  count?: number;
+  locale?: 'ko' | 'en';
+}): Promise<Array<Post>> => {
   const _count = count || 4;
   const posts = await fetchPosts();
+  const localizedPosts = locale ? posts.filter((post) => post.language === locale) : posts;
 
-  return posts ? posts.slice(0, _count) : [];
+  return localizedPosts.slice(0, _count);
 };
 
 /** */
@@ -263,6 +270,7 @@ export async function getRelatedPosts(originalPost: Post, maxResults: number = 4
 
   const postsWithScores = allPosts.reduce((acc: { post: Post; score: number }[], iteratedPost: Post) => {
     if (iteratedPost.slug === originalPost.slug) return acc;
+    if (originalPost.language && iteratedPost.language !== originalPost.language) return acc;
 
     let score = 0;
     if (iteratedPost.category && originalPost.category && iteratedPost.category.slug === originalPost.category.slug) {

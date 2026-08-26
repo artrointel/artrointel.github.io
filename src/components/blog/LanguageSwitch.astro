@@ -1,5 +1,4 @@
 ---
-import { getPermalink } from '~/utils/permalinks';
 import type { Post } from '~/types';
 
 export interface Props {
@@ -29,7 +28,7 @@ const hasSwitcher =
           ) : (
             <a
               class="rounded-full px-3 py-1.5 font-medium text-muted transition hover:bg-gray-100 hover:text-default dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white"
-              href={getPermalink(item.slug ?? '', 'post')}
+              href={`/${item.code}/${item.slug}`}
             >
               {item.label}
             </a>

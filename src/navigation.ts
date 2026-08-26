@@ -1,43 +1,68 @@
-import { getPermalink, getBlogPermalink } from './utils/permalinks';
+import type { Locale } from './i18n';
 
-export const headerData = {
+const labels = {
+  en: {
+    about: 'About',
+    resume: 'Resume',
+    lab: 'Lab',
+    blog: 'Blog',
+    sitemap: 'Sitemap',
+    connect: 'Connect',
+    email: 'Email',
+    rights: 'All rights reserved.',
+  },
+  ko: {
+    about: '소개',
+    resume: '이력서',
+    lab: '프로젝트',
+    blog: '블로그',
+    sitemap: '사이트맵',
+    connect: '연락처',
+    email: '이메일',
+    rights: '모든 권리 보유.',
+  },
+} as const;
+
+const localPath = (locale: Locale, path = '') => `/${locale}${path}`;
+
+export const getHeaderData = (locale: Locale = 'en') => ({
   links: [
     {
-      text: 'About',
-      href: getPermalink('/about'),
+      text: labels[locale].about,
+      href: localPath(locale, '/about'),
     },
     {
-      text: 'Resume',
-      href: getPermalink('/resume'),
+      text: labels[locale].resume,
+      href: localPath(locale, '/resume'),
     },
     {
-      text: 'Lab',
-      href: getPermalink('/lab'),
+      text: labels[locale].lab,
+      href: localPath(locale, '/lab'),
     },
     {
-      text: 'Blog',
-      href: getBlogPermalink(),
+      text: labels[locale].blog,
+      href: localPath(locale, '/blog'),
     },
   ],
   actions: [], // Removed Download CV button
-};
+});
 
-export const footerData = {
+export const getFooterData = (locale: Locale = 'en') => ({
   links: [
     {
-      title: 'Sitemap',
+      title: labels[locale].sitemap,
       links: [
-        { text: 'About', href: getPermalink('/about') },
-        { text: 'Resume', href: getPermalink('/resume') },
-        { text: 'Lab', href: getPermalink('/lab') },
-        { text: 'Blog', href: getBlogPermalink() },
+        { text: labels[locale].about, href: localPath(locale, '/about') },
+        { text: labels[locale].resume, href: localPath(locale, '/resume') },
+        { text: labels[locale].lab, href: localPath(locale, '/lab') },
+        { text: labels[locale].blog, href: localPath(locale, '/blog') },
       ],
     },
     {
-      title: 'Connect',
+      title: labels[locale].connect,
       links: [
         { text: 'GitHub', href: 'https://github.com/artrointel' },
-        { text: 'Email', href: 'mailto:artrointel@gmail.com' },
+        { text: labels[locale].email, href: 'mailto:artrointel@gmail.com' },
       ],
     },
   ],
@@ -47,6 +72,9 @@ export const footerData = {
     { ariaLabel: 'Email', icon: 'tabler:mail', href: 'mailto:artrointel@gmail.com' },
   ],
   footNote: `
-    Made by <a class="text-blue-600 underline dark:text-muted" href="https://github.com/artrointel">Artrointel</a>. All rights reserved.
+    <a class="text-blue-600 underline dark:text-muted" href="https://github.com/artrointel">Artrointel</a>. ${labels[locale].rights}
   `,
-};
+});
+
+export const headerData = getHeaderData('en');
+export const footerData = getFooterData('en');

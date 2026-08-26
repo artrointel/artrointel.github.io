@@ -1,0 +1,292 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Content from '~/components/widgets/Content.astro';
+import ResumeProjectDetails from '~/components/resume/ResumeProjectDetails.astro';
+import samsungLogoBlack from '~/assets/images/logo_samsung_black.png';
+import samsungLogoWhite from '~/assets/images/logo_samsung_white.png';
+import metaLogoRaw from '~/assets/images/logo_metaintelligence.svg?raw';
+
+const metadata = {
+  title: '이력서 - 김우현',
+  description:
+    'Android 그래픽스, 플랫폼 엔지니어링, AI 기반 제품 개발 분야에서 10년 이상의 실무 경험을 보유한 김우현의 이력서입니다.',
+};
+---
+
+<Layout metadata={metadata} locale="ko">
+  <div class="resume-content">
+    <Hero
+      tagline="이력서"
+      classes={{
+        container: 'py-10 md:py-14',
+        copy: 'pb-4 md:pb-6',
+        subtitle: 'text-lg leading-8',
+        body: 'max-w-4xl',
+      }}
+    >
+      <Fragment slot="title">이력서</Fragment>
+      <Fragment slot="subtitle">
+        <span class="font-semibold">Android 그래픽스</span> · <span class="font-semibold">플랫폼 엔지니어링</span> ·
+        <span class="font-semibold">AI 기반 제품 개발</span> 분야의 10년 이상 실무 경험 보유.
+      </Fragment>
+      <Fragment slot="content">
+        <div class="mx-auto mt-1 max-w-xl text-center">
+          <div class="text-xs font-bold uppercase text-secondary dark:text-blue-200">목표 직무</div>
+          <ul class="mt-3 grid gap-1.5 text-sm text-muted dark:text-slate-300">
+            <li>Android / 플랫폼 소프트웨어 엔지니어</li>
+            <li>그래픽스 / 멀티미디어 / 렌더링 엔지니어</li>
+            <li>AI 기반 제품 / PoC 엔지니어</li>
+            <li>테크니컬 리드 / 제품 중심 소프트웨어 엔지니어</li>
+          </ul>
+        </div>
+      </Fragment>
+    </Hero>
+
+    <section class="py-4 md:py-6">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6">
+        <div class="flex flex-wrap items-end justify-center gap-8 sm:gap-12">
+          <div class="flex flex-col items-center gap-2">
+            <a href="https://www.samsung.com/" target="_blank" rel="noopener noreferrer" aria-label="삼성전자 로고">
+              <div class="flex h-12 w-40 items-center justify-center sm:h-14 sm:w-44">
+                <img
+                  src={samsungLogoBlack.src}
+                  alt="삼성전자"
+                  class="block h-full w-auto object-contain dark:hidden"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <img
+                  src={samsungLogoWhite.src}
+                  alt="삼성전자"
+                  class="hidden h-full w-auto object-contain dark:block"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </a>
+            <span class="text-xs text-muted">2016 - 2025</span>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <a
+              href="https://metaintelligence.github.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="메타인텔리전스 로고"
+            >
+              <div class="flex h-12 w-16 items-center justify-center sm:h-14 sm:w-20">
+                <span class="sr-only">메타인텔리전스</span>
+                <div class="meta-logo w-16 sm:w-20 [&>svg]:h-auto [&>svg]:w-full" set:html={metaLogoRaw} />
+              </div>
+            </a>
+            <span class="text-xs text-muted">2025 - 2026.07.27</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Steps
+      id="experience"
+      title="경력"
+      items={[
+        {
+          title:
+            '개발 이사 (Executive Director) <br /> <span class="font-normal">코어 개발자 · 메타인텔리전스</span> <br /> <span class="text-sm font-normal">2025 - 2026.07.27</span>',
+          description: `<ul class="list-disc pl-5 space-y-1">
+            <li>개발 이사 겸 코어 개발자로서 주요 기술 과제의 설계, 구현 및 기술 의사결정을 주도했습니다.</li>
+            <li><a class="resume-link" href="https://metaintelligence.github.io/solutions/mvi" target="_blank" rel="noopener noreferrer">MVI (Meta Vision AI)</a>: 제조 결함 탐지 제품의 공개 버전을 완성했습니다. GAN · Stable Diffusion 기반 풀스택 개발과 음영 대응 비전 탐지를 구현했습니다.</li>
+            <li><a class="resume-link" href="https://metaintelligence.github.io/namespring-web/" target="_blank" rel="noopener noreferrer">Namespring</a>: 이름 추천 서비스의 백엔드와 React · Vite 기반 프론트엔드를 설계·개발해 공개 서비스로 완성했습니다.</li>
+          </ul>`,
+          icon: 'tabler:briefcase',
+        },
+        {
+          title:
+            '소프트웨어 엔지니어 <br /> <span class="font-normal">Wonderland · AI Effects, 삼성전자</span> <br /> <span class="text-sm font-normal">2023 - 2025 · 주 역할</span>',
+          description: `<ul class="list-disc pl-5 space-y-1">
+            <li><button type="button" class="resume-detail-link" data-modal-open="wonderland-modal" aria-haspopup="dialog" aria-controls="wonderland-modal">Wonderland</button> (Good Lock)의 Wallpaper Transition Effects 코어 개발을 담당했습니다.</li>
+            <li>Galaxy 기기에서 제공하는 모든 AI 기능에 공통 적용되는 RenderEffect 기반 AI 비주얼 이펙트 렌더링 라이브러리 <button type="button" class="resume-detail-link" data-modal-open="vanillavibes-modal" aria-haspopup="dialog" aria-controls="vanillavibes-modal">VanillaVibes</button>를 개발했으며, One UI 7.0 이후 버전에 지속적으로 적용되고 있습니다.</li>
+            <li>Transparent Video Player와 Skottie View 등 사내 그래픽스 라이브러리의 렌더링 성능과 런타임 안정성을 개선했습니다.</li>
+          </ul>`,
+          icon: 'tabler:briefcase',
+        },
+        {
+          title:
+            '플랫폼 소프트웨어 엔지니어 <br /> <span class="font-normal">Watch Face Studio, 삼성전자</span> <br /> <span class="text-sm font-normal">2020 - 2025 · 병행 역할</span>',
+          description: `<ul class="list-disc pl-5 space-y-1">
+            <li><a class="resume-link" href="https://developer.android.com/training/wearables/wff" target="_blank" rel="noopener">WFF (Android Watch Face Format)</a>의 <a class="resume-link" href="https://github.com/google/watchface/commit/bbc2def58c94b18c4deec12d079b2792c2a33fef" target="_blank" rel="noopener">XML 스키마를 설계</a>하고 호환성과 품질 검증을 위한 Validator를 개발했습니다.</li>
+            <li><a class="resume-link" href="https://developer.samsung.com/watch-face-studio/overview.html" target="_blank" rel="noopener">Watch Face Studio</a>의 미리보기 렌더링 파이프라인 개발에 참여했습니다.</li>
+            <li>Wear OS 워치 페이스 런타임 WFF Loader 개발에 참여했습니다. 해당 런타임은 이후 Android 플랫폼에 채택되어 AOSP 공식 모듈로 통합됐습니다.</li>
+          </ul>`,
+          icon: 'tabler:briefcase',
+        },
+        {
+          title:
+            'Android 그래픽스 엔지니어 <br /> <span class="font-normal">삼성전자</span> <br /> <span class="text-sm font-normal">2019 - 2020</span>',
+          description: `<ul class="list-disc pl-5 space-y-1">
+            <li>Runtime Gradient Blur와 멀티 윈도우 블러 효과를 구현했습니다. 관련 특허군에는 <a class="resume-link" href="https://patents.google.com/patent/US12511803B2/en" target="_blank" rel="noopener">US12511803B2</a>와 <a class="resume-link" href="https://patents.google.com/patent/EP4167190B1/en" target="_blank" rel="noopener">EP4167190B1</a>이 있습니다.</li>
+            <li>윈도우에 독립적인 Android View 블러를 PoC와 보고서로 검증했고 이후 담당 팀을 통해 삼성 스마트폰에 적용됐습니다.</li>
+            <li>오픈소스 <a class="resume-link" href="https://tympanus.net/Development/RainEffect/" target="_blank" rel="noopener">RainEffect</a>를 분석해 삼성 사내 워치 페이스의 <a class="resume-link" href="https://youtu.be/ZGL_8u3thSU?t=14" target="_blank" rel="noopener">Weather-Raindrop</a> 렌더링을 구현했습니다.</li>
+          </ul>`,
+          icon: 'tabler:brand-android',
+        },
+        {
+          title:
+            'Tizen 그래픽스 엔지니어 <br /> <span class="font-normal">삼성전자</span> <br /> <span class="text-sm font-normal">2018 - 2019</span>',
+          description: `<ul class="list-disc pl-5 space-y-1">
+            <li>삼성 사내 워치 페이스의 <a class="resume-link" href="https://www.youtube.com/watch?v=B_CbUWJJ4cw" target="_blank" rel="noopener">Activity Sparkles</a> 렌더링을 구현했습니다.</li>
+            <li>Tizen 기반 삼성 워치를 위한 DALi 기반 3D 워치 페이스 도구 WatchFactory 실험 프로젝트에 참여했습니다. 이 프로젝트는 이후 Watch Face Studio로 발전했습니다.</li>
+          </ul>`,
+          icon: 'tabler:device-watch',
+        },
+        {
+          title:
+            '모바일 GPU 드라이버 엔지니어 <br /> <span class="font-normal">삼성전자</span> <br /> <span class="text-sm font-normal">2016 - 2018</span>',
+          description: `<ul class="list-disc pl-5 space-y-1">
+            <li>삼성 모바일 제품을 위한 ARM Mali GPU 드라이버를 개발했습니다.</li>
+            <li>드라이버 안정성, Khronos 적합성, 성능 최적화를 담당했습니다.</li>
+            <li>저수준 프로파일링 도구를 활용해 복잡한 GPU 드라이버 문제를 분석하고 해결했습니다.</li>
+          </ul>`,
+          icon: 'tabler:cpu',
+        },
+      ]}
+      classes={{ container: 'max-w-3xl pt-8 md:pt-10 lg:pt-12' }}
+    />
+
+    <Steps
+      id="programs"
+      title="프로그램과 리더십"
+      subtitle="삼성전자 재직 이력과 별도로 수행한 학생 개발자 프로그램 및 리더십 활동입니다."
+      items={[
+        {
+          title:
+            '삼성소프트웨어멤버십 <br /> <span class="font-normal">학생 개발자 프로그램</span> <br /> <span class="text-sm font-normal">2014 - 2015</span>',
+          description: `<ul class="list-disc pl-5 space-y-1">
+            <li>삼성소프트웨어멤버십 24-1기 정회원으로 선발됐습니다.</li>
+            <li>2014년부터 2015년까지 교육팀장으로 활동했습니다.</li>
+            <li><button type="button" class="resume-detail-link" data-modal-open="seminar-3d-math-modal" aria-haspopup="dialog" aria-controls="seminar-3d-math-modal">3D 프로그래밍을 위한 벡터·행렬·쿼터니언</button>과 <button type="button" class="resume-detail-link" data-modal-open="seminar-openmp-modal" aria-haspopup="dialog" aria-controls="seminar-openmp-modal">OpenMP·MPI 입문</button> 세미나를 진행했습니다.</li>
+            <li>3D 게임 엔진과 교량 시뮬레이션 프로젝트 <button type="button" class="resume-detail-link" data-modal-open="crossbridge-modal" aria-haspopup="dialog" aria-controls="crossbridge-modal">Cross the Bridge</button>를 이끌고 물리 엔진 RPEngine을 개발했습니다.</li>
+            <li>외부 집단지성을 활용한 음성 기반 Android 시스템 서비스 <button type="button" class="resume-detail-link" data-modal-open="smartvoice-modal" aria-haspopup="dialog" aria-controls="smartvoice-modal">SmartVoice</button>와 관련 AOSP 플랫폼 변경을 개발했습니다.</li>
+          </ul>`,
+          icon: 'tabler:school',
+        },
+      ]}
+      classes={{ container: 'max-w-3xl' }}
+    />
+
+    <Steps
+      id="education"
+      title="학력"
+      items={[
+        {
+          title:
+            '소프트웨어공학·응용수학 학사 <br /> <span class="font-normal">금오공과대학교</span> <br /> <span class="text-sm font-normal">2008 - 2015</span>',
+          icon: 'tabler:school',
+        },
+        {
+          title: '학생 프로젝트 <br /> <span class="text-sm font-normal">금오공과대학교</span>',
+          description: `<ul class="list-disc pl-5 space-y-1">
+            <li><button type="button" class="resume-detail-link" data-modal-open="friendly-farm-modal" aria-haspopup="dialog" aria-controls="friendly-farm-modal">Friendly Farm</button>: 농장 시뮬레이션과 디펜스 게임플레이를 결합한 소셜 네트워크 게임의 프로젝트 리드를 맡았습니다.</li>
+            <li><button type="button" class="resume-detail-link" data-modal-open="family-story-modal" aria-haspopup="dialog" aria-controls="family-story-modal">Family Story</button>: 가족 중심 SNS를 Android 하이브리드 웹 앱으로 개발하고 프로젝트를 이끌었습니다.</li>
+          </ul>`,
+          icon: 'tabler:school',
+        },
+      ]}
+      classes={{ container: 'max-w-3xl' }}
+    />
+
+    <Features3
+      title="기술 역량"
+      subtitle="제품 개발과 연구에 활용해 온 핵심 기술 스택입니다."
+      columns={3}
+      classes={{ items: { container: 'skills-grid mt-10 max-w-5xl', panel: 'max-w-none w-full' } }}
+      items={[
+        { title: '언어', description: 'C++, Java, Kotlin, Python, C#, GLSL, TypeScript, HTML', icon: 'tabler:code' },
+        {
+          title: '그래픽스와 GPU',
+          description: 'OpenGL ES, Unity3D, Renderdoc, Mali Graphics Debugger',
+          icon: 'tabler:cube',
+        },
+        { title: 'AI', description: 'Deep Learning, Generative AI, PyTorch, TensorFlow', icon: 'tabler:brain' },
+        {
+          title: '프레임워크와 플랫폼',
+          description: 'Android Framework, Android Wear, React, Electron, Vite',
+          icon: 'tabler:device-mobile',
+        },
+        {
+          title: '도구',
+          description: 'Android Studio, Visual Studio Code, IntelliJ, Blender, Git, CI/CD pipelines',
+          icon: 'tabler:tools',
+        },
+      ]}
+    />
+
+    <Content
+      title="논문과 수상"
+      items={[
+        {
+          title: '학술지 논문 (2016)',
+          description:
+            'Seongsoo Choi, <strong>Woohyun Kim</strong>, Jongho Kim, "Compression of Hamiltonian matrix: Application to spin-1/2 Heisenberg square lattice," AIP Advances (2016). <a class="resume-link" href="https://aip.scitation.org/doi/pdf/10.1063/1.4963834" target="_blank" rel="noopener">PDF</a>.',
+        },
+        {
+          title: 'K-Hackathon 3 (2015): 대상·장관상',
+          description: '웹 기반 글로벌 무료 인터넷 전화 서비스 Team Globell로 최고상을 수상했습니다.',
+        },
+        {
+          title: 'KIT Engineering Fair (2014): 은상',
+          description: '농장 시뮬레이션 SNG Team Friendly Farm으로 수상했습니다.',
+        },
+        {
+          title: 'HPCSS@UNIST (2014): 우수 기여상',
+          description: '슈퍼컴퓨팅을 활용한 이중 슬릿 실험 시뮬레이션 Team UIRI로 수상했습니다.',
+        },
+      ]}
+      image={{
+        src: 'https://images.unsplash.com/photo-1562564055-71e051d33c19?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+        alt: '논문과 수상',
+      }}
+    />
+    <ResumeProjectDetails />
+  </div>
+</Layout>
+
+<style>
+  @media (min-width: 1024px) {
+    .skills-grid {
+      grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    }
+    .skills-grid > * {
+      grid-column: span 2 / span 2;
+    }
+    .skills-grid > *:nth-last-child(2) {
+      grid-column-start: 2;
+    }
+    .skills-grid > *:last-child {
+      grid-column-start: 4;
+    }
+  }
+  .resume-content :global(.meta-logo svg text),
+  .resume-content :global(.meta-logo svg tspan) {
+    fill: #111827 !important;
+  }
+  :global(.dark) .resume-content :global(.meta-logo svg text),
+  :global(.dark) .resume-content :global(.meta-logo svg tspan) {
+    fill: #f8fafc !important;
+  }
+  .resume-content :global(.resume-link) {
+    color: rgb(1 97 239);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .resume-content :global(.resume-detail-link) {
+    color: rgb(1 97 239);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  :global(.dark) .resume-content :global(.resume-detail-link) {
+    color: #60a5fa;
+  }
+</style>

@@ -1,19 +1,21 @@
 ---
 import Item from '~/components/blog/ListItem.astro';
 import type { Post } from '~/types';
+import type { Locale } from '~/i18n';
 
 export interface Props {
   posts: Array<Post>;
+  locale?: Locale;
 }
 
-const { posts } = Astro.props;
+const { posts, locale } = Astro.props;
 ---
 
 <ul>
   {
     posts.map((post) => (
-      <li class="mb-12 md:mb-20">
-        <Item post={post} />
+      <li class="mb-12 last:mb-0 md:mb-16">
+        <Item post={post} locale={locale} />
       </li>
     ))
   }

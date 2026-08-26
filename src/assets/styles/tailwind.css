@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html[lang='ko'] body {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
 @layer utilities {
   .bg-page {
     background-color: var(--aw-color-bg-page);

@@ -1,0 +1,150 @@
+---
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Content from '~/components/widgets/Content.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: '소개',
+  description: '김우현의 엔지니어링 경력, 핵심 전문 분야, 개발 원칙과 주요 제품 성과를 정리합니다.',
+};
+---
+
+<Layout metadata={metadata} locale="ko">
+  <Hero
+    tagline="소개"
+    classes={{
+      container: 'py-10 md:py-14',
+      copy: 'pb-8 md:pb-10',
+      title: 'text-4xl leading-tight md:text-5xl',
+      subtitle: 'text-base leading-7 sm:text-lg sm:leading-8',
+      body: 'max-w-4xl',
+    }}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: '김우현의 작업 공간',
+    }}
+  >
+    <Fragment slot="title">
+      <span class="block">소프트웨어 엔지니어링</span>
+      <span class="mt-3 block text-2xl font-semibold leading-snug text-accent dark:text-white sm:text-3xl md:text-4xl">
+        Android 그래픽스, 플랫폼과 실용 AI
+      </span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="block">
+        <span class="block">Android 그래픽스와 플랫폼 엔지니어링 분야의 10년 이상 실무 경험 보유.</span>
+        <span class="mt-1 block">삼성전자에서 약 9년간 상용 그래픽스 제품과 플랫폼 개발을 담당했습니다.</span>
+      </span>
+      <span class="mt-2 block">
+        Watch Face Studio와 Wonderland 등 상용 렌더링 시스템과 창작 플랫폼을 개발하고, 수학적 기반을
+        그래픽스 · 플랫폼 · AI 제품 엔지니어링에 적용합니다.
+      </span>
+    </Fragment>
+  </Hero>
+
+  <Stats
+    title="경력 요약"
+    stats={[
+      { title: '개발 경력', amount: '10년+' },
+      { title: '주요 프로젝트', amount: '15+' },
+      { title: '수상·특허', amount: '5+' },
+      { title: '기술 글', amount: '20+' },
+    ]}
+  />
+
+  <Features3
+    title="핵심 전문 분야"
+    subtitle="제품 개발 경력을 구성하는 세 가지 핵심 기술 영역입니다."
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        title: '그래픽스 엔지니어링',
+        description:
+          '저수준 OpenGL 최적화부터 렌더링 엔진까지 개발했으며 Wonderland와 Watch Face Studio 등 상용 창작 도구에 적용했습니다.',
+        icon: 'tabler:cube',
+      },
+      {
+        title: '실용 AI와 제품 R&D',
+        description: '제조 결함 탐지와 AI 지원 서비스에 AI·컴퓨터 비전 기술을 적용해 제품 수준으로 구현했습니다.',
+        icon: 'tabler:brain',
+      },
+      {
+        title: '시스템 아키텍처',
+        description: '기능 구현에 그치지 않고 유지보수성과 확장성을 갖춘 견고한 엔드투엔드 구조를 설계합니다.',
+        icon: 'tabler:sitemap',
+      },
+    ]}
+  />
+
+  <Features
+    id="philosophy"
+    tagline="가치"
+    title="엔지니어링 원칙"
+    subtitle="도구보다 문제 정의와 구조적 완성도를 우선하는 엔지니어링 원칙입니다."
+    items={[
+      {
+        title: '언어에 얽매이지 않는 개발',
+        description:
+          'C++, Python, Kotlin 등 문제에 적합한 기술을 선택하고 알고리즘과 시스템 구조의 완성도에 집중합니다.',
+        icon: 'tabler:code',
+      },
+      {
+        title: '수학적 기반',
+        description:
+          '응용수학 배경을 바탕으로 문제를 첫 원리부터 분석하고 최적화와 로직의 이론적 타당성을 검증합니다.',
+        icon: 'tabler:math-function',
+      },
+      {
+        title: '거시적 최적화',
+        description: '국소적인 미세 최적화보다 시스템 전체의 구조와 병목을 개선해 지속 가능한 성능을 확보합니다.',
+        icon: 'tabler:zoom-check',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    tagline="성과"
+    title="핵심 성과"
+    subtitle="삼성전자 재직 기간과 독립 프로젝트에서 완성한 주요 제품 성과입니다."
+    items={[
+      {
+        title: '창작 플랫폼',
+        description:
+          'Wonderland와 Wear OS용 Watch Face Studio의 핵심 기능 및 렌더링 파이프라인을 설계·개발했습니다.',
+      },
+      {
+        title: '기술 혁신과 특허',
+        description: 'Runtime Gradient Blur 기술을 개발해 A등급 특허를 확보했으며 Galaxy S25 시리즈의 AI Effects 구현을 주도했습니다.',
+      },
+      {
+        title: '수상 경력',
+        description: 'K-Hackathon 장관상 대상과 KIT Engineering Fair 은상을 수상했습니다.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: '주요 성과',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="mb-2 text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">주요 제품 성과</h3>
+    </Fragment>
+  </Content>
+
+  <Features2
+    title="연락처"
+    tagline="CONTACT"
+    columns={2}
+    items={[
+      { title: '이메일', description: 'artrointel@gmail.com', icon: 'tabler:mail' },
+      { title: 'GitHub', description: 'github.com/artrointel', icon: 'tabler:brand-github' },
+    ]}
+  />
+</Layout>

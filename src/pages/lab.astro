@@ -1,6 +1,13 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
+import type { Locale } from '~/i18n';
+
+export interface Props {
+  locale?: Locale;
+}
+
+const { locale } = Astro.props;
 
 type LabCategory = 'AI-Assisted Toys' | 'Experiments' | 'Side Projects' | 'Early Works';
 
@@ -26,7 +33,7 @@ const labItems: LabItem[] = [
     period: '2026',
     category: 'AI-Assisted Toys',
     summary: 'A playful rhythm game that turns an uploaded music file into a playable rhythm-game session.',
-    tags: ['Rhythm Game', 'Music Upload', 'Web Audio', 'AI-Assisted'],
+    tags: ['Rhythm Game', 'Music Upload', 'Web Audio', 'AI-Assisted', 'Codex'],
     links: [{ label: 'Open', href: 'https://artrointel.github.io/rusher' }],
   },
   {
@@ -119,9 +126,16 @@ const categories: Array<{
 ];
 ---
 
-<Layout metadata={metadata}>
+<Layout metadata={metadata} locale={locale}>
   <div class="lab-content">
-    <Hero tagline="Lab">
+    <Hero
+      tagline="Lab"
+      classes={{
+        container: 'py-10 md:py-14',
+        copy: 'pb-0',
+        subtitle: 'text-lg leading-8',
+      }}
+    >
       <Fragment slot="title">Lab</Fragment>
 
       <Fragment slot="subtitle">
@@ -172,7 +186,7 @@ const categories: Array<{
                           </span>
                         </div>
 
-                        <p class="min-h-[5rem] text-sm leading-6 text-muted dark:text-slate-300">{item.summary}</p>
+                        <p class="text-sm leading-6 text-muted dark:text-slate-300 md:min-h-[5rem]">{item.summary}</p>
 
                         <div class="mt-5 flex flex-wrap gap-2">
                           {item.tags.map((tag) => (

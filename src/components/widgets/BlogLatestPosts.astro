@@ -8,6 +8,7 @@ import { findLatestPosts } from '~/utils/blog';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import type { Widget } from '~/types';
 import Button from '~/components/ui/Button.astro';
+import type { Locale } from '~/i18n';
 
 export interface Props extends Widget {
   title?: string;
@@ -15,6 +16,8 @@ export interface Props extends Widget {
   linkUrl?: string | URL;
   information?: string;
   count?: number;
+  locale?: Locale;
+  includeAllLanguages?: boolean;
 }
 
 const {
@@ -23,6 +26,8 @@ const {
   linkUrl = getBlogPermalink(),
   information = await Astro.slots.render('information'),
   count = 4,
+  locale,
+  includeAllLanguages = false,
 
   id,
   isDark = false,
@@ -30,7 +35,7 @@ const {
   bg = await Astro.slots.render('bg'),
 } = Astro.props;
 
-const posts = APP_BLOG.isEnabled ? await findLatestPosts({ count }) : [];
+const posts = APP_BLOG.isEnabled ? await findLatestPosts({ count, locale: includeAllLanguages ? undefined : locale }) : [];
 ---
 
 {
@@ -55,7 +60,7 @@ const posts = APP_BLOG.isEnabled ? await findLatestPosts({ count }) : [];
         {information && <p class="text-muted dark:text-slate-400 lg:text-sm lg:max-w-md" set:html={information} />}
       </div>
 
-      <Grid posts={posts} />
+      <Grid posts={posts} locale={locale} />
     </WidgetWrapper>
   ) : (
     <Fragment />

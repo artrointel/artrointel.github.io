@@ -1,0 +1,11 @@
+<script is:inline>
+  (() => {
+    const path = window.location.pathname.replace(/\/$/, '') || '/';
+    const supportedPaths = new Set(['/', '/about', '/resume', '/lab', '/blog']);
+    if (!supportedPaths.has(path)) return;
+
+    const destination = '/en' + (path === '/' ? '' : path) + window.location.search + window.location.hash;
+
+    window.location.replace(destination);
+  })();
+</script>

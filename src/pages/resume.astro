@@ -7,6 +7,7 @@ import Content from '~/components/widgets/Content.astro';
 import samsungLogoBlack from '~/assets/images/logo_samsung_black.png';
 import samsungLogoWhite from '~/assets/images/logo_samsung_white.png';
 import metaLogoRaw from '~/assets/images/logo_metaintelligence.svg?raw';
+import type { Locale } from '~/i18n';
 import vvBreathFocusingDark from '~/assets/multimedia/vanillavibes/vv_breath_focusing_dark.mp4';
 import vvBreathFocusingLight from '~/assets/multimedia/vanillavibes/vv_breath_focusing_light.mp4';
 import vvScanRevealDark from '~/assets/multimedia/vanillavibes/vv_scan_reveal_dark.mp4';
@@ -17,6 +18,12 @@ const smartVoicePreviewSrc = `${baseUrl}assets/projects/smart-voice/settings.jpg
 const friendlyFarmFarmingSrc = `${baseUrl}assets/projects/friendly-farm/farming.jpg`;
 const friendlyFarmDefenseSrc = `${baseUrl}assets/projects/friendly-farm/defense.jpg`;
 const familyStoryPreviewSrc = `${baseUrl}assets/projects/family-story/family-story.jpg`;
+
+export interface Props {
+  locale?: Locale;
+}
+
+const { locale } = Astro.props;
 
 const metadata = {
   title: 'Resume - Woohyun Kim',
@@ -38,11 +45,18 @@ const wonderlandVideos = [
 ];
 ---
 
-<Layout metadata={metadata}>
+<Layout metadata={metadata} locale={locale}>
   <div class="resume-content">
     <!-- Hero Widget ******************* -->
 
-    <Hero tagline="Curriculum Vitae">
+    <Hero
+      tagline="Curriculum Vitae"
+      classes={{
+        container: 'py-10 md:py-14',
+        copy: 'pb-4 md:pb-6',
+        subtitle: 'text-lg leading-8',
+      }}
+    >
       <Fragment slot="title"> Resume </Fragment>
 
       <Fragment slot="subtitle">
@@ -123,7 +137,6 @@ const wonderlandVideos = [
     <Steps
       id="experience"
       title="Work Experience"
-      subtitle="Samsung Electronics entries include concurrent roles; overlapping dates are intentional."
       items={[
         {
           title:
@@ -140,7 +153,7 @@ const wonderlandVideos = [
             'Software Engineer (Wonderland & AI Effects) <br /> <span class="font-normal">Samsung Electronics</span> <br /> <span class="text-sm font-normal">2023 - 2025 (Primary role)</span>',
           description: `<ul class="list-disc pl-5 space-y-1">
              <li><button type="button" class="vv-link text-primary hover:underline font-semibold" data-modal-open="wonderland-modal" aria-haspopup="dialog" aria-controls="wonderland-modal">Wonderland</button>: Served as a core developer for the "Wallpaper Transition Effects" section of 'Wonderland' (Good Lock).</li>
-             <li><button type="button" class="vv-link text-primary hover:underline font-semibold" data-modal-open="vanillavibes-modal" aria-haspopup="dialog" aria-controls="vanillavibes-modal">VanillaVibes</button>: Built a shared RenderEffect-based AI visual effects rendering library for showcasing AI features across Galaxy phones, and drove its official integration starting with One UI 7.0; it has continued to evolve in active production ever since.</li>
+             <li><button type="button" class="vv-link text-primary hover:underline font-semibold" data-modal-open="vanillavibes-modal" aria-haspopup="dialog" aria-controls="vanillavibes-modal">VanillaVibes</button>: Built a shared RenderEffect-based AI visual effects rendering library used across all AI features on Galaxy devices. It has remained in continuous production use since One UI 7.0.</li>
              <li>Internal Graphic Libs: Optimized internal graphics library components, including Transparent Video Player and Skottie View, to improve rendering performance and runtime stability.</li>
            </ul>`,
           icon: 'tabler:briefcase',
@@ -185,7 +198,7 @@ const wonderlandVideos = [
           icon: 'tabler:cpu',
         },
       ]}
-      classes={{ container: 'max-w-3xl' }}
+      classes={{ container: 'max-w-3xl pt-8 md:pt-10 lg:pt-12' }}
     />
 
     <!-- Programs & Leadership Widget ****************** -->

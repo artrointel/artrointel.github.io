@@ -1,0 +1,114 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+
+const metadata = {
+  title: '김우현 | 소프트웨어 엔지니어',
+  description: 'Android 그래픽스, 플랫폼 엔지니어링, AI 기반 제품 개발 분야에서 10년 이상의 실무 경험을 보유한 김우현의 포트폴리오입니다.',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata} locale="ko">
+  <Hero classes={{ body: 'max-w-5xl', subtitle: 'text-lg leading-8' }}>
+    <Fragment slot="title">
+      <span class="text-gray-900 dark:text-gray-200">김우현</span>
+      <br />
+      <span class="text-2xl font-light tracking-wide text-gray-600 dark:text-gray-400">소프트웨어 엔지니어</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <b>Android 그래픽스</b> · <b>플랫폼 엔지니어링</b> · <b>AI 기반 제품 개발</b> 분야의 10년 이상 실무 경험 보유.
+        <br />
+        수학적 기반을 상용 소프트웨어 시스템으로 구현합니다.
+      </span>
+    </Fragment>
+  </Hero>
+
+  <Features
+    id="competencies"
+    tagline="핵심 역량"
+    title="기술 전문 분야"
+    subtitle="수학적 정밀성과 제품 개발 경험을 기반으로 상용 소프트웨어 시스템을 설계하고 구현합니다."
+    items={[
+      {
+        title: '3D 그래픽스와 렌더링',
+        description:
+          'OpenGL ES, GLSL과 렌더링 파이프라인 전반에서 저수준 최적화부터 사용자용 그래픽 도구까지 개발했습니다.',
+        icon: 'tabler:cube',
+      },
+      {
+        title: '실용 AI와 제품 R&D',
+        description:
+          '제조 결함 탐지와 AI 지원 서비스에 AI·컴퓨터 비전 기술을 적용하고 제품 수준으로 구현했습니다.',
+        icon: 'tabler:brain',
+      },
+      {
+        title: '시스템 아키텍처',
+        description: '성능과 안정성을 전체 시스템 관점에서 바라보며 견고하고 확장 가능한 구조를 설계합니다.',
+        icon: 'tabler:sitemap',
+      },
+      {
+        title: '수학 기반 R&D',
+        description: '응용수학 배경을 바탕으로 그래픽스와 AI 분야의 복잡한 알고리즘 문제를 해결합니다.',
+        icon: 'tabler:math-function',
+      },
+      {
+        title: '성능 엔지니어링',
+        description: 'GPU 프로파일링, 메모리 관리, 시스템 최적화를 통해 제품 수준의 성능과 안정성을 확보합니다.',
+        icon: 'tabler:activity',
+      },
+      {
+        title: '플랫폼 엔지니어링',
+        description: 'Watch Face Studio, Wonderland와 상용 비주얼 이펙트 라이브러리 등 창작 플랫폼과 SDK 개발 경험을 보유하고 있습니다.',
+        icon: 'tabler:tools',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    tagline="철학"
+    title="엔지니어링 원칙"
+    items={[
+      {
+        title: '언어보다 문제 해결',
+        description:
+          '특정 언어나 문법보다 알고리즘적 사고와 구조적 완성도를 우선하며 기술 변화에 유연하게 대응합니다.',
+      },
+      {
+        title: '전체 시스템 관점',
+        description:
+          '개별 연산보다 시스템 전체의 병목을 먼저 파악하고 현재 성능과 향후 확장성을 함께 고려해 설계합니다.',
+      },
+      {
+        title: '기본에서 출발하는 혁신',
+        description:
+          '수학과 컴퓨터 과학의 기본 원리를 AI·그래픽스 분야의 제품 수준 해결책으로 전환합니다.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: '엔지니어링 철학',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="mb-2 text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">수학에서 제품 시스템까지</h3>
+      기본 원리를 실제 제품에서 동작하는 소프트웨어로 구현합니다.
+    </Fragment>
+
+    <Fragment slot="bg"><div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div></Fragment>
+  </Content>
+
+  <BlogLatestPosts
+    title="최근 글"
+    linkText="모든 글 보기"
+    linkUrl="/ko/blog"
+    information="그래픽스, 플랫폼 아키텍처와 AI에 관한 기술 분석 및 개발 기록입니다."
+    locale="ko"
+  />
+</Layout>
