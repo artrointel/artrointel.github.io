@@ -11,7 +11,7 @@ metadata:
   title:
     default: Artrointel
     template: '%s | Artrointel'
-  description: 'Artrointel portfolio, blog, and engineering notes on AI and 3D graphics.'
+  description: 'Woohyun Kim''s portfolio, resume, projects, and engineering notes on Android graphics, platform engineering, and practical AI.'
   robots:
     index: true
     follow: true
@@ -22,11 +22,6 @@ metadata:
         width: 1200
         height: 628
     type: website
-  twitter:
-    handle: '@arthelokyo'
-    site: '@arthelokyo'
-    cardType: summary_large_image
-
 i18n:
   language: en
   textDirection: ltr

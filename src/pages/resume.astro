@@ -96,7 +96,7 @@ const wonderlandVideos = [
                 />
               </div>
             </a>
-            <span class="text-xs text-muted">2014 - 2025</span>
+            <span class="text-xs text-muted">2016 - 2025</span>
           </div>
 
           <div class="flex flex-col items-center gap-2">
@@ -112,7 +112,7 @@ const wonderlandVideos = [
                 <div class="meta-logo w-16 sm:w-20 [&>svg]:w-full [&>svg]:h-auto" set:html={metaLogoRaw} />
               </div>
             </a>
-            <span class="text-xs text-muted">2025 - Present</span>
+            <span class="text-xs text-muted">2025 - Jul 27, 2026</span>
           </div>
         </div>
       </div>
@@ -127,10 +127,11 @@ const wonderlandVideos = [
       items={[
         {
           title:
-            'Executive Director <br /> <span class="font-normal">MetaIntelligence</span> <br /> <span class="text-sm font-normal">2025 - Present</span>',
+            'Executive Director, Development / Core Developer <br /> <span class="font-normal">MetaIntelligence</span> <br /> <span class="text-sm font-normal">2025 - Jul 27, 2026</span>',
           description: `<ul class="list-disc pl-5 space-y-1">
-             <li>Led <a class="resume-link" href="https://metaintelligence.github.io/solutions/mvi" target="_blank" rel="noopener noreferrer">MVI (Meta Vision AI)</a>, a manufacturing defect detection product; full-stack delivery using GAN and Stable Diffusion models, with shading-aware vision detection.</li>
-             <li>Led and built <a class="resume-link" href="https://metaintelligence.github.io/namespring-web/" target="_blank" rel="noopener noreferrer">Namespring</a>, a naming recommendation service, delivering both backend and frontend in a React + Vite stack.</li>
+             <li>Led development and contributed hands-on as a core developer across the company's internal technical initiatives.</li>
+             <li>Delivered <a class="resume-link" href="https://metaintelligence.github.io/solutions/mvi" target="_blank" rel="noopener noreferrer">MVI (Meta Vision AI)</a>, a manufacturing defect detection product and public-facing company outcome; full-stack delivery using GAN and Stable Diffusion models, with shading-aware vision detection.</li>
+             <li>Delivered <a class="resume-link" href="https://metaintelligence.github.io/namespring-web/" target="_blank" rel="noopener noreferrer">Namespring</a>, a public-facing naming recommendation service, building both backend and frontend in a React + Vite stack.</li>
            </ul>`,
           icon: 'tabler:briefcase',
         },
@@ -159,8 +160,8 @@ const wonderlandVideos = [
             'Android Graphics Engineer <br /> <span class="font-normal">Samsung Electronics</span> <br /> <span class="text-sm font-normal">2019 - 2020</span>',
           description: `<ul class="list-disc pl-5 space-y-1">
              <li>Implemented Runtime Gradient Blur and multi-window blur effects; related patent family includes <a class="resume-link" href="https://patents.google.com/patent/US12511803B2/en" target="_blank" rel="noopener">US12511803B2</a> and <a class="resume-link" href="https://patents.google.com/patent/EP4167190B1/en" target="_blank" rel="noopener">EP4167190B1</a>.</li>
-             <li>Proved window‑independent Android view blur via PoC and report; the methodology was later adopted in Samsung phones by the owning team.</li>
-             <li>Implemented <a class="resume-link" href="https://youtu.be/ZGL_8u3thSU?t=14" target="_blank" rel="noopener">Weather‑Raindrop</a> rendering for a Samsung in‑house watch face, based on reverse‑engineering the open‑source <a class="resume-link" href="https://tympanus.net/Development/RainEffect/" target="_blank" rel="noopener">RainEffect</a>.</li>
+             <li>Proved window-independent Android view blur via PoC and report; the methodology was later adopted in Samsung phones by the owning team.</li>
+             <li>Implemented <a class="resume-link" href="https://youtu.be/ZGL_8u3thSU?t=14" target="_blank" rel="noopener">Weather-Raindrop</a> rendering for a Samsung in-house watch face, based on reverse-engineering the open-source <a class="resume-link" href="https://tympanus.net/Development/RainEffect/" target="_blank" rel="noopener">RainEffect</a>.</li>
            </ul>`,
           icon: 'tabler:brand-android',
         },
@@ -168,7 +169,7 @@ const wonderlandVideos = [
           title:
             'Tizen Graphics Engineer <br /> <span class="font-normal">Samsung Electronics</span> <br /> <span class="text-sm font-normal">2018 - 2019</span>',
           description: `<ul class="list-disc pl-5 space-y-1">
-             <li>Implemented <a class="resume-link" href="https://www.youtube.com/watch?v=B_CbUWJJ4cw" target="_blank" rel="noopener">Activity Sparkles</a> rendering for a Samsung in‑house watch face.</li>
+             <li>Implemented <a class="resume-link" href="https://www.youtube.com/watch?v=B_CbUWJJ4cw" target="_blank" rel="noopener">Activity Sparkles</a> rendering for a Samsung in-house watch face.</li>
              <li>Participated in the internal experimental project WatchFactory, a DALi-based 3D watch face tool for Tizen-based Samsung watches; it later evolved into Watch Face Studio.</li>
            </ul>`,
           icon: 'tabler:device-watch',
@@ -183,15 +184,27 @@ const wonderlandVideos = [
            </ul>`,
           icon: 'tabler:cpu',
         },
+      ]}
+      classes={{ container: 'max-w-3xl' }}
+    />
+
+    <!-- Programs & Leadership Widget ****************** -->
+
+    <Steps
+      id="programs"
+      title="Programs & Leadership"
+      subtitle="Student program experience, separate from Samsung Electronics employment."
+      items={[
         {
-          title: 'Samsung Software Membership <br /> <span class="text-sm font-normal">2014 - 2015</span>',
+          title:
+            'Samsung Software Membership <br /> <span class="font-normal">Student Developer Program</span> <br /> <span class="text-sm font-normal">2014 - 2015</span>',
           description: `<ul class="list-disc pl-5 space-y-1">
              <li>Regular member, 24-1st.</li>
              <li>Education Team Leader (2014 - 2015).</li>
-             <li>Seminar: Vector, Matrix and Quaternion for 3D Programming — <button type="button" class="vv-link text-primary hover:underline font-semibold" data-modal-open="seminar-3d-math-modal" aria-haspopup="dialog" aria-controls="seminar-3d-math-modal">Preview</button>.</li>
-             <li>Seminar: OpenMP and MPI for Beginners — <button type="button" class="vv-link text-primary hover:underline font-semibold" data-modal-open="seminar-openmp-modal" aria-haspopup="dialog" aria-controls="seminar-openmp-modal">Preview</button>.</li>
+             <li>Seminar: Vector, Matrix and Quaternion for 3D Programming - <button type="button" class="vv-link text-primary hover:underline font-semibold" data-modal-open="seminar-3d-math-modal" aria-haspopup="dialog" aria-controls="seminar-3d-math-modal">Preview</button>.</li>
+             <li>Seminar: OpenMP and MPI for Beginners - <button type="button" class="vv-link text-primary hover:underline font-semibold" data-modal-open="seminar-openmp-modal" aria-haspopup="dialog" aria-controls="seminar-openmp-modal">Preview</button>.</li>
              <li><button type="button" class="vv-link text-primary hover:underline font-semibold" data-modal-open="crossbridge-modal" aria-haspopup="dialog" aria-controls="crossbridge-modal">Cross the Bridge</button>: 3D game engine + bridge simulation; project lead and physics engine (RPEngine) developer.</li>
-             <li><button type="button" class="vv-link text-primary hover:underline font-semibold" data-modal-open="smartvoice-modal" aria-haspopup="dialog" aria-controls="smartvoice-modal">SmartVoice</button>: Voice‑based Android system service using third‑party collective intelligence, with related AOSP platform changes.</li>
+             <li><button type="button" class="vv-link text-primary hover:underline font-semibold" data-modal-open="smartvoice-modal" aria-haspopup="dialog" aria-controls="smartvoice-modal">SmartVoice</button>: Voice-based Android system service using third-party collective intelligence, with related AOSP platform changes.</li>
            </ul>`,
           icon: 'tabler:school',
         },
@@ -267,7 +280,7 @@ const wonderlandVideos = [
         {
           title: 'Journal Publication (2016)',
           description:
-            'Seongsoo Choi, <strong>Woohyun Kim</strong>, and Jongho Kim, “Compression of Hamiltonian matrix: Application to spin-1/2 Heisenberg square lattice,” AIP Advances (2016). <a class="resume-link" href="https://aip.scitation.org/doi/pdf/10.1063/1.4963834" target="_blank" rel="noopener">PDF</a>.',
+            'Seongsoo Choi, <strong>Woohyun Kim</strong>, and Jongho Kim, "Compression of Hamiltonian matrix: Application to spin-1/2 Heisenberg square lattice," AIP Advances (2016). <a class="resume-link" href="https://aip.scitation.org/doi/pdf/10.1063/1.4963834" target="_blank" rel="noopener">PDF</a>.',
         },
         {
           title: 'K-Hackathon 3 (2015): Grand Award (Minister Award)',
@@ -503,7 +516,7 @@ const wonderlandVideos = [
             <div>
               <div class="text-sm font-semibold text-gray-800 dark:text-slate-100">SmartVoice</div>
               <div class="text-xs text-gray-500 dark:text-slate-400">
-                Voice‑based Android system service using third‑party collective intelligence, with related AOSP platform
+                Voice-based Android system service using third-party collective intelligence, with related AOSP platform
                 changes.
               </div>
             </div>

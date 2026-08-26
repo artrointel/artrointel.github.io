@@ -47,6 +47,6 @@ export const footerData = {
     { ariaLabel: 'Email', icon: 'tabler:mail', href: 'mailto:artrointel@gmail.com' },
   ],
   footNote: `
-    Made by <a class="text-blue-600 underline dark:text-muted" href="https://github.com/artrointel"> Artrointel</a> · All rights reserved.
+    Made by <a class="text-blue-600 underline dark:text-muted" href="https://github.com/artrointel">Artrointel</a>. All rights reserved.
   `,
 };
