@@ -1,6 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
+import LabYearGroups from '~/components/widgets/LabYearGroups.astro';
 
 type LabCategory = 'AI 활용 프로젝트' | '기술 실험' | '사이드 프로젝트' | '초기 프로젝트';
 
@@ -20,10 +21,19 @@ const metadata = {
 
 const labItems: LabItem[] = [
   {
+    title: 'R.E.P.O. Mods',
+    period: '2026',
+    category: 'AI 활용 프로젝트',
+    summary: 'R.E.P.O. 게임플레이 모드를 개발해 Thunderstore에 배포했습니다.',
+    tags: ['R.E.P.O.', '게임 모드', 'AI 지원 개발'],
+    links: [{ label: '열기', href: 'https://thunderstore.io/c/repo/?search=artrointel' }],
+  },
+  {
     title: 'KNTI',
     period: '2026',
     category: 'AI 활용 프로젝트',
-    summary: '한자 획수 또는 한글 필획을 전통 성명학 81격으로 분석해 이름 유형과 생애 흐름을 보여주는 웹 애플리케이션입니다.',
+    summary:
+      '한자 획수 또는 한글 필획을 전통 성명학 81격으로 분석해 이름 유형과 생애 흐름을 보여주는 웹 애플리케이션입니다.',
     tags: ['이름 분석', '한글·한자', '성명학 81격', '웹 애플리케이션', 'AI 지원 개발'],
     links: [{ label: '열기', href: 'https://artrointel.github.io/knti/' }],
   },
@@ -102,7 +112,10 @@ const labItems: LabItem[] = [
 ];
 
 const categories: Array<{ title: LabCategory; description: string }> = [
-  { title: 'AI 활용 프로젝트', description: 'AI 지원 개발 워크플로로 구현한 실용 도구와 인터랙티브 애플리케이션입니다.' },
+  {
+    title: 'AI 활용 프로젝트',
+    description: 'AI 지원 개발 워크플로로 구현한 실용 도구와 인터랙티브 애플리케이션입니다.',
+  },
   { title: '기술 실험', description: '그래픽스 기술과 구현 아이디어의 타당성을 검증한 실험입니다.' },
   { title: '사이드 프로젝트', description: '주요 경력과 별도로 개발한 개인 도구 및 애플리케이션입니다.' },
   { title: '초기 프로젝트', description: '초기 개발 경력의 기술적 흐름을 보여주는 프로젝트입니다.' },
@@ -145,31 +158,15 @@ const categories: Array<{ title: LabCategory; description: string }> = [
                 <section class="lab-category" aria-labelledby={categoryId}>
                   <div class="mb-5 flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
                     <div>
-                      <h3 id={categoryId} class="text-2xl font-semibold text-gray-900 dark:text-white">{category.title}</h3>
+                      <h3 id={categoryId} class="text-2xl font-semibold text-gray-900 dark:text-white">
+                        {category.title}
+                      </h3>
                       <p class="mt-1 text-sm text-muted dark:text-slate-400">{category.description}</p>
                     </div>
                     <span class="text-sm text-muted dark:text-slate-400">{items.length}개</span>
                   </div>
 
-                  <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-                    {items.map((item) => (
-                      <article class="lab-card rounded-lg border border-gray-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-slate-700 dark:bg-slate-900">
-                        <div class="mb-4 flex items-start justify-between gap-4">
-                          <h4 class="text-lg font-semibold leading-snug text-gray-900 dark:text-white">{item.title}</h4>
-                          <span class="shrink-0 rounded-full bg-blue-50 px-2.5 py-1 text-xs font-semibold text-blue-700 dark:bg-blue-950 dark:text-blue-200">{item.period}</span>
-                        </div>
-                        <p class="text-sm leading-6 text-muted dark:text-slate-300 md:min-h-[5rem]">{item.summary}</p>
-                        <div class="mt-5 flex flex-wrap gap-2">
-                          {item.tags.map((tag) => <span class="rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-700 dark:bg-slate-800 dark:text-slate-300">{tag}</span>)}
-                        </div>
-                        {item.links && item.links.length > 0 && (
-                          <div class="mt-5 flex flex-wrap gap-3 border-t border-gray-100 pt-4 dark:border-slate-800">
-                            {item.links.map((link) => <a class="text-sm font-semibold text-primary hover:underline dark:text-blue-300" href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a>)}
-                          </div>
-                        )}
-                      </article>
-                    ))}
-                  </div>
+                  <LabYearGroups items={items} locale="ko" />
                 </section>
               );
             })
@@ -179,7 +176,3 @@ const categories: Array<{ title: LabCategory; description: string }> = [
     </section>
   </div>
 </Layout>
-
-<style>
-  .lab-card { min-height: 280px; }
-</style>
