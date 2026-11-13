@@ -119,7 +119,7 @@ const load = async function (): Promise<Array<Post>> {
 
   const results = (await Promise.all(normalizedPosts))
     .sort((a, b) => b.publishDate.valueOf() - a.publishDate.valueOf())
-    .filter((post) => !post.draft && !EXCLUDED_POST_SLUGS.has(post.slug));
+    .filter((post) => (import.meta.env.DEV || !post.draft) && !EXCLUDED_POST_SLUGS.has(post.slug));
 
   return results;
 };
